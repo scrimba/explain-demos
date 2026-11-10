@@ -1,0 +1,1520 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Provisioning Overview — ictVoIP Billing for WHMCS documentation</title><style>:root, :host { --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free'; --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free'; --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro'; --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro'; --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone'; --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone'; --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone'; --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone'; --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands'; --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp'; --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp'; --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp'; --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp'; --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone'; --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone'; --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone'; --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone'; --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab'; --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press'; --fa-font-slab-duo-regular: normal 400 1em/1 'Font Awesome 7 Slab Duo'; --fa-font-slab-press-duo-regular: normal 400 1em/1 'Font Awesome 7 Slab Press Duo'; --fa-font-pixel-regular: normal 400 1em/1 'Font Awesome 7 Pixel'; --fa-font-mosaic-solid: normal 900 1em/1 'Font Awesome 7 Mosaic'; --fa-font-vellum-solid: normal 900 1em/1 'Font Awesome 7 Vellum'; --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard'; --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint'; --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog'; --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo'; --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch'; --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite'; --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly'; --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill'; --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo'; --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel'; --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility'; --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo'; --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill'; }
+@keyframes fa-beat { 
+  0% { transform: scale(1); }
+  25% { transform: scale(calc(1.25 * var(--fa-beat-scale, 1.25))); }
+  45% { transform: scale(calc(1.22 * var(--fa-beat-scale, 1.22))); }
+  65% { transform: scale(calc(1.25 * var(--fa-beat-scale, 1.25))); }
+  90% { transform: scale(1); }
+}
+@keyframes fa-bounce { 
+  0% { transform: scale(1, 1) translateY(0px); animation-timing-function: var(--fa-animation-timing); }
+  14% { transform: scale(var(--fa-bounce-start-scale-x, 1.06), var(--fa-bounce-start-scale-y, 0.94)) translateY(var(--fa-bounce-anticipation, 3px)); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  32% { transform: scale(var(--fa-bounce-jump-scale-x, 0.94), var(--fa-bounce-jump-scale-y, 1.12)) translateY(calc(-1 * var(--fa-bounce-height, 0.5em))); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  52% { transform: scale(1, 1) translateY(calc(-1 * var(--fa-bounce-height, 0.5em) * 1.1)); animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5); }
+  70% { transform: scale(var(--fa-bounce-land-scale-x, 1.06), var(--fa-bounce-land-scale-y, 0.92)) translateY(0); animation-timing-function: cubic-bezier(0.33, 0.33, 0.66, 1); }
+  85% { transform: scale(0.98, 1.04) translateY(calc(-2px * var(--fa-bounce-rebound, 1))); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1); }
+  100% { transform: scale(1, 1) translateY(0px); }
+}
+@keyframes fa-fade { 
+  0% { opacity: 1; transform: scale(1); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
+  40% { opacity: var(--fa-fade-opacity, 0.4); transform: scale(0.98); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes fa-beat-fade { 
+  0% { opacity: var(--fa-beat-fade-opacity, 0.4); transform: scale(1); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
+  25% { opacity: calc(var(--fa-beat-fade-opacity, 0.4) + 0.4); transform: scale(var(--fa-beat-fade-scale, 1.28)); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  45% { opacity: 1; transform: scale(var(--fa-beat-fade-scale, 1.25)); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  65% { opacity: calc(var(--fa-beat-fade-opacity, 0.4) + 0.4); transform: scale(var(--fa-beat-fade-scale, 1.28)); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  100% { opacity: var(--fa-beat-fade-opacity, 0.4); transform: scale(1); }
+}
+@keyframes fa-flip { 
+  0% { transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
+  8% { transform: perspective(2em) scale(var(--fa-flip-anticipation-scale, 0.95)) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  35% { transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * 0.6)); animation-timing-function: linear; }
+  65% { transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * 0.5)); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  92% { transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * var(--fa-flip-overshoot, 1.04))); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1); }
+  100% { transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -360deg)); }
+}
+@keyframes fa-flip-360 { 
+  0% { transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1); }
+  8% { transform: perspective(2em) scale(var(--fa-flip-anticipation-scale, 0.95)) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  50% { transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * 0.6)); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  80% { transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * var(--fa-flip-overshoot, 1.04))); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1); }
+  100% { transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -360deg)); }
+}
+@keyframes fa-shake { 
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1); }
+  8% { transform: rotate(35deg) translateX(1px); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  20% { transform: rotate(-22deg) translateX(-1px); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  35% { transform: rotate(15deg) translateX(1px); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  50% { transform: rotate(-9deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  65% { transform: rotate(5deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  78% { transform: rotate(-3deg); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  90% { transform: rotate(1deg); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes fa-spin { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes fa-spin-snap { 
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  12% { transform: rotate(60deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  16.67% { transform: rotate(60deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  28.67% { transform: rotate(120deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  33.33% { transform: rotate(120deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  45.33% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  62% { transform: rotate(240deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  66.67% { transform: rotate(240deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  78.67% { transform: rotate(300deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  83.33% { transform: rotate(300deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  95.33% { transform: rotate(360deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes fa-spin-snap-4 { 
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  15% { transform: rotate(90deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  25% { transform: rotate(90deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  40% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  65% { transform: rotate(270deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  75% { transform: rotate(270deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  90% { transform: rotate(360deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes fa-spin-snap-8 { 
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  9% { transform: rotate(45deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  12.5% { transform: rotate(45deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  21.5% { transform: rotate(90deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  25% { transform: rotate(90deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  34% { transform: rotate(135deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  37.5% { transform: rotate(135deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  46.5% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  50% { transform: rotate(180deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  59% { transform: rotate(225deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  62.5% { transform: rotate(225deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  71.5% { transform: rotate(270deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  75% { transform: rotate(270deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  84% { transform: rotate(315deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  87.5% { transform: rotate(315deg); animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  96.5% { transform: rotate(360deg); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes fa-buzz { 
+  0% { transform: translateX(0px) rotate(0deg); animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1); }
+  5% { transform: translateX(var(--fa-buzz-distance, 4px)) rotate(0.5deg); }
+  10% { transform: translateX(calc(-1 * var(--fa-buzz-distance, 4px))) rotate(-0.5deg); }
+  15% { transform: translateX(var(--fa-buzz-distance, 4px)) rotate(0.3deg); }
+  20% { transform: translateX(calc(-1 * var(--fa-buzz-distance, 4px))) rotate(-0.3deg); }
+  25% { transform: translateX(calc(var(--fa-buzz-distance, 4px) * 0.7)) rotate(0.2deg); }
+  30% { transform: translateX(calc(-1 * var(--fa-buzz-distance, 4px) * 0.7)) rotate(-0.2deg); }
+  35% { transform: translateX(calc(var(--fa-buzz-distance, 4px) * 0.4)) rotate(0.1deg); }
+  40% { transform: translateX(0px) rotate(0deg); }
+  100% { transform: translateX(0px) rotate(0deg); }
+}
+@keyframes fa-wag { 
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1); }
+  12% { transform: rotate(var(--fa-wag-angle, 12deg)); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  24% { transform: rotate(2deg); animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1); }
+  36% { transform: rotate(calc(var(--fa-wag-angle, 12deg) * 0.85)); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  48% { transform: rotate(1deg); animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1); }
+  58% { transform: rotate(calc(var(--fa-wag-angle, 12deg) * 0.6)); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  68% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes fa-float { 
+  0% { transform: translateY(0) translateX(0) rotate(0deg) scale(var(--fa-float-squash-x, 1.02), var(--fa-float-squash-y, 0.98)); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  15% { transform: translateY(calc(-0.4 * var(--fa-float-height, 6px))) translateX(var(--fa-float-drift, 1px)) rotate(var(--fa-float-tilt, 1deg)) scale(1, 1); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  35% { transform: translateY(calc(-1 * var(--fa-float-height, 6px))) translateX(0) rotate(0deg) scale(var(--fa-float-stretch-x, 0.98), var(--fa-float-stretch-y, 1.03)); animation-timing-function: cubic-bezier(0.5, 0, 0.5, 0); }
+  50% { transform: translateY(calc(-0.92 * var(--fa-float-height, 6px))) translateX(calc(-0.5 * var(--fa-float-drift, 1px))) rotate(calc(-0.5 * var(--fa-float-tilt, 1deg))) scale(0.995, 1.01); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33); }
+  70% { transform: translateY(calc(-0.3 * var(--fa-float-height, 6px))) translateX(calc(-1 * var(--fa-float-drift, 1px))) rotate(calc(-1 * var(--fa-float-tilt, 1deg))) scale(1, 1); animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); }
+  90% { transform: translateY(calc(0.05 * var(--fa-float-height, 6px))) translateX(0) rotate(0deg) scale(var(--fa-float-squash-x, 1.02), var(--fa-float-squash-y, 0.98)); animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1); }
+  100% { transform: translateY(0) translateX(0) rotate(0deg) scale(var(--fa-float-squash-x, 1.02), var(--fa-float-squash-y, 0.98)); }
+}
+@keyframes fa-swing { 
+  0% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1); }
+  8% { transform: rotate(var(--fa-swing-angle, 22deg)); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  18% { transform: rotate(calc(-1 * var(--fa-swing-angle, 22deg) * 0.85)); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  28% { transform: rotate(calc(var(--fa-swing-angle, 22deg) * 0.65)); animation-timing-function: cubic-bezier(0.35, 0, 0.65, 1); }
+  38% { transform: rotate(calc(-1 * var(--fa-swing-angle, 22deg) * 0.45)); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  48% { transform: rotate(calc(var(--fa-swing-angle, 22deg) * 0.25)); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  56% { transform: rotate(calc(-1 * var(--fa-swing-angle, 22deg) * 0.1)); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  64% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes fa-jello { 
+  0% { transform: scale(1, 1); animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1); }
+  12% { transform: scale(var(--fa-jello-scale-x, 1.15), calc(2 - var(--fa-jello-scale-x, 1.15))); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  24% { transform: scale(calc(2 - var(--fa-jello-scale-y, 1.12)), var(--fa-jello-scale-y, 1.12)); animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1); }
+  36% { transform: scale(calc(1 + (var(--fa-jello-scale-x, 1.15) - 1) * 0.5), calc(2 - (1 + (var(--fa-jello-scale-x, 1.15) - 1) * 0.5))); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  48% { transform: scale(calc(2 - (1 + (var(--fa-jello-scale-y, 1.12) - 1) * 0.3)), calc(1 + (var(--fa-jello-scale-y, 1.12) - 1) * 0.3)); animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  58% { transform: scale(1.02, 0.98); animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  68% { transform: scale(1, 1); }
+  100% { transform: scale(1, 1); }
+}
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+* { box-sizing: border-box; }
+html { font-size: 100%; text-size-adjust: 100%; }
+body { margin: 0px; }
+a:active, a:hover { outline: 0px; }
+b, strong { font-weight: 700; }
+.rst-content code, .rst-content tt, code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
+dl, ol, ul { margin: 0px; padding: 0px; list-style: none none; }
+li { list-style: none; }
+img { border: 0px; vertical-align: middle; max-width: 100%; }
+figure, form { margin: 0px; }
+button, input, select, textarea { font-size: 100%; margin: 0px; vertical-align: baseline; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; appearance: button; }
+@media print{body, html, section { background: none !important; }
+* { box-shadow: none !important; text-shadow: none !important; filter: none !important; }
+a, a:visited { text-decoration: underline; }
+img, tr { break-inside: avoid; }
+img { max-width: 100% !important; }
+.rst-content .toctree-wrapper > p.caption, h2, h3, p { orphans: 3; widows: 3; }
+.rst-content .toctree-wrapper > p.caption, h2, h3 { break-after: avoid; }
+}
+.btn, .fa::before, .icon::before, .rst-content .admonition, .rst-content .admonition-title::before, .rst-content .admonition-todo, .rst-content .attention, .rst-content .caution, .rst-content .code-block-caption .headerlink::before, .rst-content .danger, .rst-content .eqno .headerlink::before, .rst-content .error, .rst-content .hint, .rst-content .important, .rst-content .note, .rst-content .seealso, .rst-content .tip, .rst-content .warning, .rst-content code.download span:first-child::before, .rst-content dl dt .headerlink::before, .rst-content h1 .headerlink::before, .rst-content h2 .headerlink::before, .rst-content h3 .headerlink::before, .rst-content h4 .headerlink::before, .rst-content h5 .headerlink::before, .rst-content h6 .headerlink::before, .rst-content p.caption .headerlink::before, .rst-content p .headerlink::before, .rst-content table > caption .headerlink::before, .rst-content tt.download span:first-child::before, .wy-alert, .wy-dropdown .caret::before, .wy-inline-validate.wy-inline-validate-danger .wy-input-context::before, .wy-inline-validate.wy-inline-validate-info .wy-input-context::before, .wy-inline-validate.wy-inline-validate-success .wy-input-context::before, .wy-inline-validate.wy-inline-validate-warning .wy-input-context::before, .wy-menu-vertical li.current > a button.toctree-expand::before, .wy-menu-vertical li.on a button.toctree-expand::before, .wy-menu-vertical li button.toctree-expand::before, input[type="color"], input[type="date"], input[type="datetime-local"], input[type="datetime"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea { -webkit-font-smoothing: antialiased; }
+@font-face { font-family: FontAwesome; src: url(fonts/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e) format("woff2"), url(fonts/fontawesome-webfont.woff?fee66e712a8a08eef5805a46892932ad) format("woff"), url(fonts/fontawesome-webfont.ttf?b06871f281fee6b241d60582ae9369b9) format("truetype"); font-weight: 400; font-style: normal; }
+.fa, .icon, .rst-content .admonition-title, .rst-content .code-block-caption .headerlink, .rst-content .eqno .headerlink, .rst-content code.download span:first-child, .rst-content dl dt .headerlink, .rst-content h1 .headerlink, .rst-content h2 .headerlink, .rst-content h3 .headerlink, .rst-content h4 .headerlink, .rst-content h5 .headerlink, .rst-content h6 .headerlink, .rst-content p.caption .headerlink, .rst-content p .headerlink, .rst-content table > caption .headerlink, .rst-content tt.download span:first-child, .wy-menu-vertical li.current > a button.toctree-expand, .wy-menu-vertical li.on a button.toctree-expand, .wy-menu-vertical li button.toctree-expand { display: inline-block; font-style: normal; font-variant: normal; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-weight: normal; font-stretch: normal; line-height: 1; font-family: FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; }
+@-webkit-keyframes fa-spin { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+@keyframes fa-spin { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+.fa-home::before, .icon-home::before { content: ""; }
+.fa-exclamation-circle::before, .rst-content .admonition-title::before, .wy-inline-validate.wy-inline-validate-info .wy-input-context::before, .wy-inline-validate.wy-inline-validate-warning .wy-input-context::before { content: ""; }
+.fa-arrow-circle-left::before, .icon-circle-arrow-left::before { content: ""; }
+.fa-arrow-circle-right::before, .icon-circle-arrow-right::before { content: ""; }
+.fa-bars::before, .fa-navicon::before, .fa-reorder::before { content: ""; }
+.fa-minus-square-o::before, .wy-menu-vertical li.current > a button.toctree-expand::before, .wy-menu-vertical li.on a button.toctree-expand::before { content: ""; }
+.fa-plus-square-o::before, .wy-menu-vertical li button.toctree-expand::before { content: ""; }
+.fa, .icon, .rst-content .admonition-title, .rst-content .code-block-caption .headerlink, .rst-content .eqno .headerlink, .rst-content code.download span:first-child, .rst-content dl dt .headerlink, .rst-content h1 .headerlink, .rst-content h2 .headerlink, .rst-content h3 .headerlink, .rst-content h4 .headerlink, .rst-content h5 .headerlink, .rst-content h6 .headerlink, .rst-content p.caption .headerlink, .rst-content p .headerlink, .rst-content table > caption .headerlink, .rst-content tt.download span:first-child, .wy-dropdown .caret, .wy-inline-validate.wy-inline-validate-danger .wy-input-context, .wy-inline-validate.wy-inline-validate-info .wy-input-context, .wy-inline-validate.wy-inline-validate-success .wy-input-context, .wy-inline-validate.wy-inline-validate-warning .wy-input-context, .wy-menu-vertical li.current > a button.toctree-expand, .wy-menu-vertical li.on a button.toctree-expand, .wy-menu-vertical li button.toctree-expand { font-family: inherit; }
+.fa::before, .icon::before, .rst-content .admonition-title::before, .rst-content .code-block-caption .headerlink::before, .rst-content .eqno .headerlink::before, .rst-content code.download span:first-child::before, .rst-content dl dt .headerlink::before, .rst-content h1 .headerlink::before, .rst-content h2 .headerlink::before, .rst-content h3 .headerlink::before, .rst-content h4 .headerlink::before, .rst-content h5 .headerlink::before, .rst-content h6 .headerlink::before, .rst-content p.caption .headerlink::before, .rst-content p .headerlink::before, .rst-content table > caption .headerlink::before, .rst-content tt.download span:first-child::before, .wy-dropdown .caret::before, .wy-inline-validate.wy-inline-validate-danger .wy-input-context::before, .wy-inline-validate.wy-inline-validate-info .wy-input-context::before, .wy-inline-validate.wy-inline-validate-success .wy-input-context::before, .wy-inline-validate.wy-inline-validate-warning .wy-input-context::before, .wy-menu-vertical li.current > a button.toctree-expand::before, .wy-menu-vertical li.on a button.toctree-expand::before, .wy-menu-vertical li button.toctree-expand::before { font-family: FontAwesome; display: inline-block; font-style: normal; font-weight: 400; line-height: 1; text-decoration: inherit; }
+.rst-content .code-block-caption a .headerlink, .rst-content .eqno a .headerlink, .rst-content a .admonition-title, .rst-content code.download a span:first-child, .rst-content dl dt a .headerlink, .rst-content h1 a .headerlink, .rst-content h2 a .headerlink, .rst-content h3 a .headerlink, .rst-content h4 a .headerlink, .rst-content h5 a .headerlink, .rst-content h6 a .headerlink, .rst-content p.caption a .headerlink, .rst-content p a .headerlink, .rst-content table > caption a .headerlink, .rst-content tt.download a span:first-child, .wy-menu-vertical li.current > a button.toctree-expand, .wy-menu-vertical li.on a button.toctree-expand, .wy-menu-vertical li a button.toctree-expand, a .fa, a .icon, a .rst-content .admonition-title, a .rst-content .code-block-caption .headerlink, a .rst-content .eqno .headerlink, a .rst-content code.download span:first-child, a .rst-content dl dt .headerlink, a .rst-content h1 .headerlink, a .rst-content h2 .headerlink, a .rst-content h3 .headerlink, a .rst-content h4 .headerlink, a .rst-content h5 .headerlink, a .rst-content h6 .headerlink, a .rst-content p.caption .headerlink, a .rst-content p .headerlink, a .rst-content table > caption .headerlink, a .rst-content tt.download span:first-child, a .wy-menu-vertical li button.toctree-expand { display: inline-block; text-decoration: inherit; }
+.btn .fa, .btn .icon, .btn .rst-content .admonition-title, .btn .rst-content .code-block-caption .headerlink, .btn .rst-content .eqno .headerlink, .btn .rst-content code.download span:first-child, .btn .rst-content dl dt .headerlink, .btn .rst-content h1 .headerlink, .btn .rst-content h2 .headerlink, .btn .rst-content h3 .headerlink, .btn .rst-content h4 .headerlink, .btn .rst-content h5 .headerlink, .btn .rst-content h6 .headerlink, .btn .rst-content p .headerlink, .btn .rst-content table > caption .headerlink, .btn .rst-content tt.download span:first-child, .btn .wy-menu-vertical li.current > a button.toctree-expand, .btn .wy-menu-vertical li.on a button.toctree-expand, .btn .wy-menu-vertical li button.toctree-expand, .nav .fa, .nav .icon, .nav .rst-content .admonition-title, .nav .rst-content .code-block-caption .headerlink, .nav .rst-content .eqno .headerlink, .nav .rst-content code.download span:first-child, .nav .rst-content dl dt .headerlink, .nav .rst-content h1 .headerlink, .nav .rst-content h2 .headerlink, .nav .rst-content h3 .headerlink, .nav .rst-content h4 .headerlink, .nav .rst-content h5 .headerlink, .nav .rst-content h6 .headerlink, .nav .rst-content p .headerlink, .nav .rst-content table > caption .headerlink, .nav .rst-content tt.download span:first-child, .nav .wy-menu-vertical li.current > a button.toctree-expand, .nav .wy-menu-vertical li.on a button.toctree-expand, .nav .wy-menu-vertical li button.toctree-expand, .rst-content .btn .admonition-title, .rst-content .code-block-caption .btn .headerlink, .rst-content .code-block-caption .nav .headerlink, .rst-content .eqno .btn .headerlink, .rst-content .eqno .nav .headerlink, .rst-content .nav .admonition-title, .rst-content code.download .btn span:first-child, .rst-content code.download .nav span:first-child, .rst-content dl dt .btn .headerlink, .rst-content dl dt .nav .headerlink, .rst-content h1 .btn .headerlink, .rst-content h1 .nav .headerlink, .rst-content h2 .btn .headerlink, .rst-content h2 .nav .headerlink, .rst-content h3 .btn .headerlink, .rst-content h3 .nav .headerlink, .rst-content h4 .btn .headerlink, .rst-content h4 .nav .headerlink, .rst-content h5 .btn .headerlink, .rst-content h5 .nav .headerlink, .rst-content h6 .btn .headerlink, .rst-content h6 .nav .headerlink, .rst-content p .btn .headerlink, .rst-content p .nav .headerlink, .rst-content table > caption .btn .headerlink, .rst-content table > caption .nav .headerlink, .rst-content tt.download .btn span:first-child, .rst-content tt.download .nav span:first-child, .wy-menu-vertical li .btn button.toctree-expand, .wy-menu-vertical li.current > a .btn button.toctree-expand, .wy-menu-vertical li.current > a .nav button.toctree-expand, .wy-menu-vertical li .nav button.toctree-expand, .wy-menu-vertical li.on a .btn button.toctree-expand, .wy-menu-vertical li.on a .nav button.toctree-expand { display: inline; }
+.rst-content .admonition, .rst-content .admonition-todo, .rst-content .attention, .rst-content .caution, .rst-content .danger, .rst-content .error, .rst-content .hint, .rst-content .important, .rst-content .note, .rst-content .seealso, .rst-content .tip, .rst-content .warning, .wy-alert { padding: 12px; line-height: 24px; margin-bottom: 24px; background: rgb(231, 242, 250); }
+.rst-content .admonition-title, .wy-alert-title { font-weight: 700; display: block; color: rgb(255, 255, 255); background: rgb(106, 176, 222); padding: 6px 12px; margin: -12px -12px 12px; }
+.rst-content .hint, .rst-content .important, .rst-content .tip, .rst-content .wy-alert-success.admonition, .rst-content .wy-alert-success.admonition-todo, .rst-content .wy-alert-success.attention, .rst-content .wy-alert-success.caution, .rst-content .wy-alert-success.danger, .rst-content .wy-alert-success.error, .rst-content .wy-alert-success.note, .rst-content .wy-alert-success.seealso, .rst-content .wy-alert-success.warning, .wy-alert.wy-alert-success { background: rgb(219, 250, 244); }
+.rst-content .hint .admonition-title, .rst-content .hint .wy-alert-title, .rst-content .important .admonition-title, .rst-content .important .wy-alert-title, .rst-content .tip .admonition-title, .rst-content .tip .wy-alert-title, .rst-content .wy-alert-success.admonition-todo .admonition-title, .rst-content .wy-alert-success.admonition-todo .wy-alert-title, .rst-content .wy-alert-success.admonition .admonition-title, .rst-content .wy-alert-success.admonition .wy-alert-title, .rst-content .wy-alert-success.attention .admonition-title, .rst-content .wy-alert-success.attention .wy-alert-title, .rst-content .wy-alert-success.caution .admonition-title, .rst-content .wy-alert-success.caution .wy-alert-title, .rst-content .wy-alert-success.danger .admonition-title, .rst-content .wy-alert-success.danger .wy-alert-title, .rst-content .wy-alert-success.error .admonition-title, .rst-content .wy-alert-success.error .wy-alert-title, .rst-content .wy-alert-success.note .admonition-title, .rst-content .wy-alert-success.note .wy-alert-title, .rst-content .wy-alert-success.seealso .admonition-title, .rst-content .wy-alert-success.seealso .wy-alert-title, .rst-content .wy-alert-success.warning .admonition-title, .rst-content .wy-alert-success.warning .wy-alert-title, .rst-content .wy-alert.wy-alert-success .admonition-title, .wy-alert.wy-alert-success .rst-content .admonition-title, .wy-alert.wy-alert-success .wy-alert-title { background: rgb(26, 188, 156); }
+.rst-content .admonition-todo p:last-child, .rst-content .admonition p:last-child, .rst-content .attention p:last-child, .rst-content .caution p:last-child, .rst-content .danger p:last-child, .rst-content .error p:last-child, .rst-content .hint p:last-child, .rst-content .important p:last-child, .rst-content .note p:last-child, .rst-content .seealso p:last-child, .rst-content .tip p:last-child, .rst-content .warning p:last-child, .wy-alert p:last-child { margin-bottom: 0px; }
+button { font-size: 100%; margin: 0px; vertical-align: baseline; cursor: pointer; line-height: normal; appearance: button; }
+.btn { display: inline-block; border-radius: 2px; line-height: normal; white-space: nowrap; text-align: center; cursor: pointer; font-size: 100%; padding: 6px 12px 8px; color: rgb(255, 255, 255); border: 1px solid rgba(0, 0, 0, 0.1); background-color: rgb(39, 174, 96); text-decoration: none; font-weight: 400; font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif; box-shadow: rgba(255, 255, 255, 0.5) 0px 1px 2px -1px inset, rgba(0, 0, 0, 0.1) 0px -2px 0px 0px inset; vertical-align: middle; zoom: 1; -webkit-user-drag: none; user-select: none; transition: 0.1s linear; }
+.btn:hover { background: rgb(44, 195, 107); color: rgb(255, 255, 255); }
+.btn:focus { background: rgb(44, 195, 107); outline: 0px; }
+.btn:active { box-shadow: rgba(0, 0, 0, 0.05) 0px -1px 0px 0px inset, rgba(0, 0, 0, 0.1) 0px 2px 0px 0px inset; padding: 8px 12px 6px; }
+.btn:visited { color: rgb(255, 255, 255); }
+.btn-disabled, .btn-disabled:active, .btn-disabled:focus, .btn-disabled:hover, .btn:disabled { background-image: none; opacity: 0.4; cursor: not-allowed; box-shadow: none; }
+.btn-neutral { background-color: rgb(243, 246, 246) !important; color: rgb(64, 64, 64) !important; }
+.btn-neutral:hover { background-color: rgb(229, 235, 235) !important; color: rgb(64, 64, 64); }
+.btn-neutral:visited { color: rgb(64, 64, 64) !important; }
+input, select, textarea { font-size: 100%; margin: 0px; vertical-align: baseline; }
+input { line-height: normal; }
+input[type="color"], input[type="date"], input[type="datetime-local"], input[type="datetime"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] { appearance: none; padding: 6px; display: inline-block; border: 1px solid rgb(204, 204, 204); font-size: 80%; font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif; box-shadow: rgb(221, 221, 221) 0px 1px 3px inset; border-radius: 0px; transition: border 0.3s linear; }
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime-local"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus { outline: 0px; border-color: rgb(51, 51, 51); }
+@media only screen and (max-width: 480px){.wy-form input[type="color"], .wy-form input[type="date"], .wy-form input[type="datetime-local"], .wy-form input[type="datetime"], .wy-form input[type="email"], .wy-form input[type="month"], .wy-form input[type="number"], .wy-form input[type="password"], .wy-form input[type="search"], .wy-form input[type="tel"], .wy-form input[type="text"], .wy-form input[type="time"], .wy-form input[type="url"], .wy-form input[type="week"], .wy-form label { margin-bottom: 0.3em; display: block; }
+}
+.float-left { float: left; }
+.float-right { float: right; }
+a { color: rgb(41, 128, 185); text-decoration: none; cursor: pointer; }
+a:hover { color: rgb(48, 145, 209); }
+a:visited { color: rgb(155, 89, 182); }
+html { height: 100%; }
+body, html { overflow-x: hidden; }
+body { font-family: Lato, proxima-nova, "Helvetica Neue", Arial, sans-serif; font-weight: 400; color: rgb(64, 64, 64); min-height: 100%; background: rgb(237, 240, 242); }
+.rst-content .toctree-wrapper > p.caption, h1, h2, h3, h4, h5, h6, legend { margin-top: 0px; font-weight: 700; font-family: "Roboto Slab", ff-tisa-web-pro, Georgia, Arial, sans-serif; }
+p { line-height: 24px; font-size: 16px; margin: 0px 0px 24px; }
+h1 { font-size: 175%; }
+.rst-content .toctree-wrapper > p.caption, h2 { font-size: 150%; }
+hr { display: block; height: 1px; border-width: 1px 0px 0px; border-style: solid none none; border-color: rgb(225, 228, 229) currentcolor currentcolor; border-image: none; margin: 24px 0px; padding: 0px; }
+.rst-content code, .rst-content tt, code { white-space: nowrap; max-width: 100%; background: rgb(255, 255, 255); border: 1px solid rgb(225, 228, 229); font-size: 75%; padding: 0px 5px; font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace; color: rgb(231, 76, 60); overflow-x: auto; }
+.rst-content .section ul, .rst-content .toctree-wrapper ul, .rst-content section ul, .wy-plain-list-disc, article ul { list-style: disc; line-height: 24px; margin-bottom: 24px; }
+.rst-content .section ul li, .rst-content .toctree-wrapper ul li, .rst-content section ul li, .wy-plain-list-disc li, article ul li { list-style: disc; margin-left: 24px; }
+.rst-content .section ul li p:last-child, .rst-content .section ul li ul, .rst-content .toctree-wrapper ul li p:last-child, .rst-content .toctree-wrapper ul li ul, .rst-content section ul li p:last-child, .rst-content section ul li ul, .wy-plain-list-disc li p:last-child, .wy-plain-list-disc li ul, article ul li p:last-child, article ul li ul { margin-bottom: 0px; }
+.rst-content .section ol, .rst-content .section ol.arabic, .rst-content .toctree-wrapper ol, .rst-content .toctree-wrapper ol.arabic, .rst-content section ol, .rst-content section ol.arabic, .wy-plain-list-decimal, article ol { list-style: decimal; line-height: 24px; margin-bottom: 24px; }
+.rst-content .section ol.arabic li, .rst-content .section ol li, .rst-content .toctree-wrapper ol.arabic li, .rst-content .toctree-wrapper ol li, .rst-content section ol.arabic li, .rst-content section ol li, .wy-plain-list-decimal li, article ol li { list-style: decimal; margin-left: 24px; }
+.rst-content .section ol.arabic li ul, .rst-content .section ol li p:last-child, .rst-content .section ol li ul, .rst-content .toctree-wrapper ol.arabic li ul, .rst-content .toctree-wrapper ol li p:last-child, .rst-content .toctree-wrapper ol li ul, .rst-content section ol.arabic li ul, .rst-content section ol li p:last-child, .rst-content section ol li ul, .wy-plain-list-decimal li p:last-child, .wy-plain-list-decimal li ul, article ol li p:last-child, article ol li ul { margin-bottom: 0px; }
+.rst-content .section ol.arabic li ul li, .rst-content .section ol li ul li, .rst-content .toctree-wrapper ol.arabic li ul li, .rst-content .toctree-wrapper ol li ul li, .rst-content section ol.arabic li ul li, .rst-content section ol li ul li, .wy-plain-list-decimal li ul li, article ol li ul li { list-style: disc; }
+html { font-size: 16px; }
+.wy-menu a:hover { text-decoration: none; }
+.wy-menu-vertical { width: 300px; }
+.wy-menu-vertical header, .wy-menu-vertical p.caption { color: rgb(85, 165, 217); height: 32px; line-height: 32px; padding: 0px 1.618em; margin: 12px 0px 0px; display: block; font-weight: 700; text-transform: uppercase; font-size: 85%; white-space: nowrap; }
+.wy-menu-vertical ul { margin-bottom: 0px; }
+.wy-menu-vertical li.current { background: rgb(227, 227, 227); }
+.wy-menu-vertical li.current a { color: grey; border-right: 1px solid rgb(201, 201, 201); padding: 0.4045em 2.427em; }
+.wy-menu-vertical li.current a:hover { background: rgb(214, 214, 214); }
+.rst-content .wy-menu-vertical li tt, .wy-menu-vertical li .rst-content tt, .wy-menu-vertical li code { border-width: medium; border-style: none; border-color: currentcolor; border-image: none; background: inherit; color: inherit; padding-left: 0px; padding-right: 0px; }
+.wy-menu-vertical li button.toctree-expand { display: block; float: left; margin-left: -1.2em; line-height: 18px; color: rgb(77, 77, 77); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; background: none; padding: 0px; }
+.wy-menu-vertical li.current > a, .wy-menu-vertical li.on a { color: rgb(64, 64, 64); font-weight: 700; position: relative; background: rgb(252, 252, 252); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; padding: 0.4045em 1.618em; }
+.wy-menu-vertical li.current > a:hover, .wy-menu-vertical li.on a:hover { background: rgb(252, 252, 252); }
+.wy-menu-vertical li.current > a:hover button.toctree-expand, .wy-menu-vertical li.on a:hover button.toctree-expand { color: grey; }
+.wy-menu-vertical li.current > a button.toctree-expand, .wy-menu-vertical li.on a button.toctree-expand { display: block; line-height: 18px; color: rgb(51, 51, 51); }
+.wy-menu-vertical li.toctree-l1.current > a { border-bottom: 1px solid rgb(201, 201, 201); border-top: 1px solid rgb(201, 201, 201); }
+.wy-menu-vertical .toctree-l1.current .toctree-l2 > ul, .wy-menu-vertical .toctree-l2.current .toctree-l3 > ul, .wy-menu-vertical .toctree-l3.current .toctree-l4 > ul, .wy-menu-vertical .toctree-l4.current .toctree-l5 > ul, .wy-menu-vertical .toctree-l5.current .toctree-l6 > ul, .wy-menu-vertical .toctree-l6.current .toctree-l7 > ul, .wy-menu-vertical .toctree-l7.current .toctree-l8 > ul, .wy-menu-vertical .toctree-l8.current .toctree-l9 > ul, .wy-menu-vertical .toctree-l9.current .toctree-l10 > ul, .wy-menu-vertical .toctree-l10.current .toctree-l11 > ul { display: none; }
+.wy-menu-vertical .toctree-l1.current .current.toctree-l2 > ul, .wy-menu-vertical .toctree-l2.current .current.toctree-l3 > ul, .wy-menu-vertical .toctree-l3.current .current.toctree-l4 > ul, .wy-menu-vertical .toctree-l4.current .current.toctree-l5 > ul, .wy-menu-vertical .toctree-l5.current .current.toctree-l6 > ul, .wy-menu-vertical .toctree-l6.current .current.toctree-l7 > ul, .wy-menu-vertical .toctree-l7.current .current.toctree-l8 > ul, .wy-menu-vertical .toctree-l8.current .current.toctree-l9 > ul, .wy-menu-vertical .toctree-l9.current .current.toctree-l10 > ul, .wy-menu-vertical .toctree-l10.current .current.toctree-l11 > ul { display: block; }
+.wy-menu-vertical li.toctree-l3, .wy-menu-vertical li.toctree-l4 { font-size: 0.9em; }
+.wy-menu-vertical li.toctree-l2 a, .wy-menu-vertical li.toctree-l3 a, .wy-menu-vertical li.toctree-l4 a, .wy-menu-vertical li.toctree-l5 a, .wy-menu-vertical li.toctree-l6 a, .wy-menu-vertical li.toctree-l7 a, .wy-menu-vertical li.toctree-l8 a, .wy-menu-vertical li.toctree-l9 a, .wy-menu-vertical li.toctree-l10 a { color: rgb(64, 64, 64); }
+.wy-menu-vertical li.toctree-l2 a:hover button.toctree-expand, .wy-menu-vertical li.toctree-l3 a:hover button.toctree-expand, .wy-menu-vertical li.toctree-l4 a:hover button.toctree-expand, .wy-menu-vertical li.toctree-l5 a:hover button.toctree-expand, .wy-menu-vertical li.toctree-l6 a:hover button.toctree-expand, .wy-menu-vertical li.toctree-l7 a:hover button.toctree-expand, .wy-menu-vertical li.toctree-l8 a:hover button.toctree-expand, .wy-menu-vertical li.toctree-l9 a:hover button.toctree-expand, .wy-menu-vertical li.toctree-l10 a:hover button.toctree-expand { color: grey; }
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a, .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a, .wy-menu-vertical li.toctree-l4.current li.toctree-l5 > a, .wy-menu-vertical li.toctree-l5.current li.toctree-l6 > a, .wy-menu-vertical li.toctree-l6.current li.toctree-l7 > a, .wy-menu-vertical li.toctree-l7.current li.toctree-l8 > a, .wy-menu-vertical li.toctree-l8.current li.toctree-l9 > a, .wy-menu-vertical li.toctree-l9.current li.toctree-l10 > a, .wy-menu-vertical li.toctree-l10.current li.toctree-l11 > a { display: block; }
+.wy-menu-vertical li.toctree-l2.current > a { padding: 0.4045em 2.427em; }
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a { padding: 0.4045em 1.618em 0.4045em 4.045em; }
+.wy-menu-vertical li.toctree-l3.current > a { padding: 0.4045em 4.045em; }
+.wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a { padding: 0.4045em 1.618em 0.4045em 5.663em; }
+.wy-menu-vertical li.toctree-l2.current > a, .wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a { background: rgb(201, 201, 201); }
+.wy-menu-vertical li.toctree-l2 button.toctree-expand { color: rgb(163, 163, 163); }
+.wy-menu-vertical li.toctree-l3.current > a, .wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a { background: rgb(189, 189, 189); }
+.wy-menu-vertical li.toctree-l3 button.toctree-expand { color: rgb(150, 150, 150); }
+.wy-menu-vertical li.current ul { display: block; }
+.wy-menu-vertical li ul { margin-bottom: 0px; display: none; }
+.wy-menu-vertical li ul li a { margin-bottom: 0px; color: rgb(217, 217, 217); font-weight: 400; }
+.wy-menu-vertical a { line-height: 18px; padding: 0.4045em 1.618em; display: block; position: relative; font-size: 90%; color: rgb(217, 217, 217); }
+.wy-menu-vertical a:hover { background-color: rgb(78, 74, 74); cursor: pointer; }
+.wy-menu-vertical a:hover button.toctree-expand { color: rgb(217, 217, 217); }
+.wy-menu-vertical a:active { background-color: rgb(41, 128, 185); cursor: pointer; color: rgb(255, 255, 255); }
+.wy-menu-vertical a:active button.toctree-expand { color: rgb(255, 255, 255); }
+.wy-side-nav-search { display: block; width: 300px; padding: 0.809em; margin-bottom: 0.809em; z-index: 200; background-color: rgb(41, 128, 185); text-align: center; color: rgb(252, 252, 252); }
+.wy-side-nav-search input[type="text"] { width: 100%; border-radius: 50px; padding: 6px 12px; border-color: rgb(36, 114, 164); }
+.wy-side-nav-search .wy-dropdown > a, .wy-side-nav-search > a { color: rgb(252, 252, 252); font-size: 100%; font-weight: 700; display: inline-block; padding: 4px 6px; margin-bottom: 0.809em; max-width: 100%; }
+.wy-side-nav-search .wy-dropdown > a:hover, .wy-side-nav-search > a:hover { background: rgba(255, 255, 255, 0.1); }
+.wy-side-nav-search > div.version { margin-top: -0.4045em; margin-bottom: 0.809em; font-weight: 400; color: rgba(255, 255, 255, 0.3); }
+.wy-body-for-nav { background: rgb(252, 252, 252); }
+.wy-grid-for-nav { position: absolute; width: 100%; height: 100%; }
+.wy-nav-side { position: fixed; top: 0px; bottom: 0px; left: 0px; padding-bottom: 2em; width: 300px; overflow: hidden; min-height: 100%; color: rgb(155, 155, 155); background: rgb(52, 49, 49); z-index: 200; }
+.wy-side-scroll { width: 320px; position: relative; overflow: hidden scroll; height: 100%; }
+.wy-nav-top { display: none; background: rgb(41, 128, 185); color: rgb(255, 255, 255); padding: 0.4045em 0.809em; position: relative; line-height: 50px; text-align: center; font-size: 100%; }
+.wy-nav-top::after, .wy-nav-top::before { display: table; content: ""; }
+.wy-nav-top::after { clear: both; }
+.wy-nav-top a { color: rgb(255, 255, 255); font-weight: 700; }
+.wy-nav-top i { font-size: 30px; float: left; cursor: pointer; padding-top: inherit; }
+.wy-nav-content-wrap { margin-left: 300px; background: rgb(252, 252, 252); min-height: 100%; }
+.wy-nav-content { padding: 1.618em 3.236em; height: 100%; max-width: 800px; margin: auto; }
+footer { color: grey; }
+footer p { margin-bottom: 12px; }
+.rst-footer-buttons { }
+.rst-footer-buttons::after, .rst-footer-buttons::before { width: 100%; display: table; content: ""; }
+.rst-footer-buttons::after { clear: both; }
+@media screen and (max-width: 768px){.wy-body-for-nav { background: rgb(252, 252, 252); }
+.wy-nav-top { display: block; }
+.wy-nav-side { left: -300px; }
+.wy-menu.wy-menu-vertical, .wy-side-nav-search, .wy-side-scroll { width: auto; }
+.wy-nav-content-wrap { margin-left: 0px; }
+.wy-nav-content-wrap .wy-nav-content { padding: 1.618em; }
+}
+@media screen and (min-width: 1100px){.wy-nav-content-wrap { background: rgba(0, 0, 0, 0.05); }
+.wy-nav-content { margin: 0px; background: rgb(252, 252, 252); }
+}
+@media print{.rst-versions, .wy-nav-side, footer { display: none; }
+.wy-nav-content-wrap { margin-left: 0px; }
+}
+.rst-content .toctree-wrapper > p.caption, .rst-content h1, .rst-content h2, .rst-content h3, .rst-content h4, .rst-content h5, .rst-content h6 { margin-bottom: 24px; }
+.rst-content .admonition, .rst-content .admonition-todo, .rst-content .attention, .rst-content .caution, .rst-content .danger, .rst-content .error, .rst-content .hint, .rst-content .important, .rst-content .note, .rst-content .seealso, .rst-content .tip, .rst-content .warning { clear: both; }
+.rst-content .admonition-todo .last, .rst-content .admonition-todo > :last-child, .rst-content .admonition .last, .rst-content .admonition > :last-child, .rst-content .attention .last, .rst-content .attention > :last-child, .rst-content .caution .last, .rst-content .caution > :last-child, .rst-content .danger .last, .rst-content .danger > :last-child, .rst-content .error .last, .rst-content .error > :last-child, .rst-content .hint .last, .rst-content .hint > :last-child, .rst-content .important .last, .rst-content .important > :last-child, .rst-content .note .last, .rst-content .note > :last-child, .rst-content .seealso .last, .rst-content .seealso > :last-child, .rst-content .tip .last, .rst-content .tip > :last-child, .rst-content .warning .last, .rst-content .warning > :last-child { margin-bottom: 0px; }
+.rst-content .admonition-title::before { margin-right: 4px; }
+.rst-content .section ol li > *, .rst-content .section ul li > *, .rst-content .toctree-wrapper ol li > *, .rst-content .toctree-wrapper ul li > *, .rst-content section ol li > *, .rst-content section ul li > * { margin-top: 12px; margin-bottom: 12px; }
+.rst-content .section ol li > :first-child, .rst-content .section ul li > :first-child, .rst-content .toctree-wrapper ol li > :first-child, .rst-content .toctree-wrapper ul li > :first-child, .rst-content section ol li > :first-child, .rst-content section ul li > :first-child { margin-top: 0px; }
+.rst-content .section ol li > p, .rst-content .section ol li > p:last-child, .rst-content .section ul li > p, .rst-content .section ul li > p:last-child, .rst-content .toctree-wrapper ol li > p, .rst-content .toctree-wrapper ol li > p:last-child, .rst-content .toctree-wrapper ul li > p, .rst-content .toctree-wrapper ul li > p:last-child, .rst-content section ol li > p, .rst-content section ol li > p:last-child, .rst-content section ul li > p, .rst-content section ul li > p:last-child { margin-bottom: 12px; }
+.rst-content .section ol li > p:only-child, .rst-content .section ol li > p:only-child:last-child, .rst-content .section ul li > p:only-child, .rst-content .section ul li > p:only-child:last-child, .rst-content .toctree-wrapper ol li > p:only-child, .rst-content .toctree-wrapper ol li > p:only-child:last-child, .rst-content .toctree-wrapper ul li > p:only-child, .rst-content .toctree-wrapper ul li > p:only-child:last-child, .rst-content section ol li > p:only-child, .rst-content section ol li > p:only-child:last-child, .rst-content section ul li > p:only-child, .rst-content section ul li > p:only-child:last-child { margin-bottom: 0px; }
+.rst-content .section ol li > ol, .rst-content .section ol li > ul, .rst-content .section ul li > ol, .rst-content .section ul li > ul, .rst-content .toctree-wrapper ol li > ol, .rst-content .toctree-wrapper ol li > ul, .rst-content .toctree-wrapper ul li > ol, .rst-content .toctree-wrapper ul li > ul, .rst-content section ol li > ol, .rst-content section ol li > ul, .rst-content section ul li > ol, .rst-content section ul li > ul { margin-bottom: 12px; }
+.rst-content .section ol.simple li > *, .rst-content .section ol.simple li ol, .rst-content .section ol.simple li ul, .rst-content .section ul.simple li > *, .rst-content .section ul.simple li ol, .rst-content .section ul.simple li ul, .rst-content .toctree-wrapper ol.simple li > *, .rst-content .toctree-wrapper ol.simple li ol, .rst-content .toctree-wrapper ol.simple li ul, .rst-content .toctree-wrapper ul.simple li > *, .rst-content .toctree-wrapper ul.simple li ol, .rst-content .toctree-wrapper ul.simple li ul, .rst-content section ol.simple li > *, .rst-content section ol.simple li ol, .rst-content section ol.simple li ul, .rst-content section ul.simple li > *, .rst-content section ul.simple li ol, .rst-content section ul.simple li ul { margin-top: 0px; margin-bottom: 0px; }
+.rst-content p a { overflow-wrap: anywhere; }
+.rst-content .btn:focus { outline: solid 2px; }
+@font-face { font-family: Lato; src: url(fonts/lato-normal.woff2?bd03a2cc277bbbc338d464e679fe9942) format("woff2"), url(fonts/lato-normal.woff?27bd77b9162d388cb8d4c4217c7c5e2a) format("woff"); font-weight: 400; font-style: normal; font-display: block; }
+@font-face { font-family: Lato; src: url(fonts/lato-bold.woff2?cccb897485813c7c256901dbca54ecf2) format("woff2"), url(fonts/lato-bold.woff?d878b6c29b10beca227e9eef4246111b) format("woff"); font-weight: 700; font-style: normal; font-display: block; }
+@font-face { font-family: Lato; src: url(fonts/lato-bold-italic.woff2?0b6bb6725576b072c5d0b02ecdd1900d) format("woff2"), url(fonts/lato-bold-italic.woff?9c7e4e9eb485b4a121c760e61bc3707c) format("woff"); font-weight: 700; font-style: italic; font-display: block; }
+@font-face { font-family: Lato; src: url(fonts/lato-normal-italic.woff2?4eb103b4d12be57cb1d040ed5e162e9d) format("woff2"), url(fonts/lato-normal-italic.woff?f28f2d6482446544ef1ea1ccc6dd5892) format("woff"); font-weight: 400; font-style: italic; font-display: block; }
+@font-face { font-family: "Roboto Slab"; font-style: normal; font-weight: 400; src: url(fonts/Roboto-Slab-Regular.woff2?7abf5b8d04d26a2cafea937019bca958) format("woff2"), url(fonts/Roboto-Slab-Regular.woff?c1be9284088d487c5e3ff0a10a92e58c) format("woff"); font-display: block; }
+@font-face { font-family: "Roboto Slab"; font-style: normal; font-weight: 700; src: url(fonts/Roboto-Slab-Bold.woff2?9984f4a9bda09be08e83f2506954adbe) format("woff2"), url(fonts/Roboto-Slab-Bold.woff?bed5564a116b05148e3b3bea6fb1162a) format("woff"); font-display: block; }
+.wy-nav-side { position: fixed; top: 0px; bottom: 0px; left: 0px; width: 300px; overflow: hidden auto; z-index: 200; background: rgb(4, 41, 100); }
+.wy-menu-vertical li.current > a { background: rgb(10, 90, 184); color: white; }
+.wy-menu-vertical li.current > a:hover { background: rgb(26, 111, 216); }
+@media screen and (max-width: 768px){.wy-nav-side { left: -300px; }
+.wy-nav-content { margin-left: 0px; }
+}
+.wy-menu-vertical li.toctree-l1.current > a { background: rgb(10, 90, 184); color: white; }
+.wy-menu-vertical li.toctree-l2.current > a { background: rgb(26, 111, 216); color: white; }
+.wy-nav-content-wrap { background: rgb(255, 255, 255); }
+.wy-menu-vertical li.toctree-l1 > a { font-weight: bold; }
+.wy-menu-vertical li.toctree-l2 > a { padding-left: 2em; }
+.wy-menu-vertical li.toctree-l3 > a { padding-left: 3em; }
+.wy-menu-vertical li.toctree-l4 > a { padding-left: 4em; }
+.wy-grid-for-nav { position: relative; }
+.wy-nav-side { position: fixed !important; top: 0px !important; bottom: 0px !important; left: 0px !important; width: 300px !important; overflow: hidden auto !important; z-index: 200 !important; background: rgb(4, 41, 100) !important; }
+.toctree-l1.current > a { background: rgb(10, 90, 184) !important; color: white !important; }
+.toctree-l2.current > a { background: rgb(26, 111, 216) !important; color: white !important; }
+.toctree-l1 > a { font-weight: bold !important; }
+.toctree-l2 > a { padding-left: 2em !important; }
+.toctree-l3 > a { padding-left: 3em !important; }
+.toctree-l4 > a { padding-left: 4em !important; }
+.wy-nav-content { margin-left: 0px !important; padding: 1.618em 2em !important; max-width: 1200px !important; margin-right: auto !important; }
+@media screen and (max-width: 768px){.wy-nav-side { left: -300px !important; }
+.wy-nav-content { margin-left: 0px !important; }
+}
+.wy-menu-vertical li.toctree-l1.current > a { background: rgb(10, 90, 184) !important; color: white !important; font-weight: bold !important; }
+.wy-menu-vertical li.toctree-l2.current > a { background: rgb(26, 111, 216) !important; color: white !important; }
+.wy-menu-vertical li.toctree-l3.current > a { background: rgb(95, 169, 255) !important; color: white !important; }
+.wy-menu-vertical li.toctree-l1.current > ul { display: block !important; }
+.wy-menu-vertical li.toctree-l2.current > ul { display: block !important; }
+.wy-menu-vertical li.current > a { background: rgb(10, 90, 184) !important; color: white !important; }
+.wy-menu-vertical li.current > a:hover { background: rgb(26, 111, 216) !important; }
+.wy-grid-for-nav { position: relative !important; }
+.wy-menu-vertical li.toctree-l1.current > a, .wy-menu-vertical li.toctree-l2.current > a, .wy-menu-vertical li.toctree-l3.current > a { background: rgb(10, 90, 184) !important; color: white !important; }
+.wy-menu-vertical li.toctree-l1 > a { font-weight: bold !important; }
+.wy-menu-vertical li.toctree-l2 > a { padding-left: 2em !important; }
+.wy-menu-vertical li.toctree-l3 > a { padding-left: 3em !important; }
+.wy-menu-vertical li.toctree-l4 > a { padding-left: 4em !important; }
+.wy-menu-vertical li.toctree-l1.current > ul { display: block !important; visibility: visible !important; opacity: 1 !important; }
+.wy-menu-vertical li.toctree-l2.current > ul { display: block !important; visibility: visible !important; opacity: 1 !important; }
+.wy-nav-content { transition: none !important; }
+.wy-nav-content-wrap { background: rgb(255, 255, 255) !important; }
+code, .rst-content tt, .rst-content code { border-radius: 4px; padding: 0.1em 0.3em; background: rgb(35, 39, 46) !important; color: rgb(248, 248, 242) !important; }
+body, .wy-nav-content { font-family: Muli, Arial, sans-serif; color: rgb(51, 51, 51); }
+html body .wy-nav-content-wrap .wy-nav-content { padding: 1.618em 2em !important; margin-left: 0px !important; margin-right: auto !important; max-width: 1000px !important; }
+.wy-nav-content-wrap { margin-left: 300px !important; }
+.wy-side-nav-search { background: rgb(21, 119, 212) !important; }
+@layer defaults{:root { --ea-container-md: 720px; --ea-container-lg: 960px; --ea-container-xl: 1040px; --ea-image-width: 120px; --ea-image-width-xs: 44px; --ea-image-placement-width: 180px; --ea-image-placement-width-horizontal: 320px; --ea-image-logo-width: 80px; --ea-fixedheader-height: 50px; --ea-font-size: 14px; --ea-font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; --ea-bgcolor: rgba(0, 0, 0, 0.03); --ea-bgcolor-dark: rgba(255, 255, 255, 0.05); --ea-font-size-text-only-header: 18px; --ea-stylefixed-bgcolor: rgb(220, 220, 220); --ea-stylefixed-bgcolor-dark: rgb(80, 80, 80); --ea-color-link: rgb(80, 80, 80); --ea-color-link-dark: rgb(220, 220, 220); --ea-color-link-active: rgb(54.5, 54.5, 54.5); --ea-color-link-dark-active: rgb(245.5, 245.5, 245.5); --ea-color-link-callout: rgb(105.5, 105.5, 105.5); --ea-color-link-callout-dark: rgb(194.5, 194.5, 194.5); --ea-color-link-callout-active: #505050; --ea-color-link-callout-dark-active: gainsboro; --ea-color-link-bold: #088cdb; --ea-color-link-bold-dark: rgb(80.3788546256, 185.6299559471, 248.6211453744); --ea-color-domain: rgb(156.5, 156.5, 156.5); --ea-color-domain-dark: rgb(143.5, 143.5, 143.5); --ea-image-logo-filter: grayscale(1); --ea-image-logo-filter-dark: grayscale(1) invert(1); }
+}
+[data-ea-publisher].loaded { font-size: var(--ea-font-size); font-family: var(--ea-font-family); font-weight: normal; font-style: normal; letter-spacing: 0px; vertical-align: baseline; line-height: 1.3em; }
+[data-ea-publisher].loaded a { text-decoration: none; }
+[data-ea-publisher].loaded .ea-pixel { display: none; }
+[data-ea-publisher].loaded .ea-content { margin: 1em 1em 0.5em; padding: 1em; background: var(--ea-bgcolor); color: var(--ea-color-link); }
+[data-ea-publisher].loaded .ea-content a:link { color: var(--ea-color-link); }
+[data-ea-publisher].loaded .ea-content a:visited { color: var(--ea-color-link); }
+[data-ea-publisher].loaded .ea-content a:hover { color: var(--ea-color-link-active); }
+[data-ea-publisher].loaded .ea-content a:active { color: var(--ea-color-link-active); }
+[data-ea-publisher].loaded .ea-content a strong, [data-ea-publisher].loaded .ea-content a b { color: var(--ea-color-link-bold); }
+[data-ea-publisher].loaded .ea-callout { color: var(--ea-color-link-callout); }
+[data-ea-publisher].loaded .ea-callout a { font-size: 0.8em; }
+[data-ea-publisher].loaded .ea-callout a:link { color: var(--ea-color-link-callout); }
+[data-ea-publisher].loaded .ea-callout a:visited { color: var(--ea-color-link-callout); }
+[data-ea-publisher].loaded .ea-callout a:hover { color: var(--ea-color-link-callout-active); }
+[data-ea-publisher].loaded .ea-callout a:active { color: var(--ea-color-link-callout-active); }
+html.dark [data-ea-publisher].loaded.adaptive-css, body.dark [data-ea-publisher].loaded.adaptive-css, html[data-theme="dark"] [data-ea-publisher].loaded.adaptive-css, body[data-theme="dark"] [data-ea-publisher].loaded.adaptive-css, html[data-bs-theme="dark"] [data-ea-publisher].loaded.adaptive-css, body[data-bs-theme="dark"] [data-ea-publisher].loaded.adaptive-css { --ea-bgcolor: var(--ea-bgcolor-dark); --ea-stylefixed-bgcolor: var(--ea-stylefixed-bgcolor-dark); --ea-color-link: var(--ea-color-link-dark); --ea-color-link-active: var(--ea-color-link-dark-active); --ea-color-link-callout: var(--ea-color-link-callout-dark); --ea-color-link-callout-active: var(--ea-color-link-callout-dark-active); --ea-color-link-bold: var(--ea-color-link-bold-dark); --ea-color-domain: var(--ea-color-domain-dark); --ea-image-logo-filter: var(--ea-image-logo-filter-dark); }
+@media (prefers-color-scheme: dark){html.auto [data-ea-publisher].loaded.adaptive-css, body.auto [data-ea-publisher].loaded.adaptive-css, html.system [data-ea-publisher].loaded.adaptive-css, body.system [data-ea-publisher].loaded.adaptive-css, html[data-theme="auto"] [data-ea-publisher].loaded.adaptive-css, body[data-theme="auto"] [data-ea-publisher].loaded.adaptive-css, html[data-bs-theme="auto"] [data-ea-publisher].loaded.adaptive-css, body[data-bs-theme="auto"] [data-ea-publisher].loaded.adaptive-css { --ea-bgcolor: var(--ea-bgcolor-dark); --ea-stylefixed-bgcolor: var(--ea-stylefixed-bgcolor-dark); --ea-color-link: var(--ea-color-link-dark); --ea-color-link-active: var(--ea-color-link-dark-active); --ea-color-link-callout: var(--ea-color-link-callout-dark); --ea-color-link-callout-active: var(--ea-color-link-callout-dark-active); --ea-color-link-bold: var(--ea-color-link-bold-dark); --ea-color-domain: var(--ea-color-domain-dark); --ea-image-logo-filter: var(--ea-image-logo-filter-dark); }
+}
+[data-ea-publisher].loaded .ea-content { border: 0px; border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 3px; }
+[data-ea-publisher].loaded.raised .ea-content { border: 0px; border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 3px; }
+[data-ea-type="text"].loaded, .ea-type-text { font-size: var(--ea-font-size); }
+[data-ea-type="text"].loaded .ea-content, .ea-type-text .ea-content { text-align: left; }
+[data-ea-type="text"].loaded .ea-callout, .ea-type-text .ea-callout { margin: 0.5em 1em 1em; padding-left: 1em; padding-right: 1em; text-align: right; font-style: italic; }
+[data-ea-style="fixedfooter"].loaded { position: fixed; bottom: 0px; left: 0px; z-index: 200; width: 100%; max-width: 100%; }
+[data-ea-style="fixedfooter"].loaded .ea-type-text { width: 100%; max-width: 100%; display: flex; z-index: 200; background: var(--ea-stylefixed-bgcolor); }
+[data-ea-style="fixedfooter"].loaded .ea-type-text .ea-content { border: 0px; border-radius: 3px; box-shadow: none; }
+[data-ea-style="fixedfooter"].loaded .ea-type-text .ea-content { background-color: inherit; max-width: 100%; margin: 0px; padding: 1em; flex: 1 1 auto; }
+[data-ea-style="fixedfooter"].loaded .ea-type-text .ea-callout { max-width: 100%; margin: 0px; padding: 1em; flex: initial; }
+@media (max-width: 576px){[data-ea-style="fixedfooter"].loaded .ea-type-text .ea-callout { display: none; }
+}
+[data-ea-style="fixedfooter"].loaded .ea-type-text .ea-fixedfooter-hide { cursor: pointer; color: var(--ea-color-link); padding: 1em; flex: initial; margin: auto 0px; }
+[data-ea-style="fixedfooter"].loaded .ea-type-text .ea-fixedfooter-hide span { padding: 0.25em; font-size: 0.8em; font-weight: bold; border: .15em solid var(--ea-color-link); border-radius: 0.5em; white-space: nowrap; }
+.xd-video{margin:8px 0 32px;padding:22px;border-radius:16px;background:#f3f7fc;border:1px solid #d3e1f2;font-family:Muli, Lato, Arial, sans-serif;box-sizing:border-box;clear:both}
+.xd-inline{margin:20px 0 28px}
+.xd-label{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12px;line-height:1;color:#042964;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.xd-dot{width:8px;height:8px;border-radius:50%;background:#2980b9;display:inline-block}
+.xd-title{font-weight:700;font-size:22px;line-height:1.3;color:#042964;margin:0 0 6px;padding:0}
+.xd-sub{font-size:16px;line-height:1.5;color:#555;margin:0 0 16px;padding:0}
+.xd-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#111;box-shadow:0 6px 20px rgba(0,0,0,.10)}
+.xd-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@media (max-width:600px){.xd-video{padding:14px}.xd-title{font-size:18px}}</style></head><body class="wy-body-for-nav"><div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side" style="position: fixed; top: 0px; bottom: 0px; left: 0px; width: 300px; z-index: 200; padding-bottom: 47.2031px;">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" style="background: #2980B9">
+
+          
+          
+          <a href="https://docs.ictvoip.ca/en/latest/index.html" class="icon icon-home">
+            ictVoIP Billing for WHMCS
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation Guide</span></p>
+<ul class="current" aria-expanded="true">
+<li class="toctree-l1 current" aria-expanded="true"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started.html" style="background: rgb(52, 152, 219); color: white;"><button class="toctree-expand" title="Open/close menu"></button>Getting Started</a><ul class="" aria-expanded="false">
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started.html#key-features">Key Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started.html#supported-versions">Supported Versions</a></li>
+<li class="toctree-l2 current" aria-expanded="true"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started.html#installation-process" style="background: rgb(52, 152, 219); color: white;"><button class="toctree-expand" title="Open/close menu"></button>Installation Process</a><ul class="" aria-expanded="false">
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html"><button class="toctree-expand" title="Open/close menu"></button>Quick Install</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#supported-versions">Supported Versions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#before-you-begin">Before You Begin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#installation-checklist">Installation Checklist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-1-prepare-your-environment">Step 1: Prepare Your Environment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-2-upload-the-package">Step 2: Upload the Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-3-extract-and-merge-files">Step 3: Extract and Merge Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-4-activate-the-ictvoip-billing-addon">Step 4: Activate the ictVoIP Billing Addon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#database-initialization">Database Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-5-configure-providers-and-server-modules">Step 5: Configure Providers and Server Modules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-6-run-the-system-health-check">Step 6: Run the System Health Check</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/lets_encrypt.html"><button class="toctree-expand" title="Open/close menu"></button>Let’s Encrypt &amp; SSL/TLS Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/lets_encrypt.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/lets_encrypt.html#general-requirements">General Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/lets_encrypt.html#fusionpbx-wildcard-ssl-example-workflow">FusionPBX Wildcard SSL (Example Workflow)</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current" aria-expanded="true"><a class="reference internal current" href="https://docs.ictvoip.ca/en/latest/applications/provision.html#" aria-expanded="true" style="background: rgb(41, 128, 185); color: white;"><button class="toctree-expand" title="Open/close menu"></button>Provisioning Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/applications/provision.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/applications/provision.html#key-concepts">Key Concepts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/applications/provision.html#provisioning-flow-high-level">Provisioning Flow (High-Level)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/applications/provision.html#where-to-configure-what">Where to Configure What</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/applications/provision.html#how-admin-tools-use-this-flow">How Admin Tools Use This Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/security.html"><button class="toctree-expand" title="Open/close menu"></button>Security Hardening Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/security.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/security.html#core-security-principles">Core Security Principles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/security.html#whmcs-ictvoip-billing">WHMCS &amp; ictVoIP Billing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/security.html#pbx-api-security-fusionpbx-example">PBX API Security (FusionPBX Example)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/security.html#monitoring-logging">Monitoring &amp; Logging</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/security.html#regular-reviews">Regular Reviews</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/backup.html"><button class="toctree-expand" title="Open/close menu"></button>Backup Strategy Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/backup.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/backup.html#what-needs-to-be-backed-up">What Needs to Be Backed Up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/backup.html#backup-frequency">Backup Frequency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/backup.html#storage-retention">Storage &amp; Retention</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/backup.html#testing-backups">Testing Backups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/backup.html#coordination-with-upgrades">Coordination with Upgrades</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/restore.html"><button class="toctree-expand" title="Open/close menu"></button>Restore Strategy Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/restore.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/restore.html#general-restore-principles">General Restore Principles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/restore.html#typical-restore-scenarios">Typical Restore Scenarios</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/restore.html#validation-after-restore">Validation After Restore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/restore.html#documentation-follow-up">Documentation &amp; Follow-Up</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/firewall.html"><button class="toctree-expand" title="Open/close menu"></button>Firewall &amp; Network Access Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/firewall.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/firewall.html#core-principles">Core Principles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/firewall.html#typical-port-considerations">Typical Port Considerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/firewall.html#api-whitelisting">API Whitelisting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/firewall.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Upgrades &amp; Maintenance</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html"><button class="toctree-expand" title="Open/close menu"></button>Upgrading ictVoIP Billing and FusionPBX Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html#before-you-start">Before You Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html#upgrade-the-ictvoip-billing-addon-whmcs">Upgrade the ictVoIP Billing Addon (WHMCS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html#upgrade-the-fusionpbx-server-module-whmcs">Upgrade the FusionPBX Server Module (WHMCS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html#update-the-fusionpbx-api-files-each-fusionpbx-server">Update the FusionPBX API Files (Each FusionPBX Server)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html#post-upgrade-testing"><button class="toctree-expand" title="Open/close menu"></button>Post-Upgrade Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html#test-connection-from-whmcs-to-fusionpbx">Test connection from WHMCS to FusionPBX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html#verify-tenant-and-gateway-synchronisation">Verify tenant and gateway synchronisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html#optional-billing-sanity-check">Optional: Billing sanity check</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/upgrades.html#rollback-if-needed">Rollback (If Needed)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Administration Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html"><button class="toctree-expand" title="Open/close menu"></button>Admin Quick Start</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html#before-you-begin">Before You Begin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html#step-1-add-a-provider">Step 1: Add a Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html#step-2-add-a-pbx-server">Step 2: Add a PBX Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html#step-3-create-a-package">Step 3: Create a Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html#step-4-create-a-client-product">Step 4: Create a Client Product</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html#step-5-provision-the-client-service">Step 5: Provision the Client Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html#step-6-set-up-autobill">Step 6: Set Up Autobill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html#step-7-go-live">Step 7: Go Live</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/quickstart_admin.html#common-first-time-issues">Common First-Time Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin.html"><button class="toctree-expand" title="Open/close menu"></button>Admin Area</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin.html#key-features"><button class="toctree-expand" title="Open/close menu"></button>Key Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html"><button class="toctree-expand" title="Open/close menu"></button>Installing ictVoIP Billing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html#purchase-download">Purchase &amp; Download</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html#installation-process">Installation Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html#database-setup">Database Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html#license-activation">License Activation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html#system-health-check">System Health Check</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html#server-provisioning-settings-tests">Server Provisioning Settings &amp; Tests</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/ictvoipbilling.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html"><button class="toctree-expand" title="Open/close menu"></button>Server Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#fusionpbx-integration">FusionPBX Integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#fusionpbx-api-theme-installation">FusionPBX API &amp; Theme Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#whmcs-server-module-installation">WHMCS Server Module Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#server-configuration">Server Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#api-credential-whitelist-verification">API Credential/Whitelist Verification</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#security-considerations">Security Considerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#fs-pbx-integration">FS PBX Integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html"><button class="toctree-expand" title="Open/close menu"></button>Provider Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html#provider-configuration">Provider Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html#configuration-options">Configuration Options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html#tariff-linking">Tariff Linking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html#package-integration">Package Integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html#regional-configuration">Regional Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html#best-practices">Best Practices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html"><button class="toctree-expand" title="Open/close menu"></button>Tariff Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html#tariff-import-process">Tariff Import Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html#csv-mapping-requirements">CSV Mapping Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html#import-process">Import Process</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html#assigning-custom-rates">Assigning Custom Rates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html#special-number-billing">Special Number Billing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html#id2">Tariff Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html#best-practices">Best Practices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/tariffs.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html"><button class="toctree-expand" title="Open/close menu"></button>Package Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#package-configuration">Package Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#fusionpbx-real-time-billing">FusionPBX Real-Time Billing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#custom-rate-configuration">Custom Rate Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#package-types">Package Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#rate-management">Rate Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#best-practices">Best Practices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/packages.html#latest-package-rates-ui-functionality-updates">Latest Package Rates UI &amp; Functionality Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_models.html"><button class="toctree-expand" title="Open/close menu"></button>Billing Models &amp; Product Design</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_models.html#the-voip-credit-foundation">The VoIP Credit Foundation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_models.html#rate-sources-where-the-price-comes-from">Rate Sources (where the price comes from)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_models.html#billing-timing-when-money-moves">Billing Timing (when money moves)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_models.html#account-controls-whmcs-module-controls-working-together">Account Controls (WHMCS + module controls working together)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_models.html#worked-configurations">Worked Configurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_models.html#common-misconfigurations">Common Misconfigurations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_models.html#designing-your-own-model">Designing your own model</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html"><button class="toctree-expand" title="Open/close menu"></button>Billing Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#tariff-management">Tariff Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#package-management">Package Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#autobill-debug">Autobill Debug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#cdr-filtering">CDR Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#exclude-suppress-filtering">Exclude/Suppress Filtering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#exclude-from-billing">Exclude from Billing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#filter-configuration-best-practices">Filter Configuration Best Practices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/billing_management.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html"><button class="toctree-expand" title="Open/close menu"></button>Automated Billing (Autobill)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#version-comparison">Version Comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#autobill-v3-consolidated-invoicing">Autobill v3 Consolidated Invoicing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#cron-configuration">CRON Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#whmcs-automation-and-prorata-behavior">WHMCS Automation and Prorata Behavior</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#manual-testing">Manual Testing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#debug-configuration">Debug Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#billing-integration">Billing Integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#performance-optimization">Performance Optimization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#special-number-billing">Special Number Billing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#error-handling">Error Handling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#security-considerations">Security Considerations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html"><button class="toctree-expand" title="Open/close menu"></button>CDR E.164 Validator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#what-is-e-164">What is E.164?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#installation-setup">Installation &amp; Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#country-code-detection">Country Code Detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#usage-guide">Usage Guide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#understanding-the-results">Understanding the Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#fusionpbx-integration">FusionPBX Integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#technical-details">Technical Details</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#benefits">Benefits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#best-practices">Best Practices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#next-steps">Next Steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/cdr-e164-validator.html#version-history">Version History</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Client Services</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html"><button class="toctree-expand" title="Open/close menu"></button>Client Services Admin Area</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#core-tools"><button class="toctree-expand" title="Open/close menu"></button>Core Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#core-tools-index">Core Tools Index</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#extension-management-enhancements">Extension Management Enhancements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#configure-gateways">Configure Gateways</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#manage-acls"><button class="toctree-expand" title="Open/close menu"></button>Manage ACLs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#acl-list-and-node-management">ACL list and node management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#typical-workflow">Typical workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#manage-destination-routes">Manage Destination Routes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#manage-outbound-routes"><button class="toctree-expand" title="Open/close menu"></button>Manage Outbound Routes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#list-and-search">List and search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#view-route-details-and-xml">View route details and XML</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#edit-an-outbound-route">Edit an outbound route</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#assign-and-sync">Assign and sync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#xml-editing">XML editing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#quick-create-tenant">Quick Create Tenant</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#view-logs">View Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#settings-server-provisioning-settings">Settings (Server Provisioning Settings)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#dry-run-provisioning"><button class="toctree-expand" title="Open/close menu"></button>Dry-Run Provisioning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#what-dry-run-can-show">What dry-run can show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#where-dry-run-is-available">Where dry-run is available</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#template-management"><button class="toctree-expand" title="Open/close menu"></button>Template Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#available-template-actions">Available template actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#id1">Typical workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html#dashboard-statistics">Dashboard Statistics</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Client Admin</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html"><button class="toctree-expand" title="Open/close menu"></button>Client Admin Area</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#product-assignment"><button class="toctree-expand" title="Open/close menu"></button>Product Assignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#fusionpbx-product-assignment">FusionPBX Product Assignment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#formatting-to-vodia-api">Formatting to Vodia API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#formatting-to-lesnet-api">Formatting to LesNet API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#special-considerations">Special Considerations:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#low-credit-balance-alerts-suspend"><button class="toctree-expand" title="Open/close menu"></button>Low Credit Balance Alerts/Suspend</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#low-balance">Low Balance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#suspend">Suspend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#autosuspend"><button class="toctree-expand" title="Open/close menu"></button>AutoSuspend</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#auto-suspend-mode-fusionpbx">Auto Suspend Mode (FusionPBX)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#autosuspend-cron">AutoSuspend CRON</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#included-minutes-exhaustion-fusionpbx">Included Minutes Exhaustion (FusionPBX)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#manual-suspend">Manual Suspend</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#custom-client-profile-fields"><button class="toctree-expand" title="Open/close menu"></button>Custom Client Profile Fields</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#id1">Autosuspend</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#low-balance-threshold">Low Balance Threshold</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#auto-voip-top-up">Auto VoIP Top-Up</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html"><button class="toctree-expand" title="Open/close menu"></button>AutoSuspend Testing Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#how-it-works">How It Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#scope-triggers-and-exemptions"><button class="toctree-expand" title="Open/close menu"></button>Scope, Triggers, and Exemptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#suspension-method">Suspension Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#exempting-a-client">Exempting a Client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#free-minutes-and-real-time-billing">Free Minutes and Real-Time Billing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#critical-testing-rules">Critical Testing Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#where-to-verify-gateway-status">Where to Verify Gateway Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#proper-testing-sequence"><button class="toctree-expand" title="Open/close menu"></button>Proper Testing Sequence</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#test-1-suspension">Test 1: Suspension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#test-2-unsuspension">Test 2: Unsuspension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#test-3-re-suspension">Test 3: Re-Suspension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#troubleshooting-stuck-states">Troubleshooting Stuck States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#cron-setup">CRON Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#debug-vs-cron-mode">Debug vs CRON Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/autosuspend_testing.html#database-table">Database Table</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Client Area</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientarea.html"><button class="toctree-expand" title="Open/close menu"></button>Client Area Custom Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbx.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Client Area &amp; CDRs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbx.html#reaching-the-cdr-view">Reaching the CDR View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbx.html#cdr-view-export">CDR View &amp; Export</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbx.html"><button class="toctree-expand" title="Open/close menu"></button>FS PBX Client Area &amp; CDRs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbx.html#reaching-the-cdr-view">Reaching the CDR View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbx.html#cdr-view-export">CDR View &amp; Export</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbxrecordings.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Call Recordings Client Area</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbxrecordings.html#reaching-the-dashboard">Reaching the Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbxrecordings.html#dashboard-features">Dashboard Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbxrecordings.html"><button class="toctree-expand" title="Open/close menu"></button>FS PBX Call Recordings Client Area</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbxrecordings.html#reaching-the-dashboard">Reaching the Dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbxrecordings.html#dashboard-features">Dashboard Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html"><button class="toctree-expand" title="Open/close menu"></button>VoIPms Client Area &amp; VoIP Panel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#voip-admin-panel">VoIP Admin Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#call-detail-records">Call Detail Records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#faxing">Faxing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#call-rates">Call Rates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#voicemail-panel">VoiceMail Panel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#callerid-block">CallerID Block</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Supported PBX Systems</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Installation Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#compatibility-matrix">Compatibility Matrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#installation-methods">Installation Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#automated-installation-recommended"><button class="toctree-expand" title="Open/close menu"></button>Automated Installation (Recommended)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-1-download-and-extract-locally">Step 1: Download and Extract Locally</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-2-upload-to-fusionpbx-server">Step 2: Upload to FusionPBX Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-3-run-the-api-installer-script">Step 3: Run the API Installer Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-4-install-theme-customizations-optional">Step 4: Install Theme Customizations (Optional)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-5-verify-installation">Step 5: Verify Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#manual-installation"><button class="toctree-expand" title="Open/close menu"></button>Manual Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-1-backup-existing-system">Step 1: Backup Existing System</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-2-install-api-files">Step 2: Install API Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-3-install-theme-files">Step 3: Install Theme Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-4-configure-database-for-custom-login-page">Step 4: Configure Database (for Custom Login Page)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-5-restart-services">Step 5: Restart Services</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#docker-installation"><button class="toctree-expand" title="Open/close menu"></button>Docker Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-1-create-dockerfile">Step 1: Create Dockerfile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#step-2-build-and-run">Step 2: Build and Run</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#post-installation-verification"><button class="toctree-expand" title="Open/close menu"></button>Post-Installation Verification</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#check-api-endpoints">1. Check API Endpoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#verify-theme-installation">2. Verify Theme Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#check-database-settings">3. Check Database Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#test-whmcs-integration-optional">4. Test WHMCS Integration (Optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#troubleshooting-installation"><button class="toctree-expand" title="Open/close menu"></button>Troubleshooting Installation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#common-issues">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/installation.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Configuration Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#whmcs-module-configuration"><button class="toctree-expand" title="Open/close menu"></button>WHMCS Module Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#module-installation">Module Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#server-configuration">Server Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#product-configuration">Product Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#license-activation">License Activation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#api-configuration"><button class="toctree-expand" title="Open/close menu"></button>API Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#authentication-setup">Authentication Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#api-whitelist-configuration">API Whitelist Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#api-endpoints">API Endpoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#database-configuration">Database Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#system-configuration"><button class="toctree-expand" title="Open/close menu"></button>System Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#fusionpbx-settings">FusionPBX Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#web-server-configuration">Web Server Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#php-configuration">PHP Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#freeswitch-configuration">FreeSWITCH Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#special-number-billing"><button class="toctree-expand" title="Open/close menu"></button>Special Number Billing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#use-cases">Use Cases</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#enabling-special-number-billing">Enabling Special Number Billing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#configuring-special-rate-rules">Configuring Special Rate Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#example-configuration">Example Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#invoice-display">Invoice Display</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#client-area-cdr-view">Client Area CDR View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#real-time-billing-integration">Real-Time Billing Integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#troubleshooting-special-rates">Troubleshooting Special Rates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#included-minutes-exhaustion"><button class="toctree-expand" title="Open/close menu"></button>Included Minutes Exhaustion</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#how-usage-is-counted">How usage is counted</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#blocking-behavior">Blocking behavior</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#email-notifications">Email notifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#cron-setup">CRON setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#billing-integration-setup"><button class="toctree-expand" title="Open/close menu"></button>Billing Integration Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#whmcs-product-configuration">WHMCS Product Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#automation-rules">Automation Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#email-templates">Email Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#monitoring-and-maintenance"><button class="toctree-expand" title="Open/close menu"></button>Monitoring and Maintenance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#health-checks">Health Checks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#log-monitoring">Log Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#backup-configuration">Backup Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#security-configuration"><button class="toctree-expand" title="Open/close menu"></button>Security Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#ssl-tls-setup">SSL/TLS Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#firewall-configuration">Firewall Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/configuration.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX API Endpoints</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#api-summary">API Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#authentication">Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#api-endpoints"><button class="toctree-expand" title="Open/close menu"></button>API Endpoints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#status-api">Status API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#registration-status-api">Registration Status API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#gateway-provisioning-api">Gateway Provisioning API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#gateway-list-api">Gateway List API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#cdr-export-api">CDR Export API</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#developer-notes">Developer Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#error-handling">Error Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#rate-limiting">Rate Limiting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/api_endpoints.html#security-considerations">Security Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Troubleshooting Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#common-issues-and-solutions"><button class="toctree-expand" title="Open/close menu"></button>Common Issues and Solutions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#authentication-failures">Authentication Failures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#api-endpoint-issues">API Endpoint Issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#database-connection-problems">Database Connection Problems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#theme-and-interface-issues">Theme and Interface Issues</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#freeswitch-communication-problems">FreeSWITCH Communication Problems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#cdr-data-collection-issues">CDR Data Collection Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#diagnostic-tools"><button class="toctree-expand" title="Open/close menu"></button>Diagnostic Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#system-health-check-script">System Health Check Script</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#log-analysis"><button class="toctree-expand" title="Open/close menu"></button>Log Analysis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#system-logs">System Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#performance-monitoring"><button class="toctree-expand" title="Open/close menu"></button>Performance Monitoring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#system-resources">System Resources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#database-performance">Database Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#preventive-maintenance"><button class="toctree-expand" title="Open/close menu"></button>Preventive Maintenance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#regular-maintenance-tasks">Regular Maintenance Tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#backup-and-recovery">Backup and Recovery</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#security-considerations"><button class="toctree-expand" title="Open/close menu"></button>Security Considerations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#access-control">Access Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx/troubleshooting.html#monitoring-and-alerting">Monitoring and Alerting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html#key-features">Key Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html#api-access-whitelist">API Access Whitelist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html#supported-versions">Supported Versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html#architecture">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html#included-apis-versions">Included APIs &amp; Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fspbx.html"><button class="toctree-expand" title="Open/close menu"></button>FS PBX Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fspbx.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fspbx.html#supported-operations">Supported Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fspbx.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fspbx.html#server-setup">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fspbx.html#client-services-workflows">Client Services Workflows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fspbx.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fspbx.html#provider-setup">Provider Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fspbx.html#fs-pbx-vs-fusionpbx">FS PBX vs FusionPBX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html"><button class="toctree-expand" title="Open/close menu"></button>Vodia Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html#api-integration">API Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html#client-area-features">Client Area Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html#automated-billing">Automated Billing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Optional Addons &amp; Apps</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/extra_addons.html"><button class="toctree-expand" title="Open/close menu"></button>Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/ictvoipbox.html"><button class="toctree-expand" title="Open/close menu"></button>ictVoIP Box</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/overview.html"><button class="toctree-expand" title="Open/close menu"></button>ictVoIP Box Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/overview.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/overview.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/overview.html#high-level-capabilities">High-Level Capabilities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/installation.html"><button class="toctree-expand" title="Open/close menu"></button>Installation &amp; Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/installation.html#installing-ictvoip-box">Installing ictVoIP Box</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/installation.html#installation-steps">Installation Steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/installation.html#initial-configuration">Initial Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html"><button class="toctree-expand" title="Open/close menu"></button>Provider Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#provider-settings">Provider Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#gateway-templates">Gateway Templates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#route-templates">Route Templates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#acls">ACLs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#did-search">DID Search</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#settings">Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#health-check">Health Check</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#did-purchase-cron">DID Purchase Cron</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#multi-provider-support">Multi-Provider Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#advanced-provider-credential-fields">Advanced Provider Credential Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#client-access-setting">Client Access Setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provider_configuration.html#welcome-email-template">Welcome Email Template</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/product_mapping.html"><button class="toctree-expand" title="Open/close menu"></button>Product Mapping Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/product_mapping.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/product_mapping.html#three-mapping-methods">Three Mapping Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/product_mapping.html#critical-requirements">Critical Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/product_mapping.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/client_checkout.html"><button class="toctree-expand" title="Open/close menu"></button>Client Checkout Experience</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/client_checkout.html#provisioning-methods">Provisioning Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/client_checkout.html#checkout-wizard-flow">Checkout Wizard Flow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/client_checkout.html#post-checkout-order-status">Post-Checkout Order Status</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provisioning.html"><button class="toctree-expand" title="Open/close menu"></button>Provisioning Workflows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provisioning.html#provisioning-standard">Provisioning (Standard)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provisioning.html#admin-queue-management"><button class="toctree-expand" title="Open/close menu"></button>Admin Queue Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/provisioning.html#provisioning-queue-interface">Provisioning Queue Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/troubleshooting.html"><button class="toctree-expand" title="Open/close menu"></button>Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/troubleshooting.html#common-issues">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/maintenance.html"><button class="toctree-expand" title="Open/close menu"></button>Maintenance Tasks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/maintenance.html#daily-tasks">Daily Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/maintenance.html#support-resources"><button class="toctree-expand" title="Open/close menu"></button>Support &amp; Resources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/maintenance.html#documentation">Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoipbox/maintenance.html#getting-help">Getting Help</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fusionpbx_recordings.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Call Recordings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fusionpbx_recordings.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fusionpbx_recordings.html#fusionpbx-host-api-update-required">FusionPBX Host — API Update Required</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fusionpbx_recordings.html#setup-step-by-step">Setup — Step by Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fusionpbx_recordings.html#billing-optional"><button class="toctree-expand" title="Open/close menu"></button>Billing (Optional)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fusionpbx_recordings.html#cron-configuration">CRON Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fusionpbx_recordings.html#security">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fusionpbx_recordings.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fspbx_recordings.html"><button class="toctree-expand" title="Open/close menu"></button>FS PBX Call Recordings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fspbx_recordings.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fspbx_recordings.html#setup-step-by-step">Setup — Step by Step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fspbx_recordings.html#billing-optional"><button class="toctree-expand" title="Open/close menu"></button>Billing (Optional)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fspbx_recordings.html#cron-configuration">CRON Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fspbx_recordings.html#security">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/pbxrecordings/fspbx_recordings.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/themes/custom_themes.html"><button class="toctree-expand" title="Open/close menu"></button>Custom Themes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/themes/custom_themes.html#fusionpbx-landing-page"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Landing Page</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/themes/custom_themes.html#theme-installation-customization">Theme Installation &amp; Customization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html"><button class="toctree-expand" title="Open/close menu"></button>ictPopup Manager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#configuration"><button class="toctree-expand" title="Open/close menu"></button>Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#default-style-presets">Default Style Presets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#creating-a-popup">Creating a Popup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#managing-style-presets">Managing Style Presets</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#usage-examples"><button class="toctree-expand" title="Open/close menu"></button>Usage Examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#holiday-sale-popup">Holiday Sale Popup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#maintenance-alert">Maintenance Alert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#product-specific-upsell">Product-Specific Upsell</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#troubleshooting"><button class="toctree-expand" title="Open/close menu"></button>Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#popup-not-appearing">Popup Not Appearing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#animations-not-working">Animations Not Working</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#style-presets-missing">Style Presets Missing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#technical-details"><button class="toctree-expand" title="Open/close menu"></button>Technical Details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#database-tables">Database Tables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#client-side-integration">Client-Side Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#changelog"><button class="toctree-expand" title="Open/close menu"></button>Changelog</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#version-1-1-0-2024-12-27">Version 1.1.0 (2024-12-27)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#version-1-0-0-2024-12-26">Version 1.0.0 (2024-12-26)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#support">Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/addons/ictpopupmanager.html#requirements">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX CDR Maintenance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html#getting-started">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html#exporting-any-v5-1">Exporting (any v5.1+)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html#importing">Importing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html#selective-exporting">Selective Exporting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html"><button class="toctree-expand" title="Open/close menu"></button>ictSIP Registration Status/Alerts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html#voipms-registrations-status"><button class="toctree-expand" title="Open/close menu"></button>VoIPms Registrations Status</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html#log-view-and-export-to-excel-or-csv">Log View and Export to Excel or CSV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html#log-settings">Log Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html#email-templates">Email Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html#fusionpbx-registrations-status"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Registrations Status</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html#id1">Log View and Export to Excel or CSV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html#id2">Log Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictsipreg/ictsipreg.html#id3">Email Templates</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/extra_addons/sip_faxing.html"><button class="toctree-expand" title="Open/close menu"></button>ictSIP Faxing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/extra_addons/sip_faxing.html#fax-panel"><button class="toctree-expand" title="Open/close menu"></button>Fax Panel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/extra_addons/sip_faxing.html#fax-view-email">Fax View/Email</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/extra_addons/sip_faxing.html#sending-faxes">Sending Faxes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html"><button class="toctree-expand" title="Open/close menu"></button>Client Admin Area</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#product-assignment"><button class="toctree-expand" title="Open/close menu"></button>Product Assignment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#fusionpbx-product-assignment">FusionPBX Product Assignment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#formatting-to-vodia-api">Formatting to Vodia API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#formatting-to-lesnet-api">Formatting to LesNet API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#special-considerations">Special Considerations:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#low-credit-balance-alerts-suspend"><button class="toctree-expand" title="Open/close menu"></button>Low Credit Balance Alerts/Suspend</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#low-balance">Low Balance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#suspend">Suspend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#autosuspend">AutoSuspend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#included-minutes-exhaustion-fusionpbx">Included Minutes Exhaustion (FusionPBX)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#manual-suspend">Manual Suspend</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#custom-client-profile-fields"><button class="toctree-expand" title="Open/close menu"></button>Custom Client Profile Fields</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#id1">Autosuspend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#low-balance-threshold">Low Balance Threshold</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientadmin/clientadmin.html#auto-voip-top-up">Auto VoIP Top-Up</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/voiprecordings/voiprecordings.html"><button class="toctree-expand" title="Open/close menu"></button>VoIP.ms Call Recordings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/voiprecordings/voiprecordings.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/voiprecordings/voiprecordings.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/voiprecordings/voiprecordings.html#security">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/voiprecordings/voiprecordings.html#server-configuration">Server Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/voiprecordings/voiprecordings.html#product-configuration">Product Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/voiprecordings/voiprecordings.html#client-area-usage">Client Area Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/voiprecordings/voiprecordings.html#autobill">Autobill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/voiprecordings/voiprecordings.html#bulk-backfill-tool">Bulk Backfill Tool</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoiptranscribe/ictvoiptranscribe.html"><button class="toctree-expand" title="Open/close menu"></button>VoIP.ms Call Transcription</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoiptranscribe/ictvoiptranscribe.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoiptranscribe/ictvoiptranscribe.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoiptranscribe/ictvoiptranscribe.html#server-and-product-configuration">Server and Product Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoiptranscribe/ictvoiptranscribe.html#client-area">Client Area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/ictvoiptranscribe/ictvoiptranscribe.html#autobill">Autobill</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientarea.html"><button class="toctree-expand" title="Open/close menu"></button>Client Area Custom Views</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbx.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Client Area &amp; CDRs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbx.html#reaching-the-cdr-view">Reaching the CDR View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbx.html#cdr-view-export">CDR View &amp; Export</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbx.html"><button class="toctree-expand" title="Open/close menu"></button>FS PBX Client Area &amp; CDRs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbx.html#reaching-the-cdr-view">Reaching the CDR View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbx.html#cdr-view-export">CDR View &amp; Export</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbxrecordings.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Call Recordings Client Area</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbxrecordings.html#reaching-the-dashboard">Reaching the Dashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafusionpbxrecordings.html#dashboard-features">Dashboard Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbxrecordings.html"><button class="toctree-expand" title="Open/close menu"></button>FS PBX Call Recordings Client Area</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbxrecordings.html#reaching-the-dashboard">Reaching the Dashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareafspbxrecordings.html#dashboard-features">Dashboard Features</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html"><button class="toctree-expand" title="Open/close menu"></button>VoIPms Client Area &amp; VoIP Panel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#voip-admin-panel">VoIP Admin Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#call-detail-records">Call Detail Records</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#faxing">Faxing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#call-rates">Call Rates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#voicemail-panel">VoiceMail Panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/clientarea/clientareaproviders.html#callerid-block">CallerID Block</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/extra_addons/server_widget.html"><button class="toctree-expand" title="Open/close menu"></button>Server Status Widget</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/extra_addons/server_widget.html#server-widget">Server Widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/extra_addons/server_widget.html#fusionpbx-status-widget"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX Status Widget</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/extra_addons/server_widget.html#whmcs-setup">WHMCS Setup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Practical Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html"><button class="toctree-expand" title="Open/close menu"></button>Quick Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#supported-versions">Supported Versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#before-you-begin">Before You Begin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#installation-checklist">Installation Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-1-prepare-your-environment">Step 1: Prepare Your Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-2-upload-the-package">Step 2: Upload the Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-3-extract-and-merge-files">Step 3: Extract and Merge Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-4-activate-the-ictvoip-billing-addon">Step 4: Activate the ictVoIP Billing Addon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#database-initialization">Database Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-5-configure-providers-and-server-modules">Step 5: Configure Providers and Server Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/getting_started/quick_install.html#step-6-run-the-system-health-check">Step 6: Run the System Health Check</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html"><button class="toctree-expand" title="Open/close menu"></button>FusionPBX CDR Maintenance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html#exporting-any-v5-1">Exporting (any v5.1+)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html#importing">Importing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/cdr_main/cdr_maint.html#selective-exporting">Selective Exporting</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Core Technologies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/overview.html"><button class="toctree-expand" title="Open/close menu"></button>Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/whmcs.html">WHMCS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html"><button class="toctree-expand" title="Open/close menu"></button>PHP Requirements &amp; Health Check</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#what-the-health-check-verifies">What the Health Check Verifies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#required-php-extensions">Required PHP Extensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#apache-htaccess-mod-php">Apache (<code class="docutils literal notranslate"><span class="pre">.htaccess</span></code> / mod_php)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#php-fpm-cgi-no-mod-php">PHP-FPM / CGI (no mod_php)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#virtualmin"><button class="toctree-expand" title="Open/close menu"></button>Virtualmin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#ioncube-loader-path">ionCube Loader Path</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#litespeed-lsapi">LiteSpeed (lsapi)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#litespeed-timeout-overrides">LiteSpeed Timeout Overrides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#timezone-fallback-configuration-php">Timezone Fallback (configuration.php)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/php.html#verifying-with-the-health-check">Verifying with the Health Check</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/postgresql.html">PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/mysql.html">MySQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/mariadb.html">MariaDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/phpmyadmin.html">phpMyAdmin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/fusionpbx.html">FusionPBX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/fspbx.html"><button class="toctree-expand" title="Open/close menu"></button>FS PBX</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/fspbx.html#fs-pbx-vs-fusionpbx">FS PBX vs FusionPBX</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/vodia.html">Vodia PBX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/freeswitch.html">FreeSWITCH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/litespeed.html">LiteSpeed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/apache.html">Apache HTTP Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/nginx.html">Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/cpanel.html">cPanel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/debian.html">Debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/ubuntu.html">Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/ssl_tls.html">SSL/TLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/reference/cron.html">CRON</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Glossary</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/glossary.html">Glossary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Support Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html"><button class="toctree-expand" title="Open/close menu"></button>❓ Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html#installation-activation">Installation &amp; Activation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html#providers-pbx-servers">Providers &amp; PBX Servers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html#packages-tariffs-billing">Packages, Tariffs &amp; Billing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html#client-services-provisioning">Client Services &amp; Provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html#call-recordings-transcriptions">Call Recordings &amp; Transcriptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html#ictvoip-billing-v1-5-0-multi-provider">ictVoIP Billing v1.5.0 Multi-Provider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html#ictvoip-box">ictVoIP Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html#support-requests-and-bug-reports">Support Requests and Bug Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/faq.html#when-to-contact-support">When to Contact Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/support_policy.html"><button class="toctree-expand" title="Open/close menu"></button>Support Policy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/support_policy.html#what-is-included">What is Included</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/support_policy.html#how-to-request-support">How to Request Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/support_policy.html#one-ticket-per-issue">One Ticket Per Issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/support_policy.html#what-is-a-bug">What is a Bug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/support_policy.html#when-a-support-plan-is-needed">When a Support Plan is Needed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/support_policy.html#self-help-resources">Self-Help Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/support_policy.html#off-channel-requests">Off-Channel Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/bug_reports.html"><button class="toctree-expand" title="Open/close menu"></button>Bug Reports</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/bug_reports.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/bug_reports.html#workflow">Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/bug_reports.html#after-submission">After Submission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/bug_reports.html#link-rules">Link Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/support/bug_reports.html#what-is-not-a-bug">What is Not a Bug</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/contributing.html"><button class="toctree-expand" title="Open/close menu"></button>Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://docs.ictvoip.ca/en/latest/contributing/contributing.html">Contributing</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap" style="padding-bottom: 47.2031px;"><nav class="wy-nav-top" aria-label="Mobile navigation menu" style="background: #2980B9">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="https://docs.ictvoip.ca/en/latest/index.html">ictVoIP Billing for WHMCS</a>
+      </nav>
+
+      <div class="wy-nav-content" style="margin-left: 300px;">
+        <div class="rst-content style-external-links">
+           
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="provisioning-overview">
+<h1>Provisioning Overview</h1>
+<section id="overview">
+<h2>Overview</h2>
+<p>This guide provides a high-level overview of how ictVoIP Billing
+interacts with supported PBX systems (such as FusionPBX and Vodia) to
+provision tenants, gateways, extensions, and related resources. It is
+intended for administrators who want to understand the end-to-end
+provisioning flow rather than implementation details.</p>
+<p>For PBX-specific details, see <a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html"><span class="doc">FusionPBX Integration</span></a> (FusionPBX
+Integration) and <a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html"><span class="doc">Vodia Module</span></a> (Vodia Module).</p>
+</section>
+<div class="xd-video"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 2 min</div><div class="xd-title">From order to invoice: how ictVoIP Billing provisions a new customer</div><p class="xd-sub">Prefer watching? See the whole provisioning flow, from a client's order in WHMCS to the PBX and back to the invoice.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide085f7gr9k" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: From order to invoice: how ictVoIP Billing provisions a new customer"></iframe></div></div><section id="key-concepts">
+<h2>Key Concepts</h2>
+<ul class="simple">
+<li><p><strong>Provider</strong> – Represents a VoIP provider or PBX integration in ictVoIP Billing and is linked to tariffs and packages for billing.</p></li>
+<li><p><strong>Tenant / Domain</strong> – Represents a customer or site in the PBX (for example, a FusionPBX domain) and is associated with one or more WHMCS services.</p></li>
+<li><p><strong>Gateway</strong> – Connects a tenant to a VoIP provider or trunk and is managed by the PBX, with key details mirrored into ictVoIP Billing for monitoring and billing alignment.</p></li>
+<li><p><strong>Extensions</strong> – Internal endpoints for a tenant (for example, SIP extensions) that are created and managed in the PBX, with lifecycle driven by WHMCS products and services.</p></li>
+</ul>
+</section>
+<section id="provisioning-flow-high-level">
+<h2>Provisioning Flow (High-Level)</h2>
+<p>The exact flow depends on your PBX module, but a typical pattern for a
+new customer is:</p>
+<ol class="arabic">
+<li><p><strong>Create or select a Provider</strong> in ictVoIP Billing</p>
+<ul class="simple">
+<li><p>Configure provider details and link the appropriate tariff.</p></li>
+<li><p>See <a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/providers.html"><span class="doc">Provider Management</span></a> for provider and tariff configuration.</p></li>
+</ul>
+</li>
+<li><p><strong>Create or assign a Tenant Domain</strong> in the PBX</p>
+<ul class="simple">
+<li><p>For FusionPBX, this corresponds to a domain entry.</p></li>
+<li><p>For other PBXs, the concept may differ but serves the same role.</p></li>
+<li><p>Tenant limits and descriptions can be synchronized between WHMCS
+and the PBX using the relevant server module.</p></li>
+</ul>
+</li>
+<li><p><strong>Create WHMCS Products/Services</strong> for VoIP Packages</p>
+<ul class="simple">
+<li><p>Use WHMCS products to represent VoIP packages (for example,
+included minutes, number of extensions, or feature bundles).</p></li>
+<li><p>Link products to the appropriate server module (for example,
+FusionPBX module).</p></li>
+</ul>
+</li>
+<li><p><strong>Provisioning on Order/Activation</strong></p>
+<p>When a client orders a service and it is activated:</p>
+<ul class="simple">
+<li><p>The WHMCS server module calls the PBX APIs to:
+- Create or assign the tenant domain (if not already present).
+- Create or update extensions according to the service plan.
+- Associate gateways or trunks where required.</p></li>
+<li><p>ictVoIP Billing mirrors key PBX data (domains, gateways,
+extensions) into its own tables for billing and management.</p></li>
+</ul>
+</li>
+<li><p><strong>Ongoing Changes</strong></p>
+<ul class="simple">
+<li><p>Upgrading/downgrading a package may adjust:
+- Allowed number of extensions.
+- Assigned gateways or dialplan rules.</p></li>
+<li><p>Suspending a service may:
+- Disable associated gateways or trunks.
+- Prevent further usage until re-activation.</p></li>
+<li><p>Terminating a service may:
+- Remove or disable tenant resources in the PBX.</p></li>
+</ul>
+</li>
+<li><p><strong>Billing and CDRs</strong></p>
+<ul class="simple">
+<li><p>PBX CDRs are imported into ictVoIP Billing for rating and
+invoicing.</p></li>
+<li><p>Billing logic (standard or real-time) uses provider and tariff
+configuration to calculate charges.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">Where to configure what</div><p class="xd-sub">Which settings live in WHMCS, in the ictVoIP Billing addon, and in the PBX.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide0a1cabqen" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: Where to configure what"></iframe></div></div><section id="where-to-configure-what">
+<h2>Where to Configure What</h2>
+<ul class="simple">
+<li><p><strong>WHMCS</strong>
+- Products, services, and billing cycles.
+- Client accounts and invoicing.</p></li>
+<li><p><strong>ictVoIP Billing Addon</strong>
+- Providers and tariffs.
+- Server definitions for PBX hosts.
+- High-level provisioning preferences (per module).
+- Server provisioning settings for PBX hosts, including credentials and API access hashes, along with tools to test connectivity and IP whitelisting before enabling automated provisioning.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Multi-server environments:</strong> If you have multiple FusionPBX servers
+configured in WHMCS, designate one as the default server. New services
+without a specific server assignment will use the default. To set a
+default, navigate to <strong>System Settings → Products &amp; Services → Servers</strong>
+and click on the server name. See <a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/servers.html"><span class="doc">Server Management</span></a> for details.</p>
+</div>
+<ul class="simple">
+<li><p><strong>PBX (for example, FusionPBX)</strong>
+- Actual domains/tenants.
+- Gateways, dialplans, and extensions.
+- Local security and network configuration.</p></li>
+</ul>
+<p>For module-specific provisioning details and API usage, see the
+relevant module documentation under <a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html"><span class="doc">FusionPBX Integration</span></a> and
+<a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html"><span class="doc">Vodia Module</span></a>.</p>
+</section>
+<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">What happens on upgrade, suspend and terminate</div><p class="xd-sub">What upgrades, suspensions and terminations do to extensions, gateways and billing.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide0dalk4asv" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: What happens on upgrade, suspend and terminate"></iframe></div></div><section id="how-admin-tools-use-this-flow">
+<h2>How Admin Tools Use This Flow</h2>
+<p>The provisioning concepts in this overview are surfaced to
+administrators through dedicated tools in the ictVoIP Billing addon:</p>
+<ul class="simple">
+<li><p>The <strong>Client Services Admin Area</strong> (<a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/client_services.html"><span class="doc">Client Services Admin Area</span></a>)
+provides a WHMCS-based dashboard for managing tenants/domains,
+gateways, extensions, destination routes, and related resources.
+Behind the scenes, it uses the same PBX APIs described in the module
+docs to apply changes to FusionPBX (or other PBXs) while keeping
+WHMCS services aligned.</p></li>
+<li><p>The <strong>Autobill</strong> system (<a class="reference internal" href="https://docs.ictvoip.ca/en/latest/admin/autobill.html"><span class="doc">Automated Billing (Autobill)</span></a>) consumes CDRs
+exported from the PBX and applies tariffs and package rules
+configured in Billing Management to turn call usage into
+billable charges.</p></li>
+</ul>
+<p>Together, these tools allow you to provision PBX resources and bill
+for usage from within WHMCS, while the low-level API and dialplan
+logic remain on the PBX itself.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="https://docs.ictvoip.ca/en/latest/getting_started/lets_encrypt.html" class="btn btn-neutral float-left" title="Let’s Encrypt &amp; SSL/TLS Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="https://docs.ictvoip.ca/en/latest/getting_started/security.html" class="btn btn-neutral float-right" title="Security Hardening Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>© Copyright 2026, ictVoIP Canada.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div><readthedocs-flyout></readthedocs-flyout><readthedocs-notification class="raised toast"></readthedocs-notification><div class="raised adaptive-css loaded" data-ea-type="text" data-ea-style="fixedfooter" data-ea-manual="true" data-ea-publisher="readthedocs" data-ea-keywords="acl|autobill|billing-software|call-billing|cdr|did|freeswitch|fusionpbx|gateway|hosted-pbx|ictvoip|ictvoip-billing|pbx|php|provisioning|readthedocs-project-822674|readthedocs-project-ictvoip-docs|sip-trunk|tariff|tenant|vodia|voip|voip-billing|whmcs" data-ea-campaign-types="community|house|paid" id="readthedocs-ea-text-fixedfooter-sphinx"><div class="ea-placement ea-type-text"><div class="ea-content"><div class="ea-text"><a href="https://server.ethicalads.io/proxy/click/11016/01a1c473-9854-7b02-ac87-476b7bc0b696/" rel="nofollow noopener sponsored" target="_blank"><strong class="ea-headline">90% shorter build times </strong><span class="ea-body">with modern, scalable CI/CD.</span><strong class="ea-cta"> Try out TeamCity by JetBrains</strong></a></div></div><div class="ea-callout"><a rel="nofollow noopener" target="_blank" href="https://www.ethicalads.io/advertisers/topics/backend-web/?ref=ea-text">Ads by EthicalAds</a></div><div class="ea-fixedfooter-hide"><span>Close Ad</span></div></div><img src="https://server.ethicalads.io/proxy/view/11016/01a1c473-9854-7b02-ac87-476b7bc0b696/" class="ea-pixel"></div><readthedocs-search class="raised floating"></readthedocs-search><readthedocs-hotkeys></readthedocs-hotkeys></body></html>

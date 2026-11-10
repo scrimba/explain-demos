@@ -1,0 +1,1651 @@
+<!doctype html><html lang="en-US"><head><meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chain of Custody: FileOnQ Software is the Evidence Control Center</title><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"><style>@font-face { font-family: Lato; font-style: italic; font-weight: 100; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u-w4BMUTPHjxsIPx-mPCc.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI9w2_FQfo.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHjxsAUi-v.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI5wq_FQfo.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 900; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI3wi_FQfo.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 100; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHh30AUi-v.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwaPHA.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjxAwWw.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwaPHA.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 900; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh50XSwaPHA.ttf") format("truetype"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 100; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u-w4BMUTPHjxsIPx-mPCQ.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI9w2_FQfr.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHjxsAUi-s.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI5wq_FQfr.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 900; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI3wi_FQfr.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 100; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHh30AUi-s.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwaPHw.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjxAwWA.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwaPHw.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 900; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh50XSwaPHw.woff") format("woff"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 100; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u-w4BMUTPHjxsIPx-mPCI.woff2") format("woff2"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI9w2_FQft.woff2") format("woff2"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHjxsAUi-q.woff2") format("woff2"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI5wq_FQft.woff2") format("woff2"); }
+@font-face { font-family: Lato; font-style: italic; font-weight: 900; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI3wi_FQft.woff2") format("woff2"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 100; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHh30AUi-q.woff2") format("woff2"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh7USSwaPGQ.woff2") format("woff2"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjxAwXg.woff2") format("woff2"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwaPGQ.woff2") format("woff2"); }
+@font-face { font-family: Lato; font-style: normal; font-weight: 900; font-display: swap; src: url("https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh50XSwaPGQ.woff2") format("woff2"); }
+.wp-block-search .wp-block-search__label { font-weight: 700; }
+.wp-block-search__button { border: 1px solid rgb(204, 204, 204); padding: 0.375em 0.625em; }
+:root { --wp--preset--aspect-ratio--square: 1; --wp--preset--aspect-ratio--4-3: 4/3; --wp--preset--aspect-ratio--3-4: 3/4; --wp--preset--aspect-ratio--3-2: 3/2; --wp--preset--aspect-ratio--2-3: 2/3; --wp--preset--aspect-ratio--16-9: 16/9; --wp--preset--aspect-ratio--9-16: 9/16; --wp--preset--color--black: #000000; --wp--preset--color--cyan-bluish-gray: #abb8c3; --wp--preset--color--white: #ffffff; --wp--preset--color--pale-pink: #f78da7; --wp--preset--color--vivid-red: #cf2e2e; --wp--preset--color--luminous-vivid-orange: #ff6900; --wp--preset--color--luminous-vivid-amber: #fcb900; --wp--preset--color--light-green-cyan: #7bdcb5; --wp--preset--color--vivid-green-cyan: #00d084; --wp--preset--color--pale-cyan-blue: #8ed1fc; --wp--preset--color--vivid-cyan-blue: #0693e3; --wp--preset--color--vivid-purple: #9b51e0; --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%); --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%); --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%); --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%); --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%); --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%); --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%); --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%); --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%); --wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%); --wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%); --wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%); --wp--preset--font-size--small: 13px; --wp--preset--font-size--medium: 20px; --wp--preset--font-size--large: 36px; --wp--preset--font-size--x-large: 42px; --wp--preset--spacing--20: 0.44rem; --wp--preset--spacing--30: 0.67rem; --wp--preset--spacing--40: 1rem; --wp--preset--spacing--50: 1.5rem; --wp--preset--spacing--60: 2.25rem; --wp--preset--spacing--70: 3.38rem; --wp--preset--spacing--80: 5.06rem; --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2); --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4); --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2); --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1); --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1); }
+:root { --wp--style--global--content-size: 823px; --wp--style--global--wide-size: 1080px; }
+:where(body) { margin: 0px; }
+body .is-layout-flex { display: flex; }
+body .is-layout-grid { display: grid; }
+body { padding: 0px; }
+:root :where(.wp-element-button, .wp-block-button__link) { background-color: rgb(50, 55, 60); border-width: 0px; color: rgb(255, 255, 255); font-family: inherit; font-size: inherit; line-height: inherit; padding: calc(0.667em + 2px) calc(1.333em + 2px); text-decoration: none; }
+@keyframes ct-encoded-form-loader-spin { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes apbct_dog { 
+  0% { scale: 1; color: transparent; text-shadow: rgb(170, 170, 170) 0px 0px 2px; }
+  25% { scale: 2; color: unset; text-shadow: unset; }
+  75% { scale: 1; color: transparent; text-shadow: rgb(170, 170, 170) 0px 0px 2px; }
+  100% { scale: 1; color: transparent; text-shadow: rgb(170, 170, 170) 0px 0px 2px; }
+}
+.et_monarch .et_social_popup_content, .et_monarch .et_social_flyin, .et_monarch .et_social_networks, .et_monarch .et_social_sidebar_networks, .et_monarch .et_social_networks div, .et_monarch .et_social_sidebar_networks div, .et_monarch .et_social_networks span, .et_monarch .et_social_sidebar_networks span, .et_monarch .et_social_networks h2, .et_monarch .et_social_sidebar_networks h2, .et_monarch .et_social_networks h3, .et_monarch .et_social_sidebar_networks h3, .et_monarch .et_social_networks h4, .et_monarch .et_social_sidebar_networks h4, .et_monarch .et_social_networks p, .et_monarch .et_social_sidebar_networks p, .et_monarch .et_social_networks a, .et_monarch .et_social_sidebar_networks a, .et_monarch .et_social_networks font, .et_monarch .et_social_sidebar_networks font, .et_monarch .et_social_networks img, .et_monarch .et_social_sidebar_networks img, .et_monarch .et_social_networks strike, .et_monarch .et_social_sidebar_networks strike, .et_monarch .et_social_networks strong, .et_monarch .et_social_sidebar_networks strong, .et_monarch .et_social_networks b, .et_monarch .et_social_sidebar_networks b, .et_monarch .et_social_networks u, .et_monarch .et_social_sidebar_networks u, .et_monarch .et_social_networks i, .et_monarch .et_social_sidebar_networks i, .et_monarch .et_social_networks ol, .et_monarch .et_social_sidebar_networks ol, .et_monarch .et_social_networks ul, .et_monarch .et_social_sidebar_networks ul, .et_monarch .et_social_networks li, .et_monarch .et_social_sidebar_networks li, .et_monarch .widget_monarchwidget li, .et_monarch .widget .et_social_networks li, .et_monarch .widget_text .et_social_networks li, .et_monarch .widget_monarchwidget li::before, .et_monarch .widget_monarchwidget li::after, .et_monarch .et_social_popup_content h3, .et_monarch .et_social_popup_content p, .et_monarch .et_social_popup_content::after, .et_monarch .et_social_flyin h3, .et_monarch .et_social_flyin p, .et_monarch .et_social_flyin::after, .et_monarch .et_social_pinterest_window h3, .et_monarch .et_social_mobile, .et_monarch .et_social_mobile_button, .et_monarch .et_social_heading { font-family: "Open Sans", helvetica, arial, sans-serif; line-height: 1em; text-transform: none; font-weight: normal; margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 100%; vertical-align: baseline; background-image: none; box-sizing: content-box; transform: translate3d(0px, 0px, 0px); -webkit-font-smoothing: antialiased; }
+.et_monarch .et_social_networks, .et_monarch .et_social_sidebar_networks, .et_monarch .et_social_sidebar_networks_mobile { font-family: "Open Sans", helvetica, arial, sans-serif; line-height: 1em; font-weight: 400; -webkit-font-smoothing: antialiased; }
+.et_monarch .et_social_networks span, .et_monarch .et_social_sidebar_networks span, .et_monarch .et_social_circle i.et_social_icon, i.et_social_icon::before, i.et_social_icon::after, .et_monarch .et_social_networks li, .et_monarch .et_social_networks li a, .et_monarch .et_social_networks div, .et_monarch .et_social_sidebar_mobile, .et_monarch .et_social_sidebar_networks_mobile li, .et_monarch .et_social_pin_image a::before { transition: 0.3s; }
+.et_monarch .et_social_count, .et_monarch .widget_monarchwidget .et_social_networkname, .et_monarch .widget_monarchwidget .et_social_count span, .et_monarch .et_social_circle .et_social_icons_container li i::before { transition: none !important; }
+.et_monarch .et_social_circle .et_social_icons_container li i::after, .et_monarch .et_social_circle .et_social_icons_container li i::before, .et_monarch .et_social_circle .et_social_icons_container li:hover i::after, .et_monarch .et_social_circle .et_social_icons_container li:hover i::before { transition: left 0.3s, right 0.3s, margin 0.3s, opacity 0.3s !important; }
+.et_monarch .et_social_icon, .et_monarch .et_social_networks .et_social_network_label, .et_monarch .et_social_sidebar_networks .et_social_count { color: rgb(255, 255, 255); }
+.et_monarch .et_social_networks.et_social_circle .et_social_network_label, .et_monarch .et_social_networks.et_social_circle .et_social_networkname, .et_monarch .et_social_networks.et_social_circle .et_social_count, .et_monarch .et_social_networks.et_social_circle .et_social_icons_container li:hover .et_social_networkname, .et_monarch .et_social_networks.et_social_circle .et_social_icons_container li:hover .et_social_count { color: rgb(68, 68, 68) !important; }
+.et_monarch .et_social_networks, .et_monarch .et_social_sidebar_networks, .et_monarch .widget_monarchwidget a { text-shadow: none !important; }
+@font-face { font-family: ETmonarch; src: url(https://fileonq.com/wp-content/plugins/monarch/css/fonts/monarch.ttf) format("truetype"), url(https://fileonq.com/wp-content/plugins/monarch/css/fonts/monarch.woff) format("woff"); font-weight: normal; font-style: normal; }
+.et_monarch .et_social_icon, .et_monarch .et_social_icon::before, .et_monarch .et_social_icon::after { font-family: ETmonarch; speak: none; font-style: normal; font-size: 16px; line-height: 16px; font-weight: normal; font-variant: normal; text-transform: none; -webkit-font-smoothing: antialiased; text-align: center; display: block; }
+.et_monarch .et_social_icon_printfriendly::before, .et_monarch .et_social_icon_printfriendly::after { content: ""; }
+.et_monarch .et_social_icon_linkedin::before, .et_monarch .et_social_icon_linkedin::after { content: ""; }
+.et_monarch .et_social_icon_facebook::before, .et_monarch .et_social_icon_facebook::after { content: ""; }
+.et_monarch .et_social_facebook, .et_monarch .et_social_facebook, .et_monarch .et_social_networks.et_social_circle .et_social_facebook i { background-color: rgb(58, 87, 154); }
+.et_monarch li.et_social_facebook:hover, .et_monarch .et_social_networks.et_social_circle li.et_social_facebook:hover i { background-color: rgb(49, 74, 131); }
+.et_monarch .et_social_linkedin, .et_monarch .et_social_networks.et_social_circle .et_social_linkedin i { background-color: rgb(18, 123, 182); }
+.et_monarch li.et_social_linkedin:hover, .et_monarch .et_social_networks.et_social_circle li.et_social_linkedin:hover i { background-color: rgb(15, 105, 155); }
+.et_monarch .et_social_printfriendly, .et_monarch .et_social_networks.et_social_circle .et_social_printfriendly i { background-color: rgb(117, 170, 51); }
+.et_monarch li.et_social_printfriendly:hover, .et_monarch .et_social_networks.et_social_circle li.et_social_printfriendly:hover i { background-color: rgb(100, 145, 43); }
+.et_monarch .et_social_networkname { word-break: break-all; }
+.et_monarch .et_social_icon, .et_monarch .et_social_sidebar_networks .et_social_count { position: relative; z-index: 100; }
+.et_monarch .et_social_networks span.et_social_overlay { height: 100%; width: 100%; background-color: rgba(0, 0, 0, 0.1); bottom: 0px; left: 0px; z-index: 1; position: absolute; }
+.et_monarch .et_social_networks.et_social_left .et_social_count, .et_monarch .et_social_networks.et_social_left .et_social_networkname { line-height: 1em; display: inline-block; }
+.et_monarch .et_social_networks { width: 100%; display: inline-block; }
+.et_monarch .et_social_networks .et_social_icons_container { display: inline-block; width: inherit; padding: 0px !important; margin: 0px !important; line-height: 1em !important; }
+.et_monarch .et_social_networks li, .et_monarch .widget_monarchwidget .et_social_networks li, .et_monarch .widget .et_social_networks li, .et_monarch .widget_text .et_social_networks li { float: left; position: relative; margin: 2% 0px 0px 2%; overflow: hidden; min-height: 40px; line-height: 0; }
+.et_monarch .et_social_networks li, .et_monarch .et_social_networks li a, .et_monarch .et_social_icon { display: block; overflow: hidden; box-sizing: border-box; }
+.et_monarch .et_social_networks div.et_social_network_label { font-size: 14px; }
+.et_monarch .et_social_networks div, .et_monarch .et_social_networks span, .et_monarch .et_social_networks li i { position: relative; z-index: 2; }
+.et_monarch .et_social_networks .et_social_icon, .et_monarch .et_social_networks .et_social_icon::before, .et_monarch .et_social_networks .et_social_icon::after { width: 40px; height: 40px; line-height: 40px; display: inline-block; border-radius: 100px; }
+.et_monarch .et_social_networks .et_social_networkname, .et_monarch .et_social_networks .et_social_count span { font-weight: 700; }
+.et_monarch .et_social_networkname, .et_monarch .et_social_count { display: none; }
+.et_monarch .et_social_withnetworknames .et_social_networkname, .et_monarch .et_social_withcounts .et_social_count, .et_monarch .et_social_sidebar_withcounts .et_social_count { display: inherit; }
+.et_monarch .et_social_withtotalcount .et_social_totalcount.et_social_dark, .et_monarch .et_social_networks.et_social_circle.et_social_outer_dark li .et_social_network_label, .et_monarch .et_social_networks.et_social_circle.et_social_outer_dark li .et_social_networkname, .et_monarch .et_social_networks.et_social_circle.et_social_outer_dark li .et_social_count, .et_monarch .et_social_networks.et_social_circle.et_social_outer_dark li:hover .et_social_count, .et_monarch .et_social_networks.et_social_circle.et_social_outer_dark li:hover .et_social_networkname, .et_monarch .et_social_media .et_social_circle.et_social_outer_dark .et_social_icons_container li:hover .et_social_count { color: rgb(68, 68, 68) !important; }
+.et_monarch .et_social_outer_dark .et_social_totalcount, .et_monarch .et_social_outer_dark.et_social_circle .et_social_network_label { color: rgb(68, 68, 68); }
+.et_monarch .et_social_icon::after { display: none; }
+.et_monarch .et_social_simple.et_social_left .et_social_network_label div { margin-left: 0px !important; }
+.et_monarch .et_social_simple.et_social_left .et_social_network_label { padding-left: 0px !important; }
+.et_monarch .et_social_simple li .et_social_overlay { display: none; margin: 0px !important; }
+.et_monarch .et_social_icon::before, .et_monarch .et_social_icon::after { position: relative; width: 100%; }
+.et_monarch .et_social_circle .et_social_icon::before, .et_monarch .et_social_circle .et_social_icon::after { border-radius: 100px; width: 100% !important; }
+.et_monarch .et_social_circle li { width: 40px; border-radius: 100px; margin-bottom: 10px; left: 0px; }
+.et_monarch .et_social_left { text-align: left; }
+.et_monarch .et_social_left .et_social_network_label { margin-left: 40px; padding: 7px 14px 10px 10px; }
+.et_monarch .et_social_left .et_social_network_label div { margin: 6px 4px 0px; }
+.et_monarch .et_social_left .et_social_overlay { background-color: rgba(0, 0, 0, 0.1); margin: 0px 0px 0px 40px; }
+.et_monarch .et_social_left.et_social_circle .et_social_network_label, .et_monarch .et_social_left.et_social_circle li:hover .et_social_network_label { padding-top: 6px; padding-bottom: 0px; padding-left: 0px; margin-left: 46px !important; padding-right: 0px !important; }
+.et_monarch .et_social_left .et_social_icon { float: left; }
+.et_monarch .et_social_networks.et_social_circle li { border-radius: 0px; background-color: transparent !important; }
+.et_monarch .et_social_circle .et_social_overlay { display: none; }
+.et_monarch .et_social_autowidth li { width: auto; margin: 0px 2% 2% 0px !important; }
+.et_monarch .et_social_1col li, .et_monarch .et_social_2col li:nth-child(2n+1), .et_monarch .et_social_3col li:nth-child(3n+1), .et_monarch .et_social_4col li:nth-child(4n+1), .et_monarch .et_social_5col li:nth-child(5n+1), .et_monarch .et_social_6col li:nth-child(6n+1), .et_monarch .et_social_autowidth li:first-child { margin-left: 0px; clear: both; }
+.et_social_media_wrapper { position: relative; overflow: hidden; }
+.et_social_media_wrapper .et_social_networks { position: absolute; left: 0px; top: 0px; }
+.et_monarch .et_social_media_wrapper .et_social_media { overflow: auto; width: 90%; height: inherit; max-height: 90%; position: absolute; top: 20px; left: 20px; padding: 0px 20px; box-sizing: border-box; opacity: 0; transition: 0.3s; }
+.et_monarch .et_social_media_wrapper:hover .et_social_media { opacity: 1; }
+.et_monarch .et_social_media_wrapper .et_social_share { cursor: pointer; }
+.et_monarch .et_social_media_wrapper .et_social_left .et_social_share { display: inline-block; width: 100%; }
+@media only screen and (max-width: 767px){.et_monarch .et_social_networks li, .et_monarch .et_social_mobile .et_social_networks li { margin: 2% 0px 0px 2% !important; width: 49% !important; clear: none !important; }
+.et_monarch .et_social_networks li:nth-child(2n+1), .et_monarch .et_social_mobile .et_social_networks li:nth-child(2n+1) { margin-left: 0px !important; clear: both !important; }
+.et_monarch .et_social_networks li:nth-child(-n+2), .et_monarch .et_social_mobile .et_social_networks li:nth-child(-n+2) { margin-top: 0px !important; }
+.et_monarch .et_social_media .et_social_networks li { overflow: hidden; width: auto !important; clear: none !important; margin: 0px 2% 2% 0px !important; }
+.et_monarch .et_social_media .et_social_networks li .et_social_network_label { display: none; }
+.et_monarch .et_social_autowidth.et_social_networks li:nth-child(n) { width: auto !important; margin: 0px 2% 2% 0px !important; clear: none !important; }
+}
+@media only screen and (max-width: 479px){.et_monarch .et_social_networks li, .et_monarch .et_social_mobile .et_social_networks li { width: 100% !important; margin-left: 0px !important; clear: both !important; }
+.et_monarch .et_social_networks li:first-child, .et_monarch .et_social_mobile .et_social_networks li:first-child { margin-top: 0px !important; }
+.et_monarch .et_social_networks li:nth-child(n+2), .et_monarch .et_social_mobile .et_social_networks li:nth-child(n+2) { margin: 2% 0px 0px !important; }
+.et_monarch .et_social_media .et_social_networks li { width: auto !important; clear: none !important; margin: 0px 2% 2% 0px !important; }
+@-webkit-keyframes et_social_fadeIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes et_social_fadeIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-webkit-keyframes et_social_fadeOut { 
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes et_social_fadeOut { 
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-webkit-keyframes et_social_fadeInRight { 
+  0% { opacity: 0; transform: translateX(-30%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes et_social_fadeInRight { 
+  0% { opacity: 0; transform: translateX(-30%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@-webkit-keyframes et_social_fadeInBottom { 
+  0% { opacity: 0; transform: translateY(-30%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@keyframes et_social_fadeInBottom { 
+  0% { opacity: 0; transform: translateY(-30%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@-webkit-keyframes et_social_fadeInTop { 
+  0% { opacity: 0; transform: translateY(30%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@keyframes et_social_fadeInTop { 
+  0% { opacity: 0; transform: translateY(30%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@-webkit-keyframes et_social_slideTop { 
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes et_social_slideTop { 
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(0px); }
+}
+@-webkit-keyframes et_social_swing { 
+  20% { transform: rotate3d(0, 0, 1, 15deg); }
+  40% { transform: rotate3d(0, 0, 1, -10deg); }
+  60% { transform: rotate3d(0, 0, 1, 5deg); }
+  80% { transform: rotate3d(0, 0, 1, -5deg); }
+  100% { transform: rotate3d(0, 0, 1, 0deg); }
+}
+@keyframes et_social_swing { 
+  20% { transform: rotate3d(0, 0, 1, 15deg); }
+  40% { transform: rotate3d(0, 0, 1, -10deg); }
+  60% { transform: rotate3d(0, 0, 1, 5deg); }
+  80% { transform: rotate3d(0, 0, 1, -5deg); }
+  100% { transform: rotate3d(0, 0, 1, 0deg); }
+}
+@-webkit-keyframes et_social_tada { 
+  0% { transform: scale3d(1, 1, 1); }
+  10%, 20% { transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%, 50%, 70%, 90% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%, 60%, 80% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+@keyframes et_social_tada { 
+  0% { transform: scale3d(1, 1, 1); }
+  10%, 20% { transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%, 50%, 70%, 90% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%, 60%, 80% { transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+@-webkit-keyframes et_social_bounce { 
+  0%, 20%, 53%, 80%, 100% { transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); transform: translate3d(0px, 0px, 0px); }
+  40%, 43% { transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); transform: translate3d(0px, -30px, 0px); }
+  70% { transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); transform: translate3d(0px, -15px, 0px); }
+  90% { transform: translate3d(0px, -4px, 0px); }
+}
+@keyframes et_social_bounce { 
+  0%, 20%, 53%, 80%, 100% { transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); transform: translate3d(0px, 0px, 0px); }
+  40%, 43% { transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); transform: translate3d(0px, -30px, 0px); }
+  70% { transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06); transform: translate3d(0px, -15px, 0px); }
+  90% { transform: translate3d(0px, -4px, 0px); }
+}
+@-webkit-keyframes et_social_flipInX { 
+  0% { transform: perspective(400px) rotate3d(1, 0, 0, 90deg); transition-timing-function: ease-in; opacity: 0; }
+  40% { transform: perspective(400px) rotate3d(1, 0, 0, -20deg); transition-timing-function: ease-in; }
+  60% { transform: perspective(400px) rotate3d(1, 0, 0, 10deg); opacity: 1; }
+  80% { transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  100% { transform: perspective(400px); }
+}
+@keyframes et_social_flipInX { 
+  0% { transform: perspective(400px) rotate3d(1, 0, 0, 90deg); transition-timing-function: ease-in; opacity: 0; }
+  40% { transform: perspective(400px) rotate3d(1, 0, 0, -20deg); transition-timing-function: ease-in; }
+  60% { transform: perspective(400px) rotate3d(1, 0, 0, 10deg); opacity: 1; }
+  80% { transform: perspective(400px) rotate3d(1, 0, 0, -5deg); }
+  100% { transform: perspective(400px); }
+}
+@-webkit-keyframes et_social_zoomIn { 
+  0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+  50% { opacity: 1; }
+}
+@keyframes et_social_zoomIn { 
+  0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+  50% { opacity: 1; }
+}
+@-webkit-keyframes et_social_lightSpeedIn { 
+  0% { transform: translate3d(30%, 0px, 0px) skewX(-10deg); opacity: 0; }
+  60% { transform: skewX(5deg); opacity: 1; }
+  80% { transform: skewX(-5deg); opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+@keyframes et_social_lightSpeedIn { 
+  0% { transform: translate3d(100%, 0px, 0px) skewX(-30deg); opacity: 0; }
+  60% { transform: skewX(20deg); opacity: 1; }
+  80% { transform: skewX(-5deg); opacity: 1; }
+  100% { transform: none; opacity: 1; }
+}
+@font-face { font-family: dashicons; src: url("data:application/x-font-woff;charset=utf-8;base64,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") format("woff"), url(https://fileonq.com/wp-includes/fonts/dashicons.ttf?99ac726223c749443b642ce33df8b800) format("truetype"); font-weight: 400; font-style: normal; }
+@-webkit-keyframes load5 { 
+  0%, 100% { box-shadow: rgb(55, 55, 55) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.5) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.7) -1.8em -1.8em 0px 0em; }
+  12.5% { box-shadow: rgba(55, 55, 55, 0.7) 0em -2.6em 0em 0em, rgb(55, 55, 55) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.5) -1.8em -1.8em 0px 0em; }
+  25% { box-shadow: rgba(55, 55, 55, 0.5) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.7) 1.8em -1.8em 0px 0em, rgb(55, 55, 55) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  37.5% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.5) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.7) 2.5em 0em 0px 0em, rgb(55, 55, 55) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  50% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.5) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.7) 1.75em 1.75em 0px 0em, rgb(55, 55, 55) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  62.5% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.5) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.7) 0em 2.5em 0px 0em, rgb(55, 55, 55) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  75% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.5) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.7) -1.8em 1.8em 0px 0em, rgb(55, 55, 55) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  87.5% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.5) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.7) -2.6em 0em 0px 0em, rgb(55, 55, 55) -1.8em -1.8em 0px 0em; }
+}
+@keyframes load5 { 
+  0%, 100% { box-shadow: rgb(55, 55, 55) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.5) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.7) -1.8em -1.8em 0px 0em; }
+  12.5% { box-shadow: rgba(55, 55, 55, 0.7) 0em -2.6em 0em 0em, rgb(55, 55, 55) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.5) -1.8em -1.8em 0px 0em; }
+  25% { box-shadow: rgba(55, 55, 55, 0.5) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.7) 1.8em -1.8em 0px 0em, rgb(55, 55, 55) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  37.5% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.5) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.7) 2.5em 0em 0px 0em, rgb(55, 55, 55) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  50% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.5) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.7) 1.75em 1.75em 0px 0em, rgb(55, 55, 55) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  62.5% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.5) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.7) 0em 2.5em 0px 0em, rgb(55, 55, 55) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.2) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  75% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.5) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.7) -1.8em 1.8em 0px 0em, rgb(55, 55, 55) -2.6em 0em 0px 0em, rgba(55, 55, 55, 0.2) -1.8em -1.8em 0px 0em; }
+  87.5% { box-shadow: rgba(55, 55, 55, 0.2) 0em -2.6em 0em 0em, rgba(55, 55, 55, 0.2) 1.8em -1.8em 0px 0em, rgba(55, 55, 55, 0.2) 2.5em 0em 0px 0em, rgba(55, 55, 55, 0.2) 1.75em 1.75em 0px 0em, rgba(55, 55, 55, 0.2) 0em 2.5em 0px 0em, rgba(55, 55, 55, 0.5) -1.8em 1.8em 0px 0em, rgba(55, 55, 55, 0.7) -2.6em 0em 0px 0em, rgb(55, 55, 55) -1.8em -1.8em 0px 0em; }
+}
+a, abbr, acronym, address, applet, b, big, blockquote, body, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tt, u, ul, var { margin: 0px; padding: 0px; border: 0px; outline: 0px; font-size: 100%; text-size-adjust: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+:focus { outline: 0px; }
+article, aside, footer, header, hgroup, nav, section { display: block; }
+body { font-family: "Open Sans", Arial, sans-serif; font-size: 14px; color: rgb(102, 102, 102); background-color: rgb(255, 255, 255); line-height: 1.7em; font-weight: 500; -webkit-font-smoothing: antialiased; }
+body.page-template-page-template-blank-php #page-container { padding-top: 0px !important; }
+body.et_cover_background { background-attachment: fixed; background-size: cover !important; background-position: center top !important; background-repeat: no-repeat !important; }
+a { color: rgb(46, 163, 242); }
+a, a:hover { text-decoration: none; }
+p { padding-bottom: 1em; }
+p:not(.has-background):last-of-type { padding-bottom: 0px; }
+cite, em, i { font-style: italic; }
+h1, h2, h3, h4, h5, h6 { color: rgb(51, 51, 51); padding-bottom: 10px; line-height: 1em; font-weight: 500; }
+h1 { font-size: 30px; }
+h2 { font-size: 26px; }
+h3 { font-size: 22px; }
+input { appearance: none; }
+button, input, select, textarea { font-family: inherit; }
+img { max-width: 100%; height: auto; }
+#main-content { background-color: rgb(255, 255, 255); }
+.container { width: 80%; max-width: 1080px; margin: auto; }
+body:not(.et-tb) #main-content .container, body:not(.et-tb-has-header) #main-content .container { padding-top: 58px; }
+#left-area ul, .entry-content ul, .et-l--body ul, .et-l--footer ul, .et-l--header ul { list-style-type: disc; padding: 0px 0px 23px 1em; line-height: 26px; }
+#left-area .post-meta { font-size: 14px; padding-bottom: 15px; }
+.single .post { padding-bottom: 25px; }
+body.single .et_audio_content { margin-bottom: -6px; }
+body #main-content .et_builder_inner_content > h1, body #main-content .et_builder_inner_content > h2, body #main-content .et_builder_inner_content > h3, body #main-content .et_builder_inner_content > h4, body #main-content .et_builder_inner_content > h5, body #main-content .et_builder_inner_content > h6 { line-height: 1.4em; }
+body #main-content .et_builder_inner_content > p { line-height: 1.7em; }
+@media (min-width: 981px){#left-area { width: 79.125%; padding-bottom: 23px; }
+#main-content .container::before { content: ""; position: absolute; top: 0px; height: 100%; width: 1px; background-color: rgb(226, 226, 226); }
+}
+@media (max-width: 980px){#page-container { padding-top: 80px; }
+.et-tb #page-container, .et-tb-has-header #page-container { padding-top: 0px !important; }
+#left-area, #sidebar { width: 100% !important; }
+#main-content .container::before { display: none !important; }
+}
+@media print{#page-container { padding-top: 0px !important; }
+}
+body.et_fixed_nav.et_boxed_layout #page-container, body.et_non_fixed_nav.et_transparent_nav.et_boxed_layout #page-container { padding-top: 80px; }
+body.et_fixed_nav.et_boxed_layout.et-tb #page-container, body.et_fixed_nav.et_boxed_layout.et-tb-has-header #page-container { padding-top: 0px !important; }
+#sidebar { padding-bottom: 28px; }
+#sidebar .et_pb_widget { margin-bottom: 30px; width: 100%; float: none; }
+@media (min-width: 981px) and (max-width: 1100px){#sidebar .et_pb_widget { margin-left: 0px; }
+}
+@media (min-width: 981px){#sidebar { float: left; width: 20.875%; }
+.et_right_sidebar #left-area { float: left; padding-right: 5.5%; }
+.et_right_sidebar #sidebar { padding-left: 30px; }
+.et_right_sidebar #main-content .container::before { right: 20.875% !important; }
+}
+@media (max-width: 980px){.et_left_sidebar #left-area, .et_left_sidebar #sidebar, .et_right_sidebar #left-area, .et_right_sidebar #sidebar { width: auto; float: none; padding-right: 0px; padding-left: 0px; }
+.et_right_sidebar #left-area { margin-right: 0px; }
+.et_right_sidebar #sidebar { margin-left: 0px; border-left-width: medium; border-left-style: none; border-left-color: currentcolor; }
+}
+.single .et_pb_post { margin-bottom: 27px; }
+.et_pb_pagebuilder_layout.single-post:not(.et-tb-has-body) #main-content .et_pb_row { width: 100%; }
+.et_pb_pagebuilder_layout .entry-content, .et_pb_pagebuilder_layout .et_pb_post .entry-content { margin-bottom: 0px !important; padding-top: 0px; }
+.comment-content address, .entry-content address, body.et-pb-preview #main-content .container address { line-height: 24px; margin-bottom: 12px; }
+body.woocommerce .woocommerce-tabs { border: 1px solid rgb(217, 217, 217); margin: 30px 0px 45px; }
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs, body.woocommerce div.product .woocommerce-tabs ul.tabs { background: rgb(244, 244, 244); margin: 0px !important; padding: 0px !important; }
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li, body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li.active, body.woocommerce div.product .woocommerce-tabs ul.tabs li, body.woocommerce div.product .woocommerce-tabs ul.tabs li.active { border-radius: 0px; background: rgb(244, 244, 244); border-width: medium 1px medium medium; border-style: none solid none none; border-color: currentcolor rgb(217, 217, 217) currentcolor currentcolor; border-image: none; padding: 0px; box-shadow: none; margin: 0px -2px; }
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li.active { background: rgb(255, 255, 255) !important; }
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li a, body.woocommerce div.product .woocommerce-tabs ul.tabs li a { color: rgb(102, 102, 102) !important; padding: 4px 22px !important; }
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li::after, body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li::before, body.woocommerce div.product .woocommerce-tabs ul.tabs li::after, body.woocommerce div.product .woocommerce-tabs ul.tabs li::before { display: none; }
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li.active a, body.woocommerce div.product .woocommerce-tabs ul.tabs li.active a { color: rgb(0, 0, 0) !important; }
+body.woocommerce #content-area div.product .woocommerce-tabs .panel, body.woocommerce div.product .woocommerce-tabs .panel { padding: 30px; margin: 0px; }
+@media (max-width: 767px){body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li, body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li.active, body.woocommerce div.product .woocommerce-tabs ul.tabs li, body.woocommerce div.product .woocommerce-tabs ul.tabs li.active { display: block !important; border-bottom: 1px solid rgb(224, 218, 223) !important; }
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li a, body.woocommerce div.product .woocommerce-tabs ul.tabs li a { display: block !important; }
+}
+.et_pb_widget .wp-block-search__label, .widget_search .screen-reader-text { display: none; }
+.et_pb_widget .wp-block-search__button, .et_pb_widget .wp-block-search__input, .widget_search input#s, .widget_search input#searchsubmit { padding: 0.7em; margin: 0px; font-size: 14px; border: 1px solid rgb(221, 221, 221); color: rgb(102, 102, 102); height: 40px !important; line-height: normal !important; }
+.et_pb_widget .wp-block-search__input, .widget_search #s { width: 100%; border-radius: 3px; }
+.et_pb_widget .wp-block-search, .widget_search #searchform { position: relative; }
+.et_pb_widget .wp-block-search__button, .widget_search #searchsubmit { background-color: rgb(221, 221, 221); border-top-right-radius: 3px; border-bottom-right-radius: 3px; position: absolute; right: 0px; top: 0px; }
+#searchsubmit, .et_pb_widget .wp-block-search__button { cursor: pointer; }
+.et_mobile_menu, .nav li ul { border-color: rgb(46, 163, 242); }
+#top-menu li.current-menu-ancestor > a, #top-menu li.current-menu-item > a, .mobile_menu_bar::after, .mobile_menu_bar::before { color: rgb(46, 163, 242); }
+.container { text-align: left; position: relative; }
+#top-menu, .et-menu, nav#top-menu-nav, nav.et-menu-nav { float: left; }
+input[type="search"]::-webkit-search-cancel-button { appearance: none; }
+.et_toggle_slide_menu::after, .mobile_menu_bar::before { content: "a"; font-size: 32px; left: 0px; position: relative; top: 0px; cursor: pointer; }
+body.admin-bar.et_fixed_nav #main-header { top: 32px; }
+body.et-wp-pre-3_8.admin-bar.et_fixed_nav #main-header { top: 28px; }
+body.et_fixed_nav.et_secondary_nav_enabled #main-header { top: 30px; }
+body.admin-bar.et_fixed_nav.et_secondary_nav_enabled #main-header { top: 63px; }
+@media (max-width: 980px){#logo, #main-header, .container, .logo_container { transition: none; }
+}
+@media screen and (max-width: 782px){body.admin-bar.et_fixed_nav #main-header { top: 46px; }
+}
+@media (max-width: 767px){body.admin-bar.et_fixed_nav #main-header { top: 46px; }
+}
+body.admin-bar.et_non_fixed_nav.et_transparent_nav.et_header_style_slide #main-header { top: 0px; }
+@media (max-width: 980px){body.admin-bar.et_fixed_nav.et_header_style_slide #main-header { top: 0px !important; }
+}
+@media screen and (max-width: 782px){body.admin-bar.et_header_style_slide .et_slide_in_menu_container { top: 46px; }
+}
+@-webkit-keyframes fadeInLeft { 
+  0% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes fadeInLeft { 
+  0% { opacity: 0; transform: translateX(-100%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@-webkit-keyframes fadeOutRight { 
+  0% { opacity: 1; transform: translateX(0px); }
+  100% { opacity: 0; transform: translateX(100%); }
+}
+@keyframes fadeOutRight { 
+  0% { opacity: 1; transform: translateX(0px); }
+  100% { opacity: 0; transform: translateX(100%); }
+}
+@-webkit-keyframes fadeOutLeft { 
+  0% { opacity: 1; transform: translateX(0px); }
+  100% { opacity: 0; transform: translateX(-70%); }
+}
+@keyframes fadeOutLeft { 
+  0% { opacity: 1; transform: translateX(0px); }
+  100% { opacity: 0; transform: translateX(-70%); }
+}
+@-webkit-keyframes fadeInRight { 
+  0% { opacity: 0; transform: translateX(100%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes fadeInRight { 
+  0% { opacity: 0; transform: translateX(100%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@media (min-width: 981px) and (max-width: 1100px){body.admin-bar.et_vertical_nav #main-header { top: 0px !important; }
+}
+body.admin-bar.et_non_fixed_nav.et_transparent_nav #main-header, body.admin-bar.et_non_fixed_nav.et_transparent_nav #top-header { top: 32px; }
+body.et-wp-pre-3_8.admin-bar.et_non_fixed_nav.et_transparent_nav #main-header, body.et-wp-pre-3_8.admin-bar.et_non_fixed_nav.et_transparent_nav #top-header { top: 28px; }
+body.et_non_fixed_nav.et_transparent_nav.et_secondary_nav_enabled #main-header { top: 30px; }
+body.admin-bar.et_non_fixed_nav.et_transparent_nav.et_secondary_nav_enabled #main-header { top: 63px; }
+@media screen and (max-width: 782px){body.admin-bar.et_non_fixed_nav.et_transparent_nav #main-header, body.admin-bar.et_non_fixed_nav.et_transparent_nav #top-header { top: 46px; }
+body.admin-bar.et_non_fixed_nav.et_transparent_nav.et_secondary_nav_enabled #main-header { top: 80px; }
+}
+@media (max-width: 767px){body.et_non_fixed_nav.et_transparent_nav.et_secondary_nav_two_panels #main-header { top: 58px; }
+body.admin-bar.et_non_fixed_nav.et_transparent_nav #main-header, body.admin-bar.et_non_fixed_nav.et_transparent_nav #top-header { top: 46px; }
+body.admin-bar.et_non_fixed_nav.et_transparent_nav.et_secondary_nav_two_panels #main-header { top: 104px; }
+}
+body.admin-bar.et_fixed_nav #top-header { top: 32px; }
+body.et-wp-pre-3_8.admin-bar.et_fixed_nav #top-header { top: 28px; }
+@media screen and (max-width: 782px){body.admin-bar.et_fixed_nav #top-header { top: 46px; }
+body.admin-bar.et_fixed_nav.et_secondary_nav_enabled #main-header { top: 80px; }
+}
+@media (max-width: 767px){body.et_fixed_nav.et_secondary_nav_two_panels #main-header { top: 58px; }
+body.admin-bar.et_fixed_nav #top-header { top: 46px; }
+body.admin-bar.et_fixed_nav.et_secondary_nav_two_panels #main-header { top: 104px; }
+}
+* { box-sizing: border-box; }
+#et-info-email::before, #et-info-phone::before, #et_search_icon::before, .comment-reply-link::after, .et-cart-info span::before, .et-pb-arrow-next::before, .et-pb-arrow-prev::before, .et-social-icon a::before, .et_audio_container .mejs-playpause-button button::before, .et_audio_container .mejs-volume-button button::before, .et_overlay::before, .et_password_protected_form .et_submit_button::after, .et_pb_button::after, .et_pb_contact_reset::after, .et_pb_contact_submit::after, .et_pb_font_icon::before, .et_pb_newsletter_button::after, .et_pb_pricing_table_button::after, .et_pb_promo_button::after, .et_pb_testimonial::before, .et_pb_toggle_title::before, .form-submit .et_pb_button::after, .mobile_menu_bar::before, a.et_pb_more_button::after { speak: none; font-style: normal; font-weight: 400; font-feature-settings: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; text-shadow: 0px 0px; direction: ltr; font-family: ETmodules !important; }
+.et_pb_bg_layout_dark, .et_pb_bg_layout_dark h1, .et_pb_bg_layout_dark h2, .et_pb_bg_layout_dark h3, .et_pb_bg_layout_dark h4, .et_pb_bg_layout_dark h5, .et_pb_bg_layout_dark h6 { color: rgb(255, 255, 255) !important; }
+.et_pb_module.et_pb_text_align_left { text-align: left; }
+.et_pb_module.et_pb_text_align_center { text-align: center; }
+.et_pb_module.et_pb_text_align_right { text-align: right; }
+.clearfix::after { visibility: hidden; display: block; font-size: 0px; content: " "; clear: both; height: 0px; }
+.et_builder_inner_content { position: relative; z-index: 1; }
+header .et_builder_inner_content { z-index: 2; }
+.et_pb_css_mix_blend_mode_passthrough { mix-blend-mode: unset !important; }
+.et_pb_all_tabs, .et_pb_module, .et_pb_posts_nav a, .et_pb_tab, .et_pb_with_background { position: relative; background-size: cover; background-position: 50% center; background-repeat: no-repeat; }
+body.et_pb_pagebuilder_layout.et_pb_show_title .post-password-required .et_password_protected_form h1, body:not(.et_pb_pagebuilder_layout) .post-password-required .et_password_protected_form h1 { display: none; }
+body.et-bfb .et_pb_section_parallax .et_pb_parallax_css, body.et-bfb .et_pb_slides .et_parallax_bg.et_pb_parallax_css { background-attachment: scroll; bottom: auto; }
+body.safari .section_has_divider { will-change: transform; }
+@keyframes multi-view-image-fade { 
+  0% { opacity: 0; }
+  10% { opacity: 0.1; }
+  20% { opacity: 0.2; }
+  30% { opacity: 0.3; }
+  40% { opacity: 0.4; }
+  50% { opacity: 0.5; }
+  60% { opacity: 0.6; }
+  70% { opacity: 0.7; }
+  80% { opacity: 0.8; }
+  90% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+header.et-l.et-l--header::after { clear: both; display: block; content: ""; }
+.et_pb_module { animation-timing-function: linear; animation-duration: 0.2s; }
+@-webkit-keyframes fadeBottom { 
+  0% { opacity: 0; transform: translateY(10%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@keyframes fadeBottom { 
+  0% { opacity: 0; transform: translateY(10%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@-webkit-keyframes fadeLeft { 
+  0% { opacity: 0; transform: translateX(-10%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes fadeLeft { 
+  0% { opacity: 0; transform: translateX(-10%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@-webkit-keyframes fadeRight { 
+  0% { opacity: 0; transform: translateX(10%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes fadeRight { 
+  0% { opacity: 0; transform: translateX(10%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@-webkit-keyframes fadeTop { 
+  0% { opacity: 0; transform: translateY(-10%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes fadeTop { 
+  0% { opacity: 0; transform: translateY(-10%); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+@-webkit-keyframes fadeIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@media (min-width: 981px){.et_pb_section.et_section_specialty div.et_pb_row .et_pb_column .et_pb_column .et_pb_module.et-last-child, .et_pb_section.et_section_specialty div.et_pb_row .et_pb_column .et_pb_column .et_pb_module:last-child, .et_pb_section.et_section_specialty div.et_pb_row .et_pb_column .et_pb_row_inner .et_pb_column .et_pb_module.et-last-child, .et_pb_section.et_section_specialty div.et_pb_row .et_pb_column .et_pb_row_inner .et_pb_column .et_pb_module:last-child, .et_pb_section div.et_pb_row .et_pb_column .et_pb_module.et-last-child, .et_pb_section div.et_pb_row .et_pb_column .et_pb_module:last-child { margin-bottom: 0px; }
+}
+@media (max-width: 980px){.et_pb_column .et_pb_module { margin-bottom: 30px; }
+.et_pb_row .et_pb_column .et_pb_module.et-last-child, .et_pb_row .et_pb_column .et_pb_module:last-child, .et_section_specialty .et_pb_row .et_pb_column .et_pb_module.et-last-child, .et_section_specialty .et_pb_row .et_pb_column .et_pb_module:last-child { margin-bottom: 0px; }
+.et_pb_module.et_pb_text_align_center-tablet { text-align: center; }
+}
+@-webkit-keyframes multi-view-image-fade { 
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.01); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.et_pb_section { position: relative; background-color: rgb(255, 255, 255); background-position: 50% center; background-size: cover; }
+@media (min-width: 981px){.et_pb_section { padding: 4% 0px; }
+body.et_pb_pagebuilder_layout.et_pb_show_title .post-password-required .et_pb_section, body:not(.et_pb_pagebuilder_layout) .post-password-required .et_pb_section { padding-top: 0px; }
+}
+@media (max-width: 980px){.et_pb_section { padding: 50px 0px; }
+.et_pb_row { width: 80%; max-width: 1080px; margin: auto; position: relative; }
+body.safari .section_has_divider, body.uiwebview .section_has_divider { perspective: 2000px; }
+.et_pb_row::after, .et_pb_row_inner::after { content: ""; display: block; clear: both; visibility: hidden; line-height: 0; height: 0px; width: 0px; }
+.et_pb_column { float: left; background-size: cover; background-position: 50% center; position: relative; z-index: 2; min-height: 1px; }
+.et_pb_column--with-menu { z-index: 3; }
+.et_pb_row .et_pb_column.et-last-child, .et_pb_row .et_pb_column:last-child, .et_pb_row_inner .et_pb_column.et-last-child, .et_pb_row_inner .et_pb_column:last-child { margin-right: 0px !important; }
+.et_pb_column, .et_pb_row, .et_pb_row_inner { background-size: cover; background-position: 50% center; background-repeat: no-repeat; }
+@media (min-width: 981px){.et_pb_row { padding: 2% 0px; }
+body.et_pb_pagebuilder_layout.et_pb_show_title .post-password-required .et_pb_row, body:not(.et_pb_pagebuilder_layout) .post-password-required .et_pb_row { padding: 0px; width: 100%; }
+.et_pb_row .et_pb_column.et-last-child, .et_pb_row .et_pb_column:last-child, .et_pb_row_inner .et_pb_column.et-last-child, .et_pb_row_inner .et_pb_column:last-child { margin-right: 0px !important; }
+}
+@media (max-width: 980px){.et_pb_row { max-width: 1080px; }
+.et_pb_column .et_pb_row_inner, .et_pb_row { padding: 30px 0px; }
+.et_pb_column { width: 100%; margin-bottom: 30px; }
+.et_pb_bottom_divider .et_pb_row:nth-last-child(2) .et_pb_column:last-child, .et_pb_row .et_pb_column.et-last-child, .et_pb_row .et_pb_column:last-child { margin-bottom: 0px; }
+}
+@media (max-width: 479px){.et_pb_column { width: 100% !important; }
+}
+@font-face { font-family: ETmodules; font-display: block; src: url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/modules/all/modules.woff) format("woff"), url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/modules/all/modules.ttf) format("truetype"); font-weight: 400; font-style: normal; }
+@font-face { font-family: FontAwesome; font-style: normal; font-weight: 400; font-display: block; src: url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-regular-400.woff2) format("woff2"), url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-regular-400.woff) format("woff"), url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-regular-400.ttf) format("truetype"); }
+@font-face { font-family: FontAwesome; font-style: normal; font-weight: 900; font-display: block; src: url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-solid-900.woff2) format("woff2"), url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-solid-900.woff) format("woff"), url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-solid-900.ttf) format("truetype"); }
+@font-face { font-family: FontAwesome; font-style: normal; font-weight: 400; font-display: block; src: url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.woff2) format("woff2"), url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.woff) format("woff"), url(https://fileonq.com/wp-content/themes/Divi/core/admin/fonts/fontawesome/fa-brands-400.ttf) format("truetype"); }
+body .grecaptcha-badge { visibility: hidden; }
+body.et_pb_recaptcha_enabled .grecaptcha-badge { visibility: initial; z-index: 9999; }
+.et_pb_post { margin-bottom: 60px; overflow-wrap: break-word; }
+.et_pb_post .entry-content { padding-top: 30px; }
+.et_pb_post .post-meta { font-size: 14px; margin-bottom: 6px; }
+@media (min-width: 981px) and (max-width: 1100px){.et_pb_post { margin-bottom: 42px; }
+}
+@media (max-width: 980px){.et_pb_post { margin-bottom: 42px; }
+}
+@media (max-width: 767px){.et_pb_post { margin-bottom: 42px; }
+}
+@media (max-width: 479px){.et_pb_post { margin-bottom: 42px; }
+.et_pb_post h2 { font-size: 16px; padding-bottom: 0px; }
+.et_pb_post .post-meta { color: rgb(102, 102, 102); font-size: 14px; }
+}
+body .et-script-temporary-measurement { opacity: 0; }
+@-webkit-keyframes et_pb_fade { 
+  100% { opacity: 1; }
+}
+@keyframes et_pb_fade { 
+  100% { opacity: 1; }
+}
+@-webkit-keyframes et_pb_fadeTop { 
+  0% { transform: translate3d(0px, -100%, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes et_pb_fadeTop { 
+  0% { transform: translate3d(0px, -100%, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+@-webkit-keyframes et_pb_fadeRight { 
+  0% { transform: translate3d(100%, 0px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes et_pb_fadeRight { 
+  0% { transform: translate3d(100%, 0px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+@-webkit-keyframes et_pb_fadeBottom { 
+  0% { transform: translate3d(0px, 100%, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes et_pb_fadeBottom { 
+  0% { transform: translate3d(0px, 100%, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+@-webkit-keyframes et_pb_fadeLeft { 
+  0% { transform: translate3d(-100%, 0px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes et_pb_fadeLeft { 
+  0% { transform: translate3d(-100%, 0px, 0px); }
+  100% { opacity: 1; transform: none; }
+}
+@-webkit-keyframes et_pb_slide { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes et_pb_slide { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@-webkit-keyframes et_pb_slideTop { 
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@keyframes et_pb_slideTop { 
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@-webkit-keyframes et_pb_slideRight { 
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@keyframes et_pb_slideRight { 
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@-webkit-keyframes et_pb_slideBottom { 
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@keyframes et_pb_slideBottom { 
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@-webkit-keyframes et_pb_slideLeft { 
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@keyframes et_pb_slideLeft { 
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@-webkit-keyframes et_pb_bounce { 
+  0%, 20%, 40%, 60%, 80%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: scale3d(0.3, 0.3, 0.3); }
+  20% { transform: scale3d(1.1, 1.1, 1.1); }
+  40% { transform: scale3d(0.9, 0.9, 0.9); }
+  60% { transform: scale3d(1.03, 1.03, 1.03); }
+  80% { transform: scale3d(0.97, 0.97, 0.97); }
+  100% { opacity: 1; transform: scaleX(1); }
+}
+@keyframes et_pb_bounce { 
+  0%, 20%, 40%, 60%, 80%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: scale3d(0.3, 0.3, 0.3); }
+  20% { transform: scale3d(1.1, 1.1, 1.1); }
+  40% { transform: scale3d(0.9, 0.9, 0.9); }
+  60% { transform: scale3d(1.03, 1.03, 1.03); }
+  80% { transform: scale3d(0.97, 0.97, 0.97); }
+  100% { opacity: 1; transform: scaleX(1); }
+}
+@-webkit-keyframes et_pb_bounceTop { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: translate3d(0px, -200px, 0px); }
+  60% { transform: translate3d(0px, 25px, 0px); }
+  75% { transform: translate3d(0px, -10px, 0px); }
+  90% { transform: translate3d(0px, 5px, 0px); }
+  100% { transform: none; opacity: 1; }
+}
+@keyframes et_pb_bounceTop { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: translate3d(0px, -200px, 0px); }
+  60% { transform: translate3d(0px, 25px, 0px); }
+  75% { transform: translate3d(0px, -10px, 0px); }
+  90% { transform: translate3d(0px, 5px, 0px); }
+  100% { transform: none; opacity: 1; }
+}
+@-webkit-keyframes et_pb_bounceRight { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: translate3d(200px, 0px, 0px); }
+  60% { transform: translate3d(-25px, 0px, 0px); }
+  75% { transform: translate3d(10px, 0px, 0px); }
+  90% { transform: translate3d(-5px, 0px, 0px); }
+  100% { transform: none; opacity: 1; }
+}
+@keyframes et_pb_bounceRight { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: translate3d(200px, 0px, 0px); }
+  60% { transform: translate3d(-25px, 0px, 0px); }
+  75% { transform: translate3d(10px, 0px, 0px); }
+  90% { transform: translate3d(-5px, 0px, 0px); }
+  100% { transform: none; opacity: 1; }
+}
+@-webkit-keyframes et_pb_bounceBottom { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: translate3d(0px, 200px, 0px); }
+  60% { transform: translate3d(0px, -20px, 0px); }
+  75% { transform: translate3d(0px, 10px, 0px); }
+  90% { transform: translate3d(0px, -5px, 0px); }
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@keyframes et_pb_bounceBottom { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: translate3d(0px, 200px, 0px); }
+  60% { transform: translate3d(0px, -20px, 0px); }
+  75% { transform: translate3d(0px, 10px, 0px); }
+  90% { transform: translate3d(0px, -5px, 0px); }
+  100% { transform: translateZ(0px); opacity: 1; }
+}
+@-webkit-keyframes et_pb_bounceLeft { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: translate3d(-200px, 0px, 0px); }
+  60% { transform: translate3d(25px, 0px, 0px); }
+  75% { transform: translate3d(-10px, 0px, 0px); }
+  90% { transform: translate3d(5px, 0px, 0px); }
+  100% { transform: none; opacity: 1; }
+}
+@keyframes et_pb_bounceLeft { 
+  0%, 60%, 75%, 90%, 100% { animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% { transform: translate3d(-200px, 0px, 0px); }
+  60% { transform: translate3d(25px, 0px, 0px); }
+  75% { transform: translate3d(-10px, 0px, 0px); }
+  90% { transform: translate3d(5px, 0px, 0px); }
+  100% { transform: none; opacity: 1; }
+}
+@-webkit-keyframes et_pb_zoom { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes et_pb_zoom { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@-webkit-keyframes et_pb_zoomTop { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes et_pb_zoomTop { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@-webkit-keyframes et_pb_zoomRight { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes et_pb_zoomRight { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@-webkit-keyframes et_pb_zoomBottom { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes et_pb_zoomBottom { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@-webkit-keyframes et_pb_zoomLeft { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@keyframes et_pb_zoomLeft { 
+  100% { transform: scaleX(1); opacity: 1; }
+}
+@-webkit-keyframes et_pb_flip { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@keyframes et_pb_flip { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@-webkit-keyframes et_pb_flipTop { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@keyframes et_pb_flipTop { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@-webkit-keyframes et_pb_flipRight { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@keyframes et_pb_flipRight { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@-webkit-keyframes et_pb_flipBottom { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@keyframes et_pb_flipBottom { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@-webkit-keyframes et_pb_flipLeft { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@keyframes et_pb_flipLeft { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@-webkit-keyframes et_pb_fold { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@keyframes et_pb_fold { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@-webkit-keyframes et_pb_foldTop { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@keyframes et_pb_foldTop { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@-webkit-keyframes et_pb_foldRight { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@keyframes et_pb_foldRight { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@-webkit-keyframes et_pb_foldBottom { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@keyframes et_pb_foldBottom { 
+  100% { opacity: 1; transform: rotateX(0deg); }
+}
+@-webkit-keyframes et_pb_foldLeft { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@keyframes et_pb_foldLeft { 
+  100% { opacity: 1; transform: rotateY(0deg); }
+}
+@-webkit-keyframes et_pb_roll { 
+  0% { transform-origin: center center; }
+  100% { transform-origin: center center; transform: none; opacity: 1; }
+}
+@keyframes et_pb_roll { 
+  0% { transform-origin: center center; }
+  100% { transform-origin: center center; transform: none; opacity: 1; }
+}
+@-webkit-keyframes et_pb_rollTop { 
+  0% { transform-origin: center top; }
+  100% { transform-origin: center top; transform: none; opacity: 1; }
+}
+@keyframes et_pb_rollTop { 
+  0% { transform-origin: center top; }
+  100% { transform-origin: center top; transform: none; opacity: 1; }
+}
+@-webkit-keyframes et_pb_rollRight { 
+  0% { transform-origin: right center; }
+  100% { transform-origin: right center; transform: none; opacity: 1; }
+}
+@keyframes et_pb_rollRight { 
+  0% { transform-origin: right center; }
+  100% { transform-origin: right center; transform: none; opacity: 1; }
+}
+@-webkit-keyframes et_pb_rollBottom { 
+  0% { transform-origin: center bottom; }
+  100% { transform-origin: center bottom; transform: none; opacity: 1; }
+}
+@keyframes et_pb_rollBottom { 
+  0% { transform-origin: center bottom; }
+  100% { transform-origin: center bottom; transform: none; opacity: 1; }
+}
+@-webkit-keyframes et_pb_rollLeft { 
+  0% { transform-origin: left center; }
+  100% { transform-origin: left center; transform: none; opacity: 1; }
+}
+@keyframes et_pb_rollLeft { 
+  0% { transform-origin: left center; }
+  100% { transform-origin: left center; transform: none; opacity: 1; }
+}
+@-webkit-keyframes fadeOutTop { 
+  0% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(-60%); }
+}
+@keyframes fadeOutTop { 
+  0% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(-60%); }
+}
+@-webkit-keyframes fadeInTop { 
+  0% { opacity: 0; transform: translateY(-60%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@keyframes fadeInTop { 
+  0% { opacity: 0; transform: translateY(-60%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@-webkit-keyframes fadeInBottom { 
+  0% { opacity: 0; transform: translateY(60%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@keyframes fadeInBottom { 
+  0% { opacity: 0; transform: translateY(60%); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+@-webkit-keyframes fadeOutBottom { 
+  0% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(60%); }
+}
+@keyframes fadeOutBottom { 
+  0% { opacity: 1; transform: translateY(0px); }
+  100% { opacity: 0; transform: translateY(60%); }
+}
+@-webkit-keyframes Grow { 
+  0% { opacity: 0; transform: scaleY(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes Grow { 
+  0% { opacity: 0; transform: scaleY(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@-webkit-keyframes flipInX { 
+  0% { transform: perspective(400px) rotateX(90deg); animation-timing-function: ease-in; opacity: 0; }
+  40% { transform: perspective(400px) rotateX(-20deg); animation-timing-function: ease-in; }
+  60% { transform: perspective(400px) rotateX(10deg); opacity: 1; }
+  80% { transform: perspective(400px) rotateX(-5deg); }
+  100% { transform: perspective(400px); }
+}
+@keyframes flipInX { 
+  0% { transform: perspective(400px) rotateX(90deg); animation-timing-function: ease-in; opacity: 0; }
+  40% { transform: perspective(400px) rotateX(-20deg); animation-timing-function: ease-in; }
+  60% { transform: perspective(400px) rotateX(10deg); opacity: 1; }
+  80% { transform: perspective(400px) rotateX(-5deg); }
+  100% { transform: perspective(400px); }
+}
+@-webkit-keyframes flipInY { 
+  0% { transform: perspective(400px) rotateY(90deg); animation-timing-function: ease-in; opacity: 0; }
+  40% { transform: perspective(400px) rotateY(-20deg); animation-timing-function: ease-in; }
+  60% { transform: perspective(400px) rotateY(10deg); opacity: 1; }
+  80% { transform: perspective(400px) rotateY(-5deg); }
+  100% { transform: perspective(400px); }
+}
+@keyframes flipInY { 
+  0% { transform: perspective(400px) rotateY(90deg); animation-timing-function: ease-in; opacity: 0; }
+  40% { transform: perspective(400px) rotateY(-20deg); animation-timing-function: ease-in; }
+  60% { transform: perspective(400px) rotateY(10deg); opacity: 1; }
+  80% { transform: perspective(400px) rotateY(-5deg); }
+  100% { transform: perspective(400px); }
+}
+.et-menu li { display: inline-block; font-size: 14px; padding-right: 22px; }
+.et-menu > li:last-child { padding-right: 0px; }
+.et-menu a { color: rgba(0, 0, 0, 0.6); text-decoration: none; display: block; position: relative; }
+.et-menu a, .et-menu a:hover { transition: 0.4s ease-in-out; }
+.et-menu a:hover { opacity: 0.7; }
+.et-menu li > a { padding-bottom: 29px; overflow-wrap: break-word; }
+.et_pb_menu__wrap .mobile_menu_bar { transform: translateY(3%); }
+.et_pb_menu__wrap .mobile_menu_bar::before { top: 0px; }
+.et_pb_menu__logo { overflow: hidden; }
+.et_pb_menu__logo img { display: block; }
+@media (max-width: 980px){.et-menu { display: none; }
+.et_mobile_nav_menu { display: block; margin-top: -1px; }
+}
+@media (min-width: 981px){.et_pb_gutters3 .et_pb_column, .et_pb_gutters3.et_pb_row .et_pb_column { margin-right: 5.5%; }
+.et_pb_gutters3 .et_pb_column_4_4, .et_pb_gutters3.et_pb_row .et_pb_column_4_4 { width: 100%; }
+.et_pb_gutters3 .et_pb_column_4_4 .et_pb_module, .et_pb_gutters3.et_pb_row .et_pb_column_4_4 .et_pb_module { margin-bottom: 2.75%; }
+.et_pb_gutters3 .et_pb_column_1_3, .et_pb_gutters3.et_pb_row .et_pb_column_1_3 { width: 29.6667%; }
+.et_pb_gutters3 .et_pb_column_1_3 .et_pb_module, .et_pb_gutters3.et_pb_row .et_pb_column_1_3 .et_pb_module { margin-bottom: 9.27%; }
+}
+.nav li li { padding: 0px 20px; margin: 0px; }
+.et-menu li li a { padding: 6px 20px; width: 200px; }
+.nav li { position: relative; line-height: 1em; }
+.nav li li { position: relative; line-height: 2em; }
+.nav li ul { position: absolute; padding: 20px 0px; z-index: 9999; width: 240px; background: rgb(255, 255, 255); visibility: hidden; opacity: 0; border-top: 3px solid rgb(46, 163, 242); box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px; transform: translateZ(0px); text-align: left; }
+.nav li.et-touch-hover > ul, .nav li:hover > ul { opacity: 1; visibility: visible; }
+.nav li li ul { z-index: 1000; top: -23px; left: 240px; }
+.nav li:hover { visibility: inherit; }
+.et_mobile_menu li a, .nav li li a { font-size: 14px; transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out; }
+.et_mobile_menu li a:hover, .nav ul li a:hover { background-color: rgba(0, 0, 0, 0.03); opacity: 0.7; }
+.et-menu .menu-item-has-children > a:first-child::after { font-family: ETmodules; content: "3"; font-size: 16px; position: absolute; right: 0px; top: 0px; font-weight: 800; }
+.et-menu .menu-item-has-children > a:first-child { padding-right: 20px; }
+.et-menu li li.menu-item-has-children > a:first-child::after { right: 20px; top: 6px; }
+.et_mobile_menu { position: absolute; left: 0px; padding: 5%; background: rgb(255, 255, 255); width: 100%; visibility: visible; opacity: 1; display: none; z-index: 9999; border-top: 3px solid rgb(46, 163, 242); box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px; }
+#main-header .et_mobile_menu li ul, .et_pb_fullwidth_menu .et_mobile_menu li ul, .et_pb_menu .et_mobile_menu li ul { padding-left: 10px; visibility: visible !important; display: block !important; }
+.et_mobile_menu li li { padding-left: 5%; }
+.et_mobile_menu li a { border-bottom: 1px solid rgba(0, 0, 0, 0.03); color: rgb(102, 102, 102); padding: 10px 5%; display: block; }
+.et_mobile_menu .menu-item-has-children > a { font-weight: 700; background-color: rgba(0, 0, 0, 0.03); }
+.et_mobile_menu li .menu-item-has-children > a { background-color: transparent; }
+.et_mobile_nav_menu { float: right; display: none; }
+.mobile_menu_bar { position: relative; display: block; line-height: 0; }
+.mobile_menu_bar::before { content: "a"; font-size: 32px; position: relative; left: 0px; top: 0px; cursor: pointer; }
+.et_pb_module .mobile_menu_bar::before { top: 2px; }
+.et_pb_widget { float: left; max-width: 100%; overflow-wrap: break-word; }
+.et_pb_widget a { text-decoration: none; color: rgb(102, 102, 102); }
+.et_pb_widget li a:hover { color: rgb(130, 192, 199); }
+.et_pb_widget ol li, .et_pb_widget ul li { margin-bottom: 0.5em; }
+@-webkit-keyframes slideWidth { 
+  0% { width: 0px; }
+}
+@keyframes slideWidth { 
+  0% { width: 0px; }
+}
+.et_pb_image { margin-left: auto; margin-right: auto; line-height: 0; }
+.et_pb_image { display: block; }
+.et_pb_image .et_pb_image_wrap { display: inline-block; position: relative; max-width: 100%; }
+.et_pb_image img { position: relative; }
+body.logged-in:not(.et-fb) .et_pb_newsletter.et_pb_login .et_pb_newsletter_description { margin-bottom: 0px; }
+.et_pb_menu .et-menu-nav, .et_pb_menu .et-menu-nav > ul { float: none; }
+.et_pb_menu .et-menu-nav > ul { line-height: 1.7em; padding: 0px !important; }
+.et_pb_menu .et-menu-nav > ul ul { padding: 20px 0px; text-align: left; }
+.et-menu li li.menu-item-has-children > a:first-child::after { top: 12px; }
+.et_pb_menu_inner_container { position: relative; }
+.et_pb_menu .et_pb_menu__wrap { -webkit-box-flex: 1; flex: 1 1 auto; display: flex; -webkit-box-pack: start; justify-content: flex-start; -webkit-box-align: stretch; align-items: stretch; flex-wrap: wrap; opacity: 1; }
+.et_pb_menu .et_pb_menu__menu { -webkit-box-flex: 0; flex: 0 1 auto; -webkit-box-pack: start; justify-content: flex-start; }
+.et_pb_menu .et_pb_menu__menu, .et_pb_menu .et_pb_menu__menu > nav, .et_pb_menu .et_pb_menu__menu > nav > ul { display: flex; -webkit-box-align: stretch; align-items: stretch; }
+.et_pb_menu .et_pb_menu__menu > nav > ul { flex-wrap: wrap; -webkit-box-pack: start; justify-content: flex-start; }
+.et_pb_menu .et_pb_menu__menu > nav > ul > li { position: relative; display: flex; -webkit-box-align: stretch; align-items: stretch; margin: 0px; }
+.et_pb_menu .et_pb_menu__menu > nav > ul > li > ul { top: calc(100% - 1px); left: 0px; }
+.et_pb_menu--with-logo .et_pb_menu__menu > nav > ul > li > a { display: flex; -webkit-box-align: center; align-items: center; padding: 31px 0px; white-space: nowrap; }
+.et_pb_menu--with-logo .et_pb_menu__menu > nav > ul > li > a::after { transform: translateY(-50%); top: 50% !important; }
+.et_pb_menu .et-menu { margin-left: -11px; margin-right: -11px; }
+.et_pb_menu .et-menu > li { padding-left: 11px; padding-right: 11px; }
+.et_pb_menu--style-left_aligned .et_pb_menu_inner_container, .et_pb_menu--style-left_aligned .et_pb_row { display: flex; -webkit-box-align: stretch; align-items: stretch; }
+.et_pb_menu--style-left_aligned .et_pb_menu__logo-wrap { -webkit-box-flex: 0; flex: 0 1 auto; display: flex; -webkit-box-align: center; align-items: center; }
+.et_pb_menu--style-left_aligned .et_pb_menu__logo { margin-right: 30px; }
+.et_pb_menu--style-left_aligned.et_pb_text_align_right .et_pb_menu__menu > nav > ul, .et_pb_menu--style-left_aligned.et_pb_text_align_right .et_pb_menu__wrap { -webkit-box-pack: end; justify-content: flex-end; }
+@media (min-width: 981px){.et_dropdown_animation_fade.et_pb_menu ul li:hover > ul { transition: 0.2s ease-in-out; }
+}
+@media (max-width: 980px){.et_pb_menu--style-left_aligned .et_pb_menu_inner_container, .et_pb_menu--style-left_aligned .et_pb_row { -webkit-box-align: center; align-items: center; }
+.et_pb_menu--style-left_aligned .et_pb_menu__wrap { -webkit-box-pack: end; justify-content: flex-end; }
+.et_pb_menu--style-left_aligned.et_pb_text_align_right .et_pb_menu__wrap { -webkit-box-pack: end; justify-content: flex-end; }
+.et_pb_menu .et_pb_menu__menu { display: none; }
+.et_pb_menu .et_mobile_nav_menu { float: none; margin: 0px 6px; display: flex; -webkit-box-align: center; align-items: center; }
+.et_pb_menu .et_mobile_menu { top: 100%; padding: 5%; }
+.et_pb_menu .et_mobile_menu, .et_pb_menu .et_mobile_menu ul { text-align: left; list-style: none !important; }
+.et_pb_menu .et_mobile_menu ul { padding: 0px; }
+}
+.et_pb_text { overflow-wrap: break-word; }
+.et_pb_text > :last-child { padding-bottom: 0px; }
+.et_pb_text_inner { position: relative; }
+@-webkit-keyframes et_pb_video_slider_item_fade_out { 
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes et_pb_video_slider_item_fade_out { 
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-webkit-keyframes et_pb_video_slider_item_overlay_fade_out { 
+  0% { transform: scale(1); }
+  100% { transform: scale(0.8); }
+}
+@keyframes et_pb_video_slider_item_overlay_fade_out { 
+  0% { transform: scale(1); }
+  100% { transform: scale(0.8); }
+}
+@-webkit-keyframes et_pb_video_slider_item_fade_in { 
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes et_pb_video_slider_item_fade_in { 
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.woocommerce-page .et_builder_inner_content.product .et_pb_wc_images div.images, .woocommerce .et_builder_inner_content.product .et_pb_wc_images div.images, body.woocommerce-page #content .et_builder_inner_content.product .et_pb_wc_images div.images { width: 100%; }
+body, .et_pb_column_1_2 .et_quote_content blockquote cite, .et_pb_column_1_2 .et_link_content a.et_link_main_url, .et_pb_column_1_3 .et_quote_content blockquote cite, .et_pb_column_3_8 .et_quote_content blockquote cite, .et_pb_column_1_4 .et_quote_content blockquote cite, .et_pb_blog_grid .et_quote_content blockquote cite, .et_pb_column_1_3 .et_link_content a.et_link_main_url, .et_pb_column_3_8 .et_link_content a.et_link_main_url, .et_pb_column_1_4 .et_link_content a.et_link_main_url, .et_pb_blog_grid .et_link_content a.et_link_main_url, body .et_pb_bg_layout_light .et_pb_post p, body .et_pb_bg_layout_dark .et_pb_post p { font-size: 18px; }
+body { color: rgb(0, 0, 0); }
+h1, h2, h3, h4, h5, h6 { color: rgb(0, 0, 0); }
+#et_search_icon:hover, .mobile_menu_bar::before, .mobile_menu_bar::after, .et_toggle_slide_menu::after, .et-social-icon a:hover, .et_pb_sum, .et_pb_pricing li a, .et_pb_pricing_table_button, .et_overlay::before, .entry-summary p.price ins, .et_pb_member_social_links a:hover, .et_pb_widget li a:hover, .et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active, .et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active, .et_pb_gallery .et_pb_gallery_pagination ul li a.active, .wp-pagenavi span.current, .wp-pagenavi a:hover, .nav-single a, .tagged_as a, .posted_in a { color: rgb(38, 132, 179); }
+.et-search-form, .nav li ul, .et_mobile_menu, .footer-widget li::before, .et_pb_pricing li::before, blockquote { border-color: rgb(38, 132, 179); }
+.container, .et_pb_row, .et_pb_slider .et_pb_container, .et_pb_fullwidth_section .et_pb_title_container, .et_pb_fullwidth_section .et_pb_title_featured_container, .et_pb_fullwidth_header:not(.et_pb_fullscreen) .et_pb_fullwidth_header_container { max-width: 1440px; }
+a { color: rgb(50, 185, 253); }
+body .et_pb_bg_layout_light.et_pb_button:hover, body .et_pb_bg_layout_light .et_pb_button:hover, body .et_pb_button:hover { border-radius: 0px; }
+h1, h2, h3, h4, h5, h6, .et_quote_content blockquote p, .et_pb_slide_description .et_pb_slide_title { font-weight: bold; font-style: normal; text-transform: none; text-decoration: none; line-height: 1.7em; }
+@media only screen and (min-width: 1800px){.et_pb_row { padding: 36px 0px; }
+.et_pb_section { padding: 72px 0px; }
+}
+h1, h1.et_pb_contact_main_title, .et_pb_title_container h1 { font-size: 40px; }
+h2, .product .related h2, .et_pb_column_1_2 .et_quote_content blockquote p { font-size: 34px; }
+h3 { font-size: 29px; }
+h1, h2, h3, h4, h5, h6 { font-family: Lato, Helvetica, Arial, Lucida, sans-serif; }
+body, input, textarea, select { font-family: Lato, Helvetica, Arial, Lucida, sans-serif; }
+:root { --foq-red: #ec0c0b; --foq-mid-blue: #2684b3; --foq-dark-blue: #173d54; --foq-light-blue: #32b9fd; --foq-light-grey: #eaeaea; }
+@keyframes blinky { 
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.no-link { cursor: default; }
+.nav li li { line-height: 1.5em; margin-bottom: 1em; }
+.main-cta.light { border: 2px solid var(--foq-red); padding: 0.7rem 1rem; }
+.main-cta.light:hover { background-color: var(--foq-red); color: white; }
+.menu-item-35 a:hover { opacity: 1; }
+#menu-main-nav.et-menu li li a { width: 260px; }
+#menu-main-nav.et-menu li li a:hover { background-color: var(--foq-dark-blue); color: white; }
+#menu-main-nav.nav li ul { width: 300px; }
+#sidebar .widget_search { max-width: 400px; }
+#sidebar h3 { margin-top: 30px; }
+.single #main-content h2 { font-size: 2.3rem; line-height: 2.5rem; }
+.et_pb_section_0_tb_header.et_pb_section { padding-top: 10px; padding-bottom: 10px; }
+.et_pb_row_0_tb_header.et_pb_row { padding-top: 0px !important; padding-bottom: 0px !important; }
+.et_pb_row_0_tb_header, body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row, body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row, body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row { width: 90%; }
+.et_pb_menu_0_tb_header.et_pb_menu ul li a { text-transform: uppercase; font-size: 16px; }
+.et_pb_menu_0_tb_header.et_pb_menu { background-color: rgb(255, 255, 255); }
+.et_pb_menu_0_tb_header .et_pb_menu_inner_container > .et_pb_menu__logo-wrap, .et_pb_menu_0_tb_header .et_pb_menu__logo-slot { transition: max-width 300ms; width: auto; max-width: 200px; }
+.et_pb_menu_0_tb_header.et_pb_menu .nav li ul, .et_pb_menu_0_tb_header.et_pb_menu .et_mobile_menu, .et_pb_menu_0_tb_header.et_pb_menu .et_mobile_menu ul { background-color: rgb(255, 255, 255) !important; }
+.et_pb_menu_0_tb_header .et_pb_menu_inner_container > .et_pb_menu__logo-wrap .et_pb_menu__logo img, .et_pb_menu_0_tb_header .et_pb_menu__logo-slot .et_pb_menu__logo-wrap img { height: auto; max-height: none; }
+.et_pb_menu_0_tb_header .mobile_nav .mobile_menu_bar::before, .et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__search-button, .et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__close-search-button, .et_pb_menu_0_tb_header .et_pb_menu__icon.et_pb_menu__cart-button { color: rgb(38, 132, 179); }
+.et_pb_section_0_tb_footer { min-height: 352.8px; }
+.et_pb_section_0_tb_footer.et_pb_section { margin-top: 108px; background-color: rgb(34, 34, 34) !important; }
+.et_pb_row_0_tb_footer, body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row, body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row, body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row { width: 90%; }
+.et_pb_row_0_tb_footer { display: flex; align-items: center; }
+.et_pb_image_0_tb_footer { max-width: 150px; text-align: left; margin-left: 0px; }
+.et_pb_text_0_tb_footer, .et_pb_text_1_tb_footer { font-size: 1rem; line-height: 0.8rem; }
+.et_pb_text_0_tb_footer.et_pb_text a { transition: color 300ms; color: rgb(255, 255, 255) !important; }
+.et_pb_text_0_tb_footer.et_pb_text a:hover { color: rgb(234, 234, 234) !important; }
+@media only screen and (max-width: 980px){.et_pb_image_0_tb_footer { text-align: center; margin-left: auto; margin-right: auto; }
+.et_pb_image_0_tb_footer .et_pb_image_wrap img { width: auto; }
+}
+@media only screen and (min-width: 768px) and (max-width: 980px){.et_pb_row_0_tb_footer { display: flex; align-items: center; }
+}
+@media only screen and (max-width: 767px){.et_pb_row_0_tb_footer { display: block; }
+.et_pb_row_0.et_pb_row, .et_pb_row_2.et_pb_row, .et_pb_row_4.et_pb_row { padding-top: 0px !important; padding-bottom: 0px !important; }
+.et_pb_image_0, .et_pb_image_1, .et_pb_image_2, .et_pb_image_3, .et_pb_image_4 { text-align: left; margin-left: 0px; }
+.et_pb_row_6.et_pb_row { padding-top: 0px !important; }
+.et_pb_row_7.et_pb_row { padding-top: 5px !important; }
+.et_pb_row_8.et_pb_row { padding-top: 0px !important; padding-bottom: 5px !important; }
+.et_pb_text_4 { padding-bottom: 0px !important; }
+@media only screen and (max-width: 980px){.et_pb_image_0 .et_pb_image_wrap img, .et_pb_image_1 .et_pb_image_wrap img, .et_pb_image_2 .et_pb_image_wrap img, .et_pb_image_3 .et_pb_image_wrap img, .et_pb_image_4 .et_pb_image_wrap img { width: auto; }
+}
+@media only screen and (max-width: 767px){.et_pb_image_0 .et_pb_image_wrap img, .et_pb_image_1 .et_pb_image_wrap img, .et_pb_image_2 .et_pb_image_wrap img, .et_pb_image_3 .et_pb_image_wrap img, .et_pb_image_4 .et_pb_image_wrap img { width: auto; }
+}
+.xd-video{margin:8px 0 32px;padding:22px;border-radius:16px;background:#f2f9fe;border:1px solid #cfe9f8;font-family:Lato, Helvetica, Arial, sans-serif;box-sizing:border-box;clear:both}
+.xd-inline{margin:20px 0 28px}
+.xd-label{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:12px;line-height:1;color:#0b2a3f;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.xd-dot{width:8px;height:8px;border-radius:50%;background:#32b9fd;display:inline-block}
+.xd-title{font-weight:700;font-size:22px;line-height:1.3;color:#0b2a3f;margin:0 0 6px;padding:0}
+.xd-sub{font-size:16px;line-height:1.5;color:#555;margin:0 0 16px;padding:0}
+.xd-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#111;box-shadow:0 6px 20px rgba(0,0,0,.10)}
+.xd-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@media (max-width:600px){.xd-video{padding:14px}.xd-title{font-size:18px}}</style></head><body class="bp-nouveau post-template-default single single-post postid-10900 single-format-standard et-tb-has-template et-tb-has-header et-tb-has-footer et_monarch ally-default et_pb_button_helper_class et_cover_background et_pb_gutter osx et_pb_gutters3 et_pb_pagebuilder_layout et_smooth_scroll et_right_sidebar et_divi_theme et-db chrome"><div id="page-container">
+<div id="et-boc" class="et-boc">
+			
+		<header class="et-l et-l--header">
+			<div class="et_builder_inner_content et_pb_gutters3"><div id="header-section" class="et_pb_section et_pb_section_0_tb_header et_pb_sticky_module et_section_regular et_pb_section--with-menu">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_header et_pb_row--with-menu" style="z-index: 3;">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column--with-menu">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_menu et_pb_menu_0_tb_header et_pb_bg_layout_light  et_pb_text_align_right et_dropdown_animation_fade et_pb_menu--with-logo et_pb_menu--style-left_aligned">
+					
+					
+					
+					
+					<div class="et_pb_menu_inner_container clearfix">
+						<div class="et_pb_menu__logo-wrap">
+			  <div class="et_pb_menu__logo">
+				<a href="https://fileonq.com/"><img fetchpriority="high" decoding="async" width="4268" height="1773" src="https://cdn.shortpixel.ai/spai/q_lossy+w_340+to_auto+ret_img/fileonq.com/wp-content/uploads/2021/09/fileonq-logo-dark.png" data-spai="1" alt="FileOnQ logo" class="wp-image-26" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="170" data-spai-height="70.6172"></a>
+			  </div>
+			</div>
+						<div class="et_pb_menu__wrap">
+							<div class="et_pb_menu__menu">
+								<nav class="et-menu-nav"><ul id="menu-main-nav" class="et-menu nav"><li class="no-link et_pb_menu_page_id-30 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30"><a>Solutions</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-237 menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="https://fileonq.com/evidence-management-system/">Evidence Management System</a></li>
+	<li class="et_pb_menu_page_id-528 menu-item menu-item-type-post_type menu-item-object-page menu-item-565"><a href="https://fileonq.com/digital-evidence-management/">Digital Evidence Management System</a></li>
+	<li class="et_pb_menu_page_id-532 menu-item menu-item-type-post_type menu-item-object-page menu-item-567"><a href="https://fileonq.com/asset-quartermaster/">Asset &amp; Quartermaster Management System</a></li>
+	<li class="et_pb_menu_page_id-12427 menu-item menu-item-type-post_type menu-item-object-page menu-item-12450"><a href="https://fileonq.com/samsonq-product-suite/">Sexual Assault Case Management System</a></li>
+	<li class="et_pb_menu_page_id-12461 menu-item menu-item-type-post_type menu-item-object-page menu-item-12471"><a href="https://fileonq.com/trackonq/">TrackOnQ Sexual Assault Kit Tracking</a></li>
+</ul>
+</li>
+<li class="no-link et_pb_menu_page_id-32 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32"><a>Resources</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-3181 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3181"><a href="http://no-link/">Events</a>
+	<ul class="sub-menu">
+		<li class="et_pb_menu_page_id-3586 menu-item menu-item-type-post_type menu-item-object-page menu-item-11605"><a href="https://fileonq.com/events/">Events</a></li>
+		<li class="et_pb_menu_page_id-555 menu-item menu-item-type-post_type menu-item-object-page menu-item-11598"><a href="https://fileonq.com/webinars/">Webinars</a></li>
+	</ul>
+</li>
+	<li class="et_pb_menu_page_id-11383 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11398"><a href="https://fileonq.com/fileonqs-youtube-videos-without-all-the-noise/">Videos &amp; Articles</a>
+	<ul class="sub-menu">
+		<li class="et_pb_menu_page_id-11383 menu-item menu-item-type-post_type menu-item-object-page menu-item-12400"><a href="https://fileonq.com/fileonqs-youtube-videos-without-all-the-noise/">Videos</a></li>
+		<li class="et_pb_menu_page_id-9420 menu-item menu-item-type-post_type menu-item-object-page menu-item-10030"><a href="https://fileonq.com/fileonq-blogs/">Articles</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="no-link et_pb_menu_page_id-1373 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1373"><a>About</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-402 menu-item menu-item-type-post_type menu-item-object-page menu-item-423"><a href="https://fileonq.com/about-us/">About Us</a></li>
+	<li class="et_pb_menu_page_id-559 menu-item menu-item-type-post_type menu-item-object-page menu-item-587"><a href="https://fileonq.com/our-team/">Our Team</a></li>
+	<li class="et_pb_menu_page_id-12534 menu-item menu-item-type-custom menu-item-object-custom menu-item-12534"><a href="https://connect.fileonq.com/careers-page">Careers</a></li>
+	<li class="et_pb_menu_page_id-561 menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="https://fileonq.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li class="et_pb_menu_page_id-12401 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12401"><a>Support</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-12694 menu-item menu-item-type-custom menu-item-object-custom menu-item-12694"><a href="https://connect.fileonq.com/My-Tickets">Support Request</a></li>
+	<li class="et_pb_menu_page_id-2989 menu-item menu-item-type-post_type menu-item-object-page menu-item-3132"><a href="https://fileonq.com/user-registration-request/">Training Videos</a></li>
+</ul>
+</li>
+<li class="et_pb_menu_page_id-35 menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="https://fileonq.com/schedule-a-demo"><div class="main-cta light">Schedule a Demo</div></a></li>
+<li class="et_pb_menu_page_id-12407 menu-item menu-item-type-custom menu-item-object-custom menu-item-12407"><a href="https://connect.fileonq.com/fileonq-blog">SUCCESS STORIES</a></li>
+</ul></nav>
+							</div>
+							
+							
+							<div class="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="mobile_menu_bar"></span>
+				<ul id="mobile_menu1" class="et_mobile_menu"><li class="no-link et_pb_menu_page_id-30 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-30 et_first_mobile_item"><a>Solutions</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-237 menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="https://fileonq.com/evidence-management-system/">Evidence Management System</a></li>
+	<li class="et_pb_menu_page_id-528 menu-item menu-item-type-post_type menu-item-object-page menu-item-565"><a href="https://fileonq.com/digital-evidence-management/">Digital Evidence Management System</a></li>
+	<li class="et_pb_menu_page_id-532 menu-item menu-item-type-post_type menu-item-object-page menu-item-567"><a href="https://fileonq.com/asset-quartermaster/">Asset &amp; Quartermaster Management System</a></li>
+	<li class="et_pb_menu_page_id-12427 menu-item menu-item-type-post_type menu-item-object-page menu-item-12450"><a href="https://fileonq.com/samsonq-product-suite/">Sexual Assault Case Management System</a></li>
+	<li class="et_pb_menu_page_id-12461 menu-item menu-item-type-post_type menu-item-object-page menu-item-12471"><a href="https://fileonq.com/trackonq/">TrackOnQ Sexual Assault Kit Tracking</a></li>
+</ul>
+</li>
+<li class="no-link et_pb_menu_page_id-32 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32"><a>Resources</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-3181 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3181"><a href="http://no-link/">Events</a>
+	<ul class="sub-menu">
+		<li class="et_pb_menu_page_id-3586 menu-item menu-item-type-post_type menu-item-object-page menu-item-11605"><a href="https://fileonq.com/events/">Events</a></li>
+		<li class="et_pb_menu_page_id-555 menu-item menu-item-type-post_type menu-item-object-page menu-item-11598"><a href="https://fileonq.com/webinars/">Webinars</a></li>
+	</ul>
+</li>
+	<li class="et_pb_menu_page_id-11383 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11398"><a href="https://fileonq.com/fileonqs-youtube-videos-without-all-the-noise/">Videos &amp; Articles</a>
+	<ul class="sub-menu">
+		<li class="et_pb_menu_page_id-11383 menu-item menu-item-type-post_type menu-item-object-page menu-item-12400"><a href="https://fileonq.com/fileonqs-youtube-videos-without-all-the-noise/">Videos</a></li>
+		<li class="et_pb_menu_page_id-9420 menu-item menu-item-type-post_type menu-item-object-page menu-item-10030"><a href="https://fileonq.com/fileonq-blogs/">Articles</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="no-link et_pb_menu_page_id-1373 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1373"><a>About</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-402 menu-item menu-item-type-post_type menu-item-object-page menu-item-423"><a href="https://fileonq.com/about-us/">About Us</a></li>
+	<li class="et_pb_menu_page_id-559 menu-item menu-item-type-post_type menu-item-object-page menu-item-587"><a href="https://fileonq.com/our-team/">Our Team</a></li>
+	<li class="et_pb_menu_page_id-12534 menu-item menu-item-type-custom menu-item-object-custom menu-item-12534"><a href="https://connect.fileonq.com/careers-page">Careers</a></li>
+	<li class="et_pb_menu_page_id-561 menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="https://fileonq.com/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li class="et_pb_menu_page_id-12401 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12401"><a>Support</a>
+<ul class="sub-menu">
+	<li class="et_pb_menu_page_id-12694 menu-item menu-item-type-custom menu-item-object-custom menu-item-12694"><a href="https://connect.fileonq.com/My-Tickets">Support Request</a></li>
+	<li class="et_pb_menu_page_id-2989 menu-item menu-item-type-post_type menu-item-object-page menu-item-3132"><a href="https://fileonq.com/user-registration-request/">Training Videos</a></li>
+</ul>
+</li>
+<li class="et_pb_menu_page_id-35 menu-item menu-item-type-custom menu-item-object-custom menu-item-35"><a href="https://fileonq.com/schedule-a-demo"><div class="main-cta light">Schedule a Demo</div></a></li>
+<li class="et_pb_menu_page_id-12407 menu-item menu-item-type-custom menu-item-object-custom menu-item-12407"><a href="https://connect.fileonq.com/fileonq-blog">SUCCESS STORIES</a></li>
+</ul></div>
+			</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</header>
+	<div id="et-main-area">
+	
+<div id="main-content">
+		<div class="container">
+		<div id="content-area" class="clearfix">
+			<div id="left-area">
+											<article id="post-10900" class="et_pb_post post-10900 post type-post status-publish format-standard has-post-thumbnail hentry category-news-blog">
+											<div class="et_post_meta_wrapper">
+							<h1 class="entry-title">Chain of Custody: FileOnQ Software is the Evidence Control Center</h1>
+
+						<p class="post-meta"><span class="published">Aug 22, 2024</span></p>
+												</div>
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_0 et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><div class="et_social_media_wrapper wp-image-10774"><img decoding="async" width="961" height="457" src="https://cdn.shortpixel.ai/spai/q_lossy+w_1508+to_auto+ret_img/fileonq.com/wp-content/uploads/2024/08/Chain-of-Custody2.jpg" data-spai="1" alt="Evidence Control Center" title="Evidence Management" class="wp-image-10774" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="753.922" data-spai-height="358.523"><div class="et_social_media et_social_media_hidden et_social_mobile_on" style="max-height: 358.523px; height: 106.773px; width: 713.922px;">
+				<div class="et_social_networks et_social_autowidth et_social_simple et_social_left et_social_circle et_social_outer_dark et_social_withnetworknames">
+					
+					<ul class="et_social_icons_container"><li class="et_social_facebook">
+									<div data-social_link="http://www.facebook.com/sharer.php?u=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;t=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="facebook" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_facebook"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Facebook</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_linkedin">
+									<div data-social_link="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="linkedin" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_linkedin"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Linkedin</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_printfriendly">
+									<div data-social_link="http://www.printfriendly.com/print?url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="printfriendly" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_printfriendly"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Print Friendly</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li></ul>
+				</div>
+			</div></div></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><span style="font-weight: 400;">In the world of law enforcement, the chain of custody is more than just a procedural formality; it’s an evidence control safeguard that underpins the entire criminal justice system. It refers to the systematic documentation of evidence handling, tracing every piece of evidence from the moment it’s discovered at a crime scene, presented in a court of law, and ultimately disposed of.&nbsp;</span></p>
+<p><span style="font-weight: 400;">This meticulous process ensures that the evidence remains unaltered, uncontaminated, and credible, preserving its integrity throughout its journey. Even the slightest discrepancy in the chain can cast doubt on the evidence’s reliability, potentially derailing a prosecution or defense.</span></p>
+<p><span style="font-weight: 400;"></span></p>
+<div class="xd-video"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 2 min</div><div class="xd-title">Chain of custody: one item, start to finish</div><p class="xd-sub">Prefer watching? Follow one piece of evidence from the scene to disposal, and see what gets recorded at every step.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide0dk2nokjv" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: Chain of custody: one item, start to finish"></iframe></div></div><h2><b>What is the Chain of Custody?</b></h2></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_2">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><div class="et_social_media_wrapper wp-image-10711"><img decoding="async" width="1800" height="1038" src="https://cdn.shortpixel.ai/spai/q_lossy+w_1508+to_auto+ret_img/fileonq.com/wp-content/uploads/2024/07/LegalSystem-Small.jpg" data-spai="1" alt="Evidence Control Center" title="Evidence Management Software" class="wp-image-10711" data-spai-orig-obs="true" data-spai-lazy-loaded="true" data-spai-width="753.922" data-spai-height="434.758"><div class="et_social_media et_social_media_hidden et_social_mobile_on" style="max-height: 434.758px; height: 106.773px; width: 713.922px;">
+				<div class="et_social_networks et_social_autowidth et_social_simple et_social_left et_social_circle et_social_outer_dark et_social_withnetworknames">
+					
+					<ul class="et_social_icons_container"><li class="et_social_facebook">
+									<div data-social_link="http://www.facebook.com/sharer.php?u=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;t=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="facebook" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_facebook"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Facebook</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_linkedin">
+									<div data-social_link="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="linkedin" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_linkedin"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Linkedin</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_printfriendly">
+									<div data-social_link="http://www.printfriendly.com/print?url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="printfriendly" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_printfriendly"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Print Friendly</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li></ul>
+				</div>
+			</div></div></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><span style="font-weight: 400;">The chain of custody encompasses the entire lifecycle of evidence, covering every transition and interaction it undergoes. At its core, it is a detailed digital log that records the sequence of custody, control, transfer, analysis, and disposition of physical or digital evidence. The goal is to create a foolproof trail that ensures the evidence remains as close to its original state as possible.</span></p>
+<p><span style="font-weight: 400;">This process begins the moment evidence is discovered. For example, at a crime scene, investigators meticulously document every piece of evidence, often with photographs, sketches, and detailed notes. Each item is then securely packaged and labeled to prevent contamination or damage.&nbsp;</span></p>
+<p><span style="font-weight: 400;">As the evidence moves from one custodian to another, each transfer is carefully recorded, noting the time, date, individuals involved, and purpose of the transfer. This record is vital in legal proceedings, where the prosecution must prove that the evidence presented is the same as that which was collected without any unauthorized alterations.</span></p>
+<p><span style="font-weight: 400;"></span></p>
+<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">Evidence handling roles: who logs what</div><p class="xd-sub">The six roles that handle evidence, and what each one must log.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide0dgvo0m5k" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: Evidence handling roles: who logs what"></iframe></div></div><h2><b>Who is Involved in the Chain of Custody?</b></h2></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_4">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><div class="et_social_media_wrapper wp-image-10561"><img decoding="async" width="1800" height="1080" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAwIDEwODAiIHdpZHRoPSIxODAwIiBoZWlnaHQ9IjEwODAiIGRhdGEtdT0iaHR0cHMlM0ElMkYlMkZmaWxlb25xLmNvbSUyRndwLWNvbnRlbnQlMkZ1cGxvYWRzJTJGMjAyNCUyRjA2JTJGRXZpZGVuY2UtTW92ZW1lbnQuanBnIiBkYXRhLXc9IjE4MDAiIGRhdGEtaD0iMTA4MCIgZGF0YS1iaXA9IiI+PC9zdmc+" data-spai="1" alt="Evidence Control Center" title="Evidence Movement" class="wp-image-10561" data-spai-target="src" data-spai-orig="https://fileonq.com/wp-content/uploads/2024/06/Evidence-Movement.jpg" data-spai-exclude="none" data-spai-orig-obs="true"><div class="et_social_media et_social_media_hidden et_social_mobile_on" style="max-height: 452.352px; height: 106.773px; width: 713.922px;">
+				<div class="et_social_networks et_social_autowidth et_social_simple et_social_left et_social_circle et_social_outer_dark et_social_withnetworknames">
+					
+					<ul class="et_social_icons_container"><li class="et_social_facebook">
+									<div data-social_link="http://www.facebook.com/sharer.php?u=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;t=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="facebook" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_facebook"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Facebook</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_linkedin">
+									<div data-social_link="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="linkedin" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_linkedin"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Linkedin</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_printfriendly">
+									<div data-social_link="http://www.printfriendly.com/print?url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="printfriendly" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_printfriendly"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Print Friendly</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li></ul>
+				</div>
+			</div></div></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_5">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><span style="font-weight: 400;">The chain of custody involves multiple parties, each playing a crucial role in preserving the integrity of the evidence:</span></p>
+<p><b>Police Officers and Crime Scene Investigators:</b><span style="font-weight: 400;"> They are the first to encounter the evidence. Their role is to collect it in a manner that prevents contamination or loss. This includes wearing gloves, using sterilized tools, and packaging evidence in tamper-evident containers.</span></p>
+<p><b>Evidence Custodians:</b><span style="font-weight: 400;"> Once the evidence is collected, it is handed over to evidence custodians, whose job is to manage the storage, security, and movement of evidence within controlled environments. This can include maintaining proper environmental conditions, such as temperature and humidity, to prevent degradation, especially in sensitive materials like biological samples.</span></p>
+<p><b>Forensic Analysts:</b><span style="font-weight: 400;"> When evidence needs to be analyzed, forensic analysts take over. They conduct various tests, such as DNA analysis, ballistics testing, or digital forensics, while meticulously documenting every interaction with the evidence. Their findings are crucial in forming the basis of expert testimony in court.</span></p>
+<p><b>Law Enforcement Officers and Investigators:</b><span style="font-weight: 400;"> Throughout an investigation, officers may need to access evidence to gather additional information or pursue new leads. Each time evidence is accessed, it must be logged to maintain the chain’s integrity.</span></p>
+<p><b>Legal Teams:</b><span style="font-weight: 400;"> Both the prosecution and defense teams may request access to the evidence during a case’s preparation. Proper documentation ensures that each time evidence is transferred to legal counsel, it is done so in a controlled and recorded manner.</span></p>
+<p><b>Court Personnel:</b><span style="font-weight: 400;"> When evidence is presented in court, it must be shown that it has been handled according to the strict protocols of the chain of custody. Any deviation can be used to challenge the evidence’s authenticity, making the role of court personnel critical in the final stages of the process.</span></p>
+<p><span style="font-weight: 400;"></span></p>
+<h2><b>The Role of Evidence Management Software in Chain of Custody</b></h2></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_6">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_3">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><div class="et_social_media_wrapper wp-image-10749"><img decoding="async" width="1000" height="467" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDQ2NyIgd2lkdGg9IjEwMDAiIGhlaWdodD0iNDY3IiBkYXRhLXU9Imh0dHBzJTNBJTJGJTJGZmlsZW9ucS5jb20lMkZ3cC1jb250ZW50JTJGdXBsb2FkcyUyRjIwMjQlMkYwOCUyRkN5YmVyLXNlY3VyaXR5LmpwZyIgZGF0YS13PSIxMDAwIiBkYXRhLWg9IjQ2NyIgZGF0YS1iaXA9IiI+PC9zdmc+" data-spai="1" alt="Evidence Control Center" title="Evidence Management Software" class="wp-image-10749" data-spai-target="src" data-spai-orig="https://fileonq.com/wp-content/uploads/2024/08/Cyber-security.jpg" data-spai-exclude="none" data-spai-orig-obs="true"><div class="et_social_media et_social_media_hidden et_social_mobile_on" style="max-height: 352.078px; height: 106.773px; width: 713.922px;">
+				<div class="et_social_networks et_social_autowidth et_social_simple et_social_left et_social_circle et_social_outer_dark et_social_withnetworknames">
+					
+					<ul class="et_social_icons_container"><li class="et_social_facebook">
+									<div data-social_link="http://www.facebook.com/sharer.php?u=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;t=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="facebook" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_facebook"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Facebook</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_linkedin">
+									<div data-social_link="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="linkedin" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_linkedin"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Linkedin</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_printfriendly">
+									<div data-social_link="http://www.printfriendly.com/print?url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="printfriendly" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_printfriendly"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Print Friendly</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li></ul>
+				</div>
+			</div></div></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_7">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><span style="font-weight: 400;">Managing the chain of custody manually is a task fraught with potential for error. In complex cases involving vast amounts of evidence, the likelihood of mistakes increases. This is where Evidence Management Software, or an “Evidence Control Center,” plays an indispensable role. This software system automates the documentation process, ensuring that every interaction with the evidence is accurately recorded and easily retrievable.</span></p>
+<p><b>Automated Tracking:</b><span style="font-weight: 400;"> With automated tracking, every movement and interaction with evidence is logged instantly, creating a digital record that is difficult to tamper with. This system not only reduces the administrative burden but also minimizes human error. Each piece of evidence is assigned a unique identifier, such as a barcode, which is scanned at every transfer point, ensuring that the evidence’s journey is continuously monitored.</span></p>
+<p><b>Enhanced Security:</b><span style="font-weight: 400;"> FileOnQ’s Evidence Management Software becomes an Evidence Control Center, offering enhanced security features that are crucial in preventing unauthorized access. By using role-based permissions, the software ensures that only those with the appropriate clearance can access or handle evidence, ensuring that each interaction with the evidence is traceable to a specific individual.</span></p>
+<p><b>Real-time Updates:</b><span style="font-weight: 400;"> One of the key advantages of using an Evidence Control Center is the ability to receive real-time updates on the status and location of evidence. This feature is particularly useful in large investigations where evidence may need to be transferred between multiple locations, such as forensic labs, storage facilities, and courtrooms. The software provides alerts if any issues arise, such as if evidence is accessed by unauthorized personnel or if it is stored in conditions that could compromise its integrity.</span></p>
+<p><b>Detailed Documentation:</b><span style="font-weight: 400;"> The software generates comprehensive reports that detail every aspect of the chain of custody. These reports are critical in court, where they can demonstrate the integrity of the evidence. The ability to produce detailed, tamper-proof documentation on demand helps eliminate any doubts about the evidence’s handling.</span></p>
+<p><span style="font-weight: 400;"></span></p>
+<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">Evidence management software vs paper logs</div><p class="xd-sub">What changes when the chain of custody runs in software instead of on paper.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide0hr42kvsm" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: Evidence management software vs paper logs"></iframe></div></div><h2><b>Protecting Chain of Custody with an Evidence Control Center</b></h2></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_8">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_4">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><div class="et_social_media_wrapper wp-image-10698"><img decoding="async" width="2560" height="1344" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYwIDEzNDQiIHdpZHRoPSIyNTYwIiBoZWlnaHQ9IjEzNDQiIGRhdGEtdT0iaHR0cHMlM0ElMkYlMkZmaWxlb25xLmNvbSUyRndwLWNvbnRlbnQlMkZ1cGxvYWRzJTJGMjAyNCUyRjA3JTJGc2h1dHRlcnN0b2NrXzE3NjcxNDQ0MjItc2NhbGVkLmpwZyIgZGF0YS13PSIyNTYwIiBkYXRhLWg9IjEzNDQiIGRhdGEtYmlwPSIiPjwvc3ZnPg==" data-spai="1" alt="Evidence Control Center" title="Evidence Management" class="wp-image-10698" data-spai-target="src" data-spai-orig="https://fileonq.com/wp-content/uploads/2024/07/shutterstock_1767144422-scaled.jpg" data-spai-exclude="none" data-spai-orig-obs="true"><div class="et_social_media et_social_media_hidden et_social_mobile_on" style="max-height: 395.805px; height: 106.773px; width: 713.922px;">
+				<div class="et_social_networks et_social_autowidth et_social_simple et_social_left et_social_circle et_social_outer_dark et_social_withnetworknames">
+					
+					<ul class="et_social_icons_container"><li class="et_social_facebook">
+									<div data-social_link="http://www.facebook.com/sharer.php?u=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;t=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="facebook" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_facebook"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Facebook</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_linkedin">
+									<div data-social_link="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="linkedin" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_linkedin"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Linkedin</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li><li class="et_social_printfriendly">
+									<div data-social_link="http://www.printfriendly.com/print?url=https%3A%2F%2Ffileonq.com%2Fchain-of-custody-fileonq-software-is-the-evidence-control-center%2F&amp;title=Chain%20of%20Custody%3A%20FileOnQ%20Software%20is%20the%20Evidence%20Control%20Center" class="et_social_share" data-social_name="printfriendly" data-social_type="media" data-post_id="10900" data-location="media">
+										<i class="et_social_icon et_social_icon_printfriendly"></i>
+										<div class="et_social_network_label"><div class="et_social_networkname">Print Friendly</div></div>
+										<span class="et_social_overlay"></span>
+									</div>
+								</li></ul>
+				</div>
+			</div></div></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_9">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><span style="font-weight: 400;">An Evidence Control Center centralizes all aspects of evidence management, providing law enforcement agencies with a powerful tool to manage the chain of custody effectively. This includes:</span></p>
+<p><b>Collection:</b><span style="font-weight: 400;"> The moment evidence is collected, the Evidence Control Center reflects its entry into the system, complete with metadata that includes details like the time and location of collection, the condition of the evidence, and the identity of the collecting officer. This information is crucial for establishing the evidence’s origin and authenticity.</span></p>
+<p><b>Storage:</b><span style="font-weight: 400;"> Evidence is then stored in a secure facility, where the Evidence Control Center reflects every aspect of its storage. This includes environmental controls to ensure that evidence is preserved under optimal conditions. For instance, biological samples may require refrigeration, while digital evidence needs protection from magnetic fields and physical damage.</span></p>
+<p><b>Transfer:</b><span style="font-weight: 400;"> As evidence is transferred from one location to another, whether for further analysis or for presentation in court, the Evidence Control Center ensures that every movement is recorded. This includes details such as the reason for the transfer, the individuals involved, and the security measures in place during transport. These records are essential for maintaining the chain’s unbroken nature.</span></p>
+<p><b>Disposition:</b><span style="font-weight: 400;"> Once the evidence has served its purpose in court, it may be returned to its owner, destroyed, or archived. The Evidence Control Center captures this final stage, ensuring that the disposition is handled according to legal and procedural requirements, and that all steps are documented to close the chain of custody properly.</span></p>
+<h3><b>Conclusion</b></h3>
+<p><span style="font-weight: 400;">The chain of custody is a fundamental aspect of the criminal justice system, and its proper management is essential for ensuring that justice is served. By using FileOnQ’s Evidence Management Software as an Evidence Control Center, law enforcement agencies can streamline the chain of custody process, reduce the risk of errors, and maintain the integrity of evidence from collection, court presentation, to disposition. With features like automated tracking, enhanced security, real-time updates, and detailed documentation, an Evidence Control Center is not just a tool but a crucial ally in the pursuit of justice.</span></p>
+<p><b><i>To learn more about FileOnQ’s software solutions for </i></b><a href="https://fileonq.com/evidence-management-system/"><b><i>Physical</i></b></a><b><i>, </i></b><a href="https://fileonq.com/digital-evidence-management/"><b><i>Digital</i></b></a><b><i> &amp; </i></b><a href="https://fileonq.com/forensic-suite/"><b><i>Forensic</i></b></a><b><i> Evidence or our</i></b> <a href="https://fileonq.com/found-property-software/"><b><i>Property</i></b></a><b><i> and </i></b><a href="https://fileonq.com/asset-quartermaster/"><b><i>Asset Management</i></b></a> <b><i>platforms,</i></b> <b><i>click the links you’re most interested in.</i></b> <b><i>To Book a Demo,&nbsp; </i></b><a href="https://fileonq.com/schedule-a-demo/"><b><i>Visit this page.</i></b></a></p>
+<p>&nbsp;</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			<div class="et_pb_row"><div class="et_pb_column et_pb_column_4_4"></div></div></div>
+		</div>
+	</div>
+	<span class="et_social_bottom_trigger"></span>					</div>
+					<div class="et_post_meta_wrapper">
+										</div>
+				</article>
+
+						</div>
+
+				<div id="sidebar">
+		<div id="block-13" class="et_pb_widget widget_block widget_search"><form role="search" method="get" action="https://fileonq.com/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search"><label class="wp-block-search__label" for="wp-block-search__input-1">Search</label><div class="wp-block-search__inside-wrapper "><input class="wp-block-search__input" id="wp-block-search__input-1" placeholder="Search Posts" value="" type="search" name="s" required=""><button aria-label="Search" class="wp-block-search__button wp-element-button" type="submit">Search</button></div></form></div><div id="block-10" class="et_pb_widget widget_block">
+<h3 class="first-widget wp-block-heading">Latest Posts</h3>
+</div><div id="block-7" class="et_pb_widget widget_block widget_recent_entries"><ul class="wp-block-latest-posts__list wp-block-latest-posts"><li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/pre-sales-solutions-engineer-remote-position/">Pre-sales Solutions Engineer (Remote Position)</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/best-practices-for-safeguarding-and-managing-digital-evidence/">Best Practices for Safeguarding and Managing Digital Evidence – Part 1</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/the-power-of-profiler-customization-in-the-hands-of-law-enforcement/">The Power of Profiler – Customization in the Hands of Law Enforcement</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/from-chaos-to-control-with-fileonq-manual-vs-automated-evidence-management/">From Chaos to Control with FileOnQ: Manual vs. Automated Evidence Management</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/precise-control-the-key-to-efficient-evidence-management/">Precise Control – The Key to Efficient Evidence Management</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/automating-the-evidence-lifecycle-with-dedicated-em-software/">Automating the Evidence Lifecycle with Dedicated EM Software</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/fire-investigations-powerful-lessons-from-an-agency-unicorn-2/">Fire and Explosion Consultants, LLC: Powerful Lessons from an Agency Unicorn – Part 2</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/fire-investigations-powerful-lessons-from-an-agency-unicorn/">Fire and Explosion Consultants, LLC: Powerful Lessons from an Agency Unicorn – Part 1</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/interview-with-captain-joe-evans-of-the-wichita-fire-department-part-2/">Interview with Captain Joe Evans of the Wichita Fire Department – Part 2</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="https://fileonq.com/interview-with-captain-joe-evans-of-the-wichita-fire-department-part-1/">Interview with Captain Joe Evans of the Wichita Fire Department – Part 1</a></li>
+</ul></div>	</div>
+		</div>
+	</div>
+	</div>
+
+	<footer class="et-l et-l--footer">
+			<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_footer">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0_tb_footer">
+				
+				
+				
+				
+				<a href="https://fileonq.com/"><span class="et_pb_image_wrap "><img decoding="async" width="800" height="332" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgMzMyIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjMzMiIgZGF0YS11PSJodHRwcyUzQSUyRiUyRmZpbGVvbnEuY29tJTJGd3AtY29udGVudCUyRnVwbG9hZHMlMkYyMDIxJTJGMDklMkZmaWxlb25xLWxvZ28tbGlnaHQwMS5wbmciIGRhdGEtdz0iODAwIiBkYXRhLWg9IjMzMiIgZGF0YS1iaXA9IiI+PC9zdmc+" data-spai="1" alt="FileOnQ logo" title="FileOnQ logo" class="wp-image-28" data-spai-target="src" data-spai-orig="https://fileonq.com/wp-content/uploads/2021/09/fileonq-logo-light01.png" data-spai-exclude="none" data-spai-orig-obs="true"></span></a>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_center et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><a href="https://fileonq.com/enterprise-platform/">Platform</a></p>
+<p><a href="https://fileonq.com/support/">Services</a></p>
+<p><a href="https://fileonq.com/about-us/">About</a></p>
+<p><a href="https://fileonq.com/schedule-a-demo/">Schedule a Demo</a></p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_2_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_right et_pb_text_align_center-tablet et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><a href="https://fileonq.com/privacy-policy/">Privacy Policy</a></p>
+<p><a href="https://fileonq.com/terms-and-conditions/" title="Terms and Conditions for FileOnQ.com">Terms and Conditions</a></p>
+<p>© 2023 FileOnQ</p>
+<p>All Rights Reserved</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</footer>
+		</div>
+
+			
+		</div>
+		<div id="et-boc" class="dm-base-context"><div class="et-l dm-base-context"></div></div></div></body></html>
