@@ -1170,7 +1170,19 @@ body { padding: 0px; }
 .xd-sub{font-size:16px;line-height:1.5;color:#555;margin:0 0 16px;padding:0}
 .xd-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#111;box-shadow:0 6px 20px rgba(0,0,0,.10)}
 .xd-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-@media (max-width:600px){.xd-video{padding:14px}.xd-title{font-size:18px}}</style></head><body class=""><div class="wrapper">
+@media (max-width:600px){.xd-video{padding:14px}.xd-title{font-size:18px}}</style><style id="xd-facade-css">
+.xd-frame{position:relative}
+.xd-play{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;cursor:pointer;display:block;overflow:hidden;border-radius:inherit}
+.xd-play:not(.xd-cover){background:#111}
+.xd-play:not(.xd-cover) img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;margin:0;max-width:none;transition:transform .3s ease,filter .3s ease}
+.xd-play:not(.xd-cover):hover img{transform:scale(1.02);filter:brightness(.92)}
+.xd-btn{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(17,17,17,.72);box-shadow:0 6px 24px rgba(0,0,0,.35);transition:transform .2s ease,background .2s ease}
+.xd-btn::after{content:"";position:absolute;left:31px;top:23px;border-style:solid;border-width:15px 0 15px 24px;border-color:transparent transparent transparent #fff}
+.xd-play:hover .xd-btn{transform:scale(1.08);background:rgba(17,17,17,.85)}
+.xd-play:focus-visible{outline:3px solid #4c8dff;outline-offset:2px}
+.xd-frame iframe[data-xd]{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@media (max-width:600px){.xd-btn{width:60px;height:60px;margin:-30px 0 0 -30px}.xd-btn::after{left:24px;top:18px;border-width:12px 0 12px 19px}}
+</style></head><body class=""><div class="wrapper">
 				<ul>
 					<li class="instagram">
 						<a href="https://thejztec.com/service/360-dmax/#" data-toggle="modal" data-target="#myModal">
@@ -1358,7 +1370,7 @@ body { padding: 0px; }
 							
 								<div class="col-lg-6 col-md-12 col-sm-12 col-12  ">	
 									 <div class="mservi13">
-										 <div class="xd-video"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 2 min</div><div class="xd-title">How a 360 DMAX feedback cycle runs</div><p class="xd-sub">See how a 360 DMAX feedback cycle runs, from Discovery to Deliver, in two minutes.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide0vb152rko" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: How a 360 DMAX feedback cycle runs"></iframe></div></div><h3>What is 360DMax ?</h3>
+										 <div class="xd-video"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 2 min</div><div class="xd-title">How a 360 DMAX feedback cycle runs</div><p class="xd-sub">See how a 360 DMAX feedback cycle runs, from Discovery to Deliver, in two minutes.</p><div class="xd-frame"><button type="button" class="xd-play" data-src="https://scrimba.com/explain/guide0vb152rko" aria-label="Play How a 360 DMAX feedback cycle runs"><img src="posters/guide0vb152rko.jpg" alt=""><span class="xd-btn" aria-hidden="true"></span></button></div></div><h3>What is 360DMax ?</h3>
 <p>A productive employee is an asset to the organization, and knowing the productivity of an employee is a challenging task to perform. But no more, it is so. You can measure the usefulness of an employee by laying your hands on a wealth of data provided by 360DMax management tools.</p>
 <p>Backed by cloud storage, your data shall always be live for you to assess it anytime, anywhere in the world. Though you might come across many tools boasting of employee productivity, yet a few cover productivity, development and automation like 360DMax.</p>
 										
@@ -1397,7 +1409,7 @@ body { padding: 0px; }
 <h3>360° Project Administration</h3>
 <p>While operating a 360° feedback project does need time and some of our customers prefer that we handle it for them, the 360 DMAX system is quite simple to use.</p>
 <p>We are a Leading Technology partner for many <strong>consulting firms /Independent coaches &amp; Trainers across India, Singapore, and Africa.</strong></p>
-<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">360 DMAX: self-run or fully managed</div><p class="xd-sub">Run 360 DMAX yourselves, or let our team manage the whole project for you.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide084e01if1" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: 360 DMAX: self-run or fully managed"></iframe></div></div><h3>Premium Administered Service</h3>
+<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">360 DMAX: self-run or fully managed</div><p class="xd-sub">Run 360 DMAX yourselves, or let our team manage the whole project for you.</p><div class="xd-frame"><button type="button" class="xd-play" data-src="https://scrimba.com/explain/guide084e01if1" aria-label="Play 360 DMAX: self-run or fully managed"><img src="posters/guide084e01if1.jpg" alt=""><span class="xd-btn" aria-hidden="true"></span></button></div></div><h3>Premium Administered Service</h3>
 <p>In accordance with the plan and timeline we have established, we will manage the project’s online component on your behalf. This makes it easier to make sure, when necessary, that your 360° feedback project fits into the schedule of your wider corporate development objectives.</p>
 <p>These services, which can be individually negotiated, often consist of:</p>
 <ul>
@@ -1620,4 +1632,10 @@ body { padding: 0px; }
 					</div>	
 				</div>
 				 
-			</div></body></html>
+			</div><script id="xd-facade-js">
+function xdStop(){document.querySelectorAll('iframe[data-xd]').forEach(function(f){if(f._xd)f.replaceWith(f._xd)})}
+document.addEventListener('play',function(e){if(e.target.tagName==='VIDEO')xdStop()},true);
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.xd-play');if(!b)return;e.preventDefault();
+xdStop();document.querySelectorAll('video').forEach(function(v){v.pause()});
+var f=document.createElement('iframe');f.src=b.getAttribute('data-src')+'?play=1';f.setAttribute('allow','autoplay; fullscreen');f.setAttribute('allowfullscreen','');f.setAttribute('scrolling','no');f.setAttribute('data-xd','');f.title=b.getAttribute('aria-label')||'Video';f._xd=b;b.replaceWith(f);});
+</script></body></html>

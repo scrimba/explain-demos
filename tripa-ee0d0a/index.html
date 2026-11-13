@@ -224,7 +224,19 @@ main span, main small, main time, main em, main strong, main b, main a, main but
 .explainer-play { left: 14px; bottom: 14px; width: 48px; height: 48px; }
 .hero-explainer { padding: 54px 0px 72px; }
 }
-.xd-cardmedia{position:relative;aspect-ratio:16/9;overflow:hidden;background:#111}.xd-cardmedia iframe,.xd-cardmedia video{position:absolute;inset:0;width:100%;height:100%;border:0}.xd-cover{position:absolute;inset:0;z-index:1;display:block;width:100%;padding:0;border:0;cursor:pointer;text-align:left;color:#fff;background:radial-gradient(circle at 78% 30%,rgba(124,182,149,.28),transparent 55%),linear-gradient(135deg,var(--brand-ink),var(--brand-slate))}.xd-cover img{position:absolute;left:20px;top:18px;width:96px;height:auto}.xd-cover strong{position:absolute;left:20px;right:20px;top:50%;transform:translateY(-50%);font-size:clamp(22px,2.6vw,34px);line-height:1.08;font-weight:800;text-transform:uppercase;letter-spacing:-.01em}.xd-cover strong em{font-style:normal;color:var(--brand-sage)}.xd-cover:focus-visible{outline:3px solid var(--brand-sage);outline-offset:-3px}</style></head><body class="archive post-type-archive post-type-archive-tripa_explainer wp-custom-logo wp-embed-responsive wp-theme-tripa-public"><header class="site-header site-header-global">
+.xd-cardmedia{position:relative;aspect-ratio:16/9;overflow:hidden;background:#111}.xd-cardmedia iframe,.xd-cardmedia video{position:absolute;inset:0;width:100%;height:100%;border:0}.xd-cover{position:absolute;inset:0;z-index:1;display:block;width:100%;padding:0;border:0;cursor:pointer;text-align:left;color:#fff;background:radial-gradient(circle at 78% 30%,rgba(124,182,149,.28),transparent 55%),linear-gradient(135deg,var(--brand-ink),var(--brand-slate))}.xd-cover img{position:absolute;left:20px;top:18px;width:96px;height:auto}.xd-cover strong{position:absolute;left:20px;right:20px;top:50%;transform:translateY(-50%);font-size:clamp(22px,2.6vw,34px);line-height:1.08;font-weight:800;text-transform:uppercase;letter-spacing:-.01em}.xd-cover strong em{font-style:normal;color:var(--brand-sage)}.xd-cover:focus-visible{outline:3px solid var(--brand-sage);outline-offset:-3px}</style><style id="xd-facade-css">
+.xd-frame{position:relative}
+.xd-play{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;cursor:pointer;display:block;overflow:hidden;border-radius:inherit}
+.xd-play:not(.xd-cover){background:#111}
+.xd-play:not(.xd-cover) img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;margin:0;max-width:none;transition:transform .3s ease,filter .3s ease}
+.xd-play:not(.xd-cover):hover img{transform:scale(1.02);filter:brightness(.92)}
+.xd-btn{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(17,17,17,.72);box-shadow:0 6px 24px rgba(0,0,0,.35);transition:transform .2s ease,background .2s ease}
+.xd-btn::after{content:"";position:absolute;left:31px;top:23px;border-style:solid;border-width:15px 0 15px 24px;border-color:transparent transparent transparent #fff}
+.xd-play:hover .xd-btn{transform:scale(1.08);background:rgba(17,17,17,.85)}
+.xd-play:focus-visible{outline:3px solid #4c8dff;outline-offset:2px}
+.xd-frame iframe[data-xd]{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@media (max-width:600px){.xd-btn{width:60px;height:60px;margin:-30px 0 0 -30px}.xd-btn::after{left:24px;top:18px;border-width:12px 0 12px 19px}}
+</style></head><body class="archive post-type-archive post-type-archive-tripa_explainer wp-custom-logo wp-embed-responsive wp-theme-tripa-public"><header class="site-header site-header-global">
     <a class="brand" href="https://tripa.ai/" aria-label="TRIPA home">
         <img src="https://tripa.ai/wp-content/themes/tripa-public/assets/images/tripa-logo-dark-surface.png" alt="TRIPA — Makes the invisible visible" data-cmp-info="10">
     </a>
@@ -274,7 +286,7 @@ main span, main small, main time, main em, main strong, main b, main a, main but
           </div>
         </article>
           <article class="explainer-card">
-          <div class="explainer-card-media xd-cardmedia"><iframe src="https://scrimba.com/explain/guide0frjl5epv" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Team Dynamics: what changes when the team changes"></iframe><button type="button" class="xd-cover" aria-label="Play Team Dynamics" onclick="var f=this.previousElementSibling;f.src=f.src.split('?')[0]+'?play=1';this.remove()"><img src="https://tripa.ai/wp-content/themes/tripa-public/assets/images/tripa-logo-dark-surface.png" alt=""><strong>What changes when <em>the team changes</em></strong><span class="explainer-play" aria-hidden="true">▶</span><span class="explainer-duration">1:55</span></button></div>
+          <div class="explainer-card-media xd-cardmedia"><button type="button" class="xd-cover xd-play" data-src="https://scrimba.com/explain/guide0frjl5epv" aria-label="Play Team Dynamics"><img src="https://tripa.ai/wp-content/themes/tripa-public/assets/images/tripa-logo-dark-surface.png" alt=""><strong>What changes when <em>the team changes</em></strong><span class="explainer-play" aria-hidden="true">▶</span><span class="explainer-duration">1:55</span></button></div>
           <div class="explainer-card-copy">
             <p class="section-kicker">TRIPA Explainer</p>
             <h3><a href="https://scrimba.com/explain/guide0frjl5epv" target="_blank">Team Dynamics</a></h3>
@@ -282,7 +294,7 @@ main span, main small, main time, main em, main strong, main b, main a, main but
             <a class="text-link" href="https://scrimba.com/explain/guide0frjl5epv" target="_blank">Explore this perspective →</a>
           </div>
         </article><article class="explainer-card">
-          <div class="explainer-card-media xd-cardmedia"><iframe src="https://scrimba.com/explain/guide0e5pblv16" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Role Fit and Team Fit: two questions"></iframe><button type="button" class="xd-cover" aria-label="Play Role &amp; Team Alignment" onclick="var f=this.previousElementSibling;f.src=f.src.split('?')[0]+'?play=1';this.remove()"><img src="https://tripa.ai/wp-content/themes/tripa-public/assets/images/tripa-logo-dark-surface.png" alt=""><strong>Role fit and team fit: <em>two questions</em></strong><span class="explainer-play" aria-hidden="true">▶</span><span class="explainer-duration">1:27</span></button></div>
+          <div class="explainer-card-media xd-cardmedia"><button type="button" class="xd-cover xd-play" data-src="https://scrimba.com/explain/guide0e5pblv16" aria-label="Play Role &amp; Team Alignment"><img src="https://tripa.ai/wp-content/themes/tripa-public/assets/images/tripa-logo-dark-surface.png" alt=""><strong>Role fit and team fit: <em>two questions</em></strong><span class="explainer-play" aria-hidden="true">▶</span><span class="explainer-duration">1:27</span></button></div>
           <div class="explainer-card-copy">
             <p class="section-kicker">TRIPA Explainer</p>
             <h3><a href="https://scrimba.com/explain/guide0e5pblv16" target="_blank">Role &amp; Team Alignment</a></h3>
@@ -339,4 +351,10 @@ main span, main small, main time, main em, main strong, main b, main a, main but
         <p><strong>TRIPA HC s.r.o.</strong> · Human-accountable workforce decision support.</p>
         <small>© 2026 TRIPA.</small>
     </div>
-</footer></body></html>
+</footer><script id="xd-facade-js">
+function xdStop(){document.querySelectorAll('iframe[data-xd]').forEach(function(f){if(f._xd)f.replaceWith(f._xd)})}
+document.addEventListener('play',function(e){if(e.target.tagName==='VIDEO')xdStop()},true);
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.xd-play');if(!b)return;e.preventDefault();
+xdStop();document.querySelectorAll('video').forEach(function(v){v.pause()});
+var f=document.createElement('iframe');f.src=b.getAttribute('data-src')+'?play=1';f.setAttribute('allow','autoplay; fullscreen');f.setAttribute('allowfullscreen','');f.setAttribute('scrolling','no');f.setAttribute('data-xd','');f.title=b.getAttribute('aria-label')||'Video';f._xd=b;b.replaceWith(f);});
+</script></body></html>

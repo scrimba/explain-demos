@@ -3938,7 +3938,19 @@ body[class^="pb_disable_scroll"], html[class^="pb_disable_scroll"] { overflow-y:
 .xd-sub{font-size:16px;line-height:1.5;color:#555;margin:0 0 16px;padding:0}
 .xd-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#111;box-shadow:0 6px 20px rgba(0,0,0,.10)}
 .xd-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-@media (max-width:600px){.xd-video{padding:14px}.xd-title{font-size:18px}}</style></head><body class="wp-singular post-template post-template-elementor_canvas single single-post postid-3515 single-format-standard wp-custom-logo wp-theme-avril eio-default elementor-default elementor-template-canvas elementor-kit-12 elementor-page elementor-page-3515 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit cookies-not-set"><div data-elementor-type="wp-post" data-elementor-id="3515" class="elementor elementor-3515">
+@media (max-width:600px){.xd-video{padding:14px}.xd-title{font-size:18px}}</style><style id="xd-facade-css">
+.xd-frame{position:relative}
+.xd-play{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;cursor:pointer;display:block;overflow:hidden;border-radius:inherit}
+.xd-play:not(.xd-cover){background:#111}
+.xd-play:not(.xd-cover) img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;margin:0;max-width:none;transition:transform .3s ease,filter .3s ease}
+.xd-play:not(.xd-cover):hover img{transform:scale(1.02);filter:brightness(.92)}
+.xd-btn{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(17,17,17,.72);box-shadow:0 6px 24px rgba(0,0,0,.35);transition:transform .2s ease,background .2s ease}
+.xd-btn::after{content:"";position:absolute;left:31px;top:23px;border-style:solid;border-width:15px 0 15px 24px;border-color:transparent transparent transparent #fff}
+.xd-play:hover .xd-btn{transform:scale(1.08);background:rgba(17,17,17,.85)}
+.xd-play:focus-visible{outline:3px solid #4c8dff;outline-offset:2px}
+.xd-frame iframe[data-xd]{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@media (max-width:600px){.xd-btn{width:60px;height:60px;margin:-30px 0 0 -30px}.xd-btn::after{left:24px;top:18px;border-width:12px 0 12px 19px}}
+</style></head><body class="wp-singular post-template post-template-elementor_canvas single single-post postid-3515 single-format-standard wp-custom-logo wp-theme-avril eio-default elementor-default elementor-template-canvas elementor-kit-12 elementor-page elementor-page-3515 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit cookies-not-set"><div data-elementor-type="wp-post" data-elementor-id="3515" class="elementor elementor-3515">
 				<div class="elementor-element elementor-element-5ab624c e-flex e-con-boxed e-con e-parent e-lazyloaded" data-id="5ab624c" data-element_type="container" data-e-type="container">
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-92d2c20 elementor-widget elementor-widget-html" data-id="92d2c20" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
@@ -4112,7 +4124,7 @@ body[class^="pb_disable_scroll"], html[class^="pb_disable_scroll"] { overflow-y:
  </div>
 
  <!-- FEATURES -->
- <div style="max-width: 960px; margin: 0px auto; padding: 40px 20px 0px;"><div class="xd-video"><div class="xd-label"><span class="xd-dot"></span>Vídeo &middot; 2 min</div><div class="xd-title">Como funciona um pedido de férias no ARISTEU</div><p class="xd-sub">Prefere ver? Acompanhe um pedido de férias do telemóvel do colaborador até ao mapa oficial em PDF.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide08c9f872e" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: Como funciona um pedido de férias no ARISTEU"></iframe></div></div></div><section class="al-sec">
+ <div style="max-width: 960px; margin: 0px auto; padding: 40px 20px 0px;"><div class="xd-video"><div class="xd-label"><span class="xd-dot"></span>Vídeo &middot; 2 min</div><div class="xd-title">Como funciona um pedido de férias no ARISTEU</div><p class="xd-sub">Prefere ver? Acompanhe um pedido de férias do telemóvel do colaborador até ao mapa oficial em PDF.</p><div class="xd-frame"><button type="button" class="xd-play" data-src="https://scrimba.com/explain/guide08c9f872e" aria-label="Play Como funciona um pedido de férias no ARISTEU"><img src="posters/guide08c9f872e.jpg" alt=""><span class="xd-btn" aria-hidden="true"></span></button></div></div></div><section class="al-sec">
   <div class="al-wrap">
    <div class="al-head"><div class="al-eyebrow">Funcionalidades</div><h2>Tudo o que precisa para gerir férias</h2><p>Simples para a equipa, completo para quem gere.</p></div>
    <div class="al-features">
@@ -4170,7 +4182,7 @@ body[class^="pb_disable_scroll"], html[class^="pb_disable_scroll"] { overflow-y:
  </section>
 
  <!-- FAQ -->
- <div style="max-width: 960px; margin: 0px auto; padding: 40px 20px 0px;"><div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Vídeo &middot; 1 min</div><div class="xd-title">ARISTEU: comece em 3 passos</div><p class="xd-sub">Do Excel que já usa à equipa toda no ARISTEU, em três passos.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide0sj77938d" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: ARISTEU: comece em 3 passos"></iframe></div></div></div><section class="al-sec">
+ <div style="max-width: 960px; margin: 0px auto; padding: 40px 20px 0px;"><div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Vídeo &middot; 1 min</div><div class="xd-title">ARISTEU: comece em 3 passos</div><p class="xd-sub">Do Excel que já usa à equipa toda no ARISTEU, em três passos.</p><div class="xd-frame"><button type="button" class="xd-play" data-src="https://scrimba.com/explain/guide0sj77938d" aria-label="Play ARISTEU: comece em 3 passos"><img src="posters/guide0sj77938d.jpg" alt=""><span class="xd-btn" aria-hidden="true"></span></button></div></div></div><section class="al-sec">
   <div class="al-wrap">
    <div class="al-head"><div class="al-eyebrow">Perguntas frequentes</div><h2>Dúvidas comuns</h2></div>
    <div class="al-faq">
@@ -4214,4 +4226,10 @@ body[class^="pb_disable_scroll"], html[class^="pb_disable_scroll"] { overflow-y:
 					<div class="e-con-inner">
 					</div>
 				</div>
-				</div><span id="elementor-device-mode" class="elementor-screen-only"></span></body></html>
+				</div><span id="elementor-device-mode" class="elementor-screen-only"></span><script id="xd-facade-js">
+function xdStop(){document.querySelectorAll('iframe[data-xd]').forEach(function(f){if(f._xd)f.replaceWith(f._xd)})}
+document.addEventListener('play',function(e){if(e.target.tagName==='VIDEO')xdStop()},true);
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.xd-play');if(!b)return;e.preventDefault();
+xdStop();document.querySelectorAll('video').forEach(function(v){v.pause()});
+var f=document.createElement('iframe');f.src=b.getAttribute('data-src')+'?play=1';f.setAttribute('allow','autoplay; fullscreen');f.setAttribute('allowfullscreen','');f.setAttribute('scrolling','no');f.setAttribute('data-xd','');f.title=b.getAttribute('aria-label')||'Video';f._xd=b;b.replaceWith(f);});
+</script></body></html>

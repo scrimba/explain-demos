@@ -420,7 +420,19 @@ html.dark [data-ea-publisher].loaded.adaptive-css, body.dark [data-ea-publisher]
 .xd-sub{font-size:16px;line-height:1.5;color:#555;margin:0 0 16px;padding:0}
 .xd-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#111;box-shadow:0 6px 20px rgba(0,0,0,.10)}
 .xd-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-@media (max-width:600px){.xd-video{padding:14px}.xd-title{font-size:18px}}</style></head><body class="wy-body-for-nav"><div class="wy-grid-for-nav">
+@media (max-width:600px){.xd-video{padding:14px}.xd-title{font-size:18px}}</style><style id="xd-facade-css">
+.xd-frame{position:relative}
+.xd-play{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0;border:0;cursor:pointer;display:block;overflow:hidden;border-radius:inherit}
+.xd-play:not(.xd-cover){background:#111}
+.xd-play:not(.xd-cover) img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;margin:0;max-width:none;transition:transform .3s ease,filter .3s ease}
+.xd-play:not(.xd-cover):hover img{transform:scale(1.02);filter:brightness(.92)}
+.xd-btn{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(17,17,17,.72);box-shadow:0 6px 24px rgba(0,0,0,.35);transition:transform .2s ease,background .2s ease}
+.xd-btn::after{content:"";position:absolute;left:31px;top:23px;border-style:solid;border-width:15px 0 15px 24px;border-color:transparent transparent transparent #fff}
+.xd-play:hover .xd-btn{transform:scale(1.08);background:rgba(17,17,17,.85)}
+.xd-play:focus-visible{outline:3px solid #4c8dff;outline-offset:2px}
+.xd-frame iframe[data-xd]{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@media (max-width:600px){.xd-btn{width:60px;height:60px;margin:-30px 0 0 -30px}.xd-btn::after{left:24px;top:18px;border-width:12px 0 12px 19px}}
+</style></head><body class="wy-body-for-nav"><div class="wy-grid-for-nav">
     <nav data-toggle="wy-nav-shift" class="wy-nav-side" style="position: fixed; top: 0px; bottom: 0px; left: 0px; width: 300px; z-index: 200; padding-bottom: 47.2031px;">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" style="background: #2980B9">
@@ -1376,7 +1388,7 @@ provisioning flow rather than implementation details.</p>
 <p>For PBX-specific details, see <a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html"><span class="doc">FusionPBX Integration</span></a> (FusionPBX
 Integration) and <a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html"><span class="doc">Vodia Module</span></a> (Vodia Module).</p>
 </section>
-<div class="xd-video"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 2 min</div><div class="xd-title">From order to invoice: how ictVoIP Billing provisions a new customer</div><p class="xd-sub">Prefer watching? See the whole provisioning flow, from a client's order in WHMCS to the PBX and back to the invoice.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide085f7gr9k" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: From order to invoice: how ictVoIP Billing provisions a new customer"></iframe></div></div><section id="key-concepts">
+<div class="xd-video"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 2 min</div><div class="xd-title">From order to invoice: how ictVoIP Billing provisions a new customer</div><p class="xd-sub">Prefer watching? See the whole provisioning flow, from a client's order in WHMCS to the PBX and back to the invoice.</p><div class="xd-frame"><button type="button" class="xd-play" data-src="https://scrimba.com/explain/guide085f7gr9k" aria-label="Play From order to invoice: how ictVoIP Billing provisions a new customer"><img src="posters/guide085f7gr9k.jpg" alt=""><span class="xd-btn" aria-hidden="true"></span></button></div></div><section id="key-concepts">
 <h2>Key Concepts</h2>
 <ul class="simple">
 <li><p><strong>Provider</strong> – Represents a VoIP provider or PBX integration in ictVoIP Billing and is linked to tariffs and packages for billing.</p></li>
@@ -1445,7 +1457,7 @@ configuration to calculate charges.</p></li>
 </li>
 </ol>
 </section>
-<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">Where to configure what</div><p class="xd-sub">Which settings live in WHMCS, in the ictVoIP Billing addon, and in the PBX.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide0a1cabqen" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: Where to configure what"></iframe></div></div><section id="where-to-configure-what">
+<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">Where to configure what</div><p class="xd-sub">Which settings live in WHMCS, in the ictVoIP Billing addon, and in the PBX.</p><div class="xd-frame"><button type="button" class="xd-play" data-src="https://scrimba.com/explain/guide0a1cabqen" aria-label="Play Where to configure what"><img src="posters/guide0a1cabqen.jpg" alt=""><span class="xd-btn" aria-hidden="true"></span></button></div></div><section id="where-to-configure-what">
 <h2>Where to Configure What</h2>
 <ul class="simple">
 <li><p><strong>WHMCS</strong>
@@ -1475,7 +1487,7 @@ and click on the server name. See <a class="reference internal" href="https://do
 relevant module documentation under <a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/fusionpbx.html"><span class="doc">FusionPBX Integration</span></a> and
 <a class="reference internal" href="https://docs.ictvoip.ca/en/latest/modules/vodia.html"><span class="doc">Vodia Module</span></a>.</p>
 </section>
-<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">What happens on upgrade, suspend and terminate</div><p class="xd-sub">What upgrades, suspensions and terminations do to extensions, gateways and billing.</p><div class="xd-frame"><iframe src="https://scrimba.com/explain/guide0dalk4asv" scrolling="no" allow="autoplay; fullscreen" allowfullscreen title="Video: What happens on upgrade, suspend and terminate"></iframe></div></div><section id="how-admin-tools-use-this-flow">
+<div class="xd-video xd-inline"><div class="xd-label"><span class="xd-dot"></span>Video &middot; 1 min</div><div class="xd-title">What happens on upgrade, suspend and terminate</div><p class="xd-sub">What upgrades, suspensions and terminations do to extensions, gateways and billing.</p><div class="xd-frame"><button type="button" class="xd-play" data-src="https://scrimba.com/explain/guide0dalk4asv" aria-label="Play What happens on upgrade, suspend and terminate"><img src="posters/guide0dalk4asv.jpg" alt=""><span class="xd-btn" aria-hidden="true"></span></button></div></div><section id="how-admin-tools-use-this-flow">
 <h2>How Admin Tools Use This Flow</h2>
 <p>The provisioning concepts in this overview are surfaced to
 administrators through dedicated tools in the ictVoIP Billing addon:</p>
@@ -1517,4 +1529,10 @@ logic remain on the PBX itself.</p>
         </div>
       </div>
     </section>
-  </div><readthedocs-flyout></readthedocs-flyout><readthedocs-notification class="raised toast"></readthedocs-notification><div class="raised adaptive-css loaded" data-ea-type="text" data-ea-style="fixedfooter" data-ea-manual="true" data-ea-publisher="readthedocs" data-ea-keywords="acl|autobill|billing-software|call-billing|cdr|did|freeswitch|fusionpbx|gateway|hosted-pbx|ictvoip|ictvoip-billing|pbx|php|provisioning|readthedocs-project-822674|readthedocs-project-ictvoip-docs|sip-trunk|tariff|tenant|vodia|voip|voip-billing|whmcs" data-ea-campaign-types="community|house|paid" id="readthedocs-ea-text-fixedfooter-sphinx"><div class="ea-placement ea-type-text"><div class="ea-content"><div class="ea-text"><a href="https://server.ethicalads.io/proxy/click/11016/01a1c473-9854-7b02-ac87-476b7bc0b696/" rel="nofollow noopener sponsored" target="_blank"><strong class="ea-headline">90% shorter build times </strong><span class="ea-body">with modern, scalable CI/CD.</span><strong class="ea-cta"> Try out TeamCity by JetBrains</strong></a></div></div><div class="ea-callout"><a rel="nofollow noopener" target="_blank" href="https://www.ethicalads.io/advertisers/topics/backend-web/?ref=ea-text">Ads by EthicalAds</a></div><div class="ea-fixedfooter-hide"><span>Close Ad</span></div></div><img src="https://server.ethicalads.io/proxy/view/11016/01a1c473-9854-7b02-ac87-476b7bc0b696/" class="ea-pixel"></div><readthedocs-search class="raised floating"></readthedocs-search><readthedocs-hotkeys></readthedocs-hotkeys></body></html>
+  </div><readthedocs-flyout></readthedocs-flyout><readthedocs-notification class="raised toast"></readthedocs-notification><div class="raised adaptive-css loaded" data-ea-type="text" data-ea-style="fixedfooter" data-ea-manual="true" data-ea-publisher="readthedocs" data-ea-keywords="acl|autobill|billing-software|call-billing|cdr|did|freeswitch|fusionpbx|gateway|hosted-pbx|ictvoip|ictvoip-billing|pbx|php|provisioning|readthedocs-project-822674|readthedocs-project-ictvoip-docs|sip-trunk|tariff|tenant|vodia|voip|voip-billing|whmcs" data-ea-campaign-types="community|house|paid" id="readthedocs-ea-text-fixedfooter-sphinx"><div class="ea-placement ea-type-text"><div class="ea-content"><div class="ea-text"><a href="https://server.ethicalads.io/proxy/click/11016/01a1c473-9854-7b02-ac87-476b7bc0b696/" rel="nofollow noopener sponsored" target="_blank"><strong class="ea-headline">90% shorter build times </strong><span class="ea-body">with modern, scalable CI/CD.</span><strong class="ea-cta"> Try out TeamCity by JetBrains</strong></a></div></div><div class="ea-callout"><a rel="nofollow noopener" target="_blank" href="https://www.ethicalads.io/advertisers/topics/backend-web/?ref=ea-text">Ads by EthicalAds</a></div><div class="ea-fixedfooter-hide"><span>Close Ad</span></div></div><img src="https://server.ethicalads.io/proxy/view/11016/01a1c473-9854-7b02-ac87-476b7bc0b696/" class="ea-pixel"></div><readthedocs-search class="raised floating"></readthedocs-search><readthedocs-hotkeys></readthedocs-hotkeys><script id="xd-facade-js">
+function xdStop(){document.querySelectorAll('iframe[data-xd]').forEach(function(f){if(f._xd)f.replaceWith(f._xd)})}
+document.addEventListener('play',function(e){if(e.target.tagName==='VIDEO')xdStop()},true);
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.xd-play');if(!b)return;e.preventDefault();
+xdStop();document.querySelectorAll('video').forEach(function(v){v.pause()});
+var f=document.createElement('iframe');f.src=b.getAttribute('data-src')+'?play=1';f.setAttribute('allow','autoplay; fullscreen');f.setAttribute('allowfullscreen','');f.setAttribute('scrolling','no');f.setAttribute('data-xd','');f.title=b.getAttribute('aria-label')||'Video';f._xd=b;b.replaceWith(f);});
+</script></body></html>
